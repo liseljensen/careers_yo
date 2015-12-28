@@ -1,0 +1,132 @@
+/* 
+    BASE RULES
+
+    Base rules are applied to an element using an element selector,
+    a descendent selector, or a child selector, along with any pseudo-
+    classes. It doensn't include any class or ID selectors. It is 
+    defining the default styling for how that element should look
+    in all occurances
+*/
+
+@import "variables.scss";
+
+html, body {
+    background: $gray-lighter;
+    height: 100%;
+    min-width: 320px;
+    -webkit-font-smoothing: antialiased;
+}
+.animated {
+    &.duration-quarter {
+        -webkit-animation-duration: .25s; 
+        animation-duration: .25s;
+    } 
+    &.duration-half {
+        -webkit-animation-duration: .5s; 
+        animation-duration: .5s;
+    }   
+    &.duration-three-quarter {
+        -webkit-animation-duration: .75s; 
+        animation-duration: .75s;
+    }   
+    &.duration-one {
+        -webkit-animation-duration: 1s; 
+        animation-duration: 1s;
+    }   
+    &.duration-one-quarter {
+        -webkit-animation-duration: 1.25s; 
+        animation-duration: 1.25s;
+    }   
+    &.duration-one-half {
+        -webkit-animation-duration: 1.5s; 
+        animation-duration: 1.5s;
+    }  
+    &.duration-one-three-quarter {
+        -webkit-animation-duration: 1.75s; 
+        animation-duration: 1.75s;
+    }  
+    &.duration-two {
+        -webkit-animation-duration: 2s; 
+        animation-duration: 2s;
+    }  
+    &.duration-two-half {
+        -webkit-animation-duration: 2.5s; 
+        animation-duration: 2.5s;
+    }  
+    &.duration-three {
+        -webkit-animation-duration: 3s; 
+        animation-duration: 3s;
+    }  
+    &.delay-1 {
+        -webkit-animation-delay: .1s; 
+        animation-delay: .1s;
+    } 
+    &.delay-2 {
+        -webkit-animation-delay: .2s; 
+        animation-delay: .2s;
+    } 
+    &.delay-quarter {
+        -webkit-animation-delay: .25s; 
+        animation-delay: .25s;
+    } 
+    &.delay-3 {
+        -webkit-animation-delay: .3s; 
+        animation-delay: .3s;
+    } 
+    &.delay-4 {
+        -webkit-animation-delay: .4s; 
+        animation-delay: .4s;
+    } 
+    &.delay-half {
+        -webkit-animation-delay: .5s; 
+        animation-delay: .5s;
+    }   
+    &.delay-6 {
+        -webkit-animation-delay: .6s; 
+        animation-delay: .6s;
+    } 
+    &.delay-7 {
+        -webkit-animation-delay: .7s; 
+        animation-delay: .7s;
+    } 
+    &.delay-three-quarter {
+        -webkit-animation-delay: .75s; 
+        animation-delay: .75s;
+    }   
+    &.delay-8 {
+        -webkit-animation-delay: .8s; 
+        animation-delay: .8s;
+    } 
+    &.delay-9 {
+        -webkit-animation-delay: .9s; 
+        animation-delay: .9s;
+    }
+    &.delay-one {
+        -webkit-animation-delay: 1s; 
+        animation-delay: 1s;
+    }   
+    &.delay-one-quarter {
+        -webkit-animation-delay: 1.25s; 
+        animation-delay: 1.25s;
+    }   
+    &.delay-one-half {
+        -webkit-animation-delay: 1.5s; 
+        animation-delay: 1.5s;
+    }  
+    &.delay-one-three-quarter {
+        -webkit-animation-delay: 1.75s; 
+        animation-delay: 1.75s;
+    }  
+    &.delay-two {
+        -webkit-animation-delay: 2s; 
+        animation-delay: 2s;
+    }  
+    &.delay-two-half {
+        -webkit-animation-delay: 2.5s; 
+        animation-delay: 2.5s;
+    }  
+    &.delay-three {
+        -webkit-animation-delay: 3s; 
+        animation-delay: 3s;
+    }  
+}

@@ -1,0 +1,36 @@
+/* 
+    LAYOUT RULES
+
+    Layout rules divide the page into sections. Layouts hold one or more modules together.
+    All major components are referred layout styles for example, header, footer, sidebar,
+    and article. This is the only component type that uses IDs. 
+*/
+
+@import "base.scss";
+
+.container-95 {
+    width: 95%; 
+    margin: 0 auto; 
+}
+.item {
+    padding: 0; 
+    .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6,
+    .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
+        padding: 0; 
+    }
+    .row {
+        margin: 0; 
+    }
+}
+.item-bottom {
+    width: 32.5%; 
+    height: 300px; 
+}
+
+footer {
+    margin-top: 20px; 
+    .navbar-nav {
+        display: inline-block;
+        float: none;
+    }
+}

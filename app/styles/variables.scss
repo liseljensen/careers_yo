@@ -1,0 +1,47 @@
+@import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+
+//
+// Variables
+// --------------------------------------------------
+
+
+//== Colors
+
+//== Core Colors
+$simplot-gray:           #675C53;
+$simplot-gold:           #EBB700;
+$white:                  #FFF;
+
+//== Secondary Colors
+$dark-green:             #284E36;
+$light-field-green:      #3C8A2E;
+$yellow-clay:            #FADD80;
+
+//== Supporting Colors
+$black:                 #000000;
+$dark-brown:            #4A3C31;
+$rust-orange:           #BD4F19;
+$leaf-green:            #69BE28;
+$dark-slate:            #988F86;
+$light-slate:           #C3C8C8;
+$bright-sky:            #00B0CA;
+$dark-sky:              #00747A;
+
+$mos-padding:           10% 0 0 10%; 
+
+//Mix Ins
+
+@mixin transition($transition...) {
+    -moz-transition:    $transition;
+    -o-transition:      $transition;
+    -webkit-transition: $transition;
+    transition:         $transition;
+}
+
+@mixin transform($transforms) {
+	   -moz-transform: $transforms;
+	     -o-transform: $transforms;
+	    -ms-transform: $transforms;
+	-webkit-transform: $transforms;
+          transform: $transforms;
+}

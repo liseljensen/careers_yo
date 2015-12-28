@@ -1,0 +1,281 @@
+/* 
+    MODULE RULES
+
+    A module is a more discrete component of the page. It includes nav bars, carousels,
+    dialogs, widgets, etc. Modules sit inside layout components and sometimes w/in other
+    modules too. Each module should exist as a stand-alone component. 
+*/
+
+@import "layout.scss";
+
+/*
+    NAVIGATION
+*/
+.navbar.navbar-default {
+    background: none;
+    border: none; 
+    margin-bottom: 0; 
+    .navbar-nav > li {
+        & > a {
+            color: $simplot-gray; 
+        }
+        &.active {
+            & > a {
+                background: none; 
+                border-bottom: 2px solid $simplot-gray;
+            }
+        }
+    }
+    
+}
+#global-nav {
+    font-size: $font-size-small;
+}
+#main-nav {
+    font-size: $font-size-base;
+    font-weight: 600; 
+    .navbar-header {
+        margin-top: -50px; 
+    }
+    a {
+        @include transition(all 0.35s ease-in-out 0s);
+        padding: 0 0 1px 0; 
+        margin: 14px 15px 0; 
+        &:hover {
+            color: lighten($simplot-gray, 25%);
+        }
+    }
+    .active {
+      & > a {
+          color: $simplot-gray;
+      }
+    }
+}
+/*
+    LINKS
+*/
+.link a {
+    font-size: 1.5rem; 
+    color: #fff; 
+    transition: all .2s ease-in-out;
+    text-decoration:none;
+    &:before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      bottom: -.1em;
+      left: 0;
+      background-color: #fff;
+      visibility: hidden;
+      @include transform(scaleX(0));
+      @include transition(all 0.35s ease-in-out 0s);
+    }
+    &.hover:before, &:hover:before  {
+      visibility: visible;
+      @include transform(scaleX(1));
+    }
+    .fa {
+        margin-left: 5px; 
+    }
+}
+.mos-link {
+    position: absolute; 
+    bottom: 35px; 
+    right: 100px; 
+    a {
+        font-size: $font-size-large;
+    }
+}
+/*
+    OVERLAYS
+*/
+.overlay {
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    position: absolute;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+    & > a.overlay-link {
+        z-index: 1000;
+        text-indent: 200%;
+        white-space: nowrap;
+        font-size: 0;
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        &:active {
+            background: #fff; 
+        }
+    }
+}
+.overlay-video {
+    opacity: .75;
+    background: $simplot-gray;
+    background-color: rgba( 103, 92, 83, .70);
+    i.fa {
+        height: 125px;
+        width: 125px;
+        text-align: center;
+        position: relative;
+        top: 25%;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        transform: translateX(-50%);
+        color: #fff;
+        font-size: 125px;
+    }
+    &:hover {
+      opacity: .95; 
+    }
+}
+/*
+    QUOTES
+*/
+.quote {
+    background: url(../images/quotes.png) no-repeat 20% 25%;
+    font-size: $font-size-xx-large; 
+    overflow: visible;
+    padding-left: calc(10% + 125px) !important;
+    span {
+        font-size: $font-size-med; 
+        margin-top: 20px; 
+        display: block; 
+        text-align: right; 
+    }
+}
+/*
+    MOSAIC STYLES
+*/
+#mosaic {
+    color: $white; 
+    .mos-heading {
+        font-size: $font-size-super-huge;
+    }
+    .mos-subheading {
+        font-size: $font-size-xx-large;
+    }
+    .mos-img {
+        transition: all .5s ease-in-out;
+        &:hover {
+            opacity: .75;
+        }
+    }
+    .mos-figure {
+        overflow: visible; 
+        -webkit-transition: all 0.35s ease-in-out;
+        transition: all 0.35s ease-in-out;
+    }
+    .mos-img {
+        transition: all .5s ease-in-out;
+    }
+    .mos-img.hover {
+        opacity: .75; 
+    }
+}
+.mos-figure {
+    padding: 10%; 
+    &.hover {
+        @include transform(translate(0,15px));
+    }
+}
+#mos-wwd {
+    @include size (40%, 665px);
+    background: url('../images/road_2.jpg') no-repeat;
+    .mos-wwd-overlay {
+        background-color: rgba(74, 60, 49, .30);
+        &:hover {
+            background-color: rgba(74, 60, 49, .5);
+            .mos-wwd-figure {
+                -webkit-transform: translate(10px,0);
+                transform: translate(10px,0);
+                .mos-heading:nth-of-type(1) {
+                    color: #EBB701;
+                }
+                .mos-heading:nth-of-type(2) {
+                    color: #01B0CA;
+                }
+                .mos-heading:nth-of-type(3) {
+                    color: #69BE28;
+                }
+            }
+        }
+        .mos-wwd-figure {
+            margin: 20% 10% 3%; 
+            padding: 0; 
+            .mos-heading {
+                -webkit-transition: all 0.35s ease-in-out;
+                transition: all 0.35s ease-in-out;
+                margin: 10px 0; 
+                &:nth-of-type(1) {
+                    @include transition-delay(.1s) 
+                }
+                &:nth-of-type(2) {
+                    @include transition-delay(.2s) 
+                }
+                &:nth-of-type(3) {
+                    @include transition-delay(.3s) 
+                }
+            }
+        }
+    }   
+}
+
+#mos-why-simplot {
+    background: $bright-sky;
+    .mos-link {
+        //right: 30.893536121673%;
+        right: calc(30.893536121673% + 100px);
+        a {
+            display: inline-block;
+        }
+    }
+    
+}
+
+#mos-apply {
+    background: $simplot-gold; 
+    .mos-figure {
+        padding: 10% 10% 0 0; 
+    }
+    .mos-heading {
+        margin-top: 0; 
+    }
+    .mos-figure {
+        &.hover {
+            @include transform(translate(15px,0));
+        }
+    }
+}
+
+#mos-student-center {
+    background: $rust-orange; 
+}
+
+#mos-video {
+    background: url(../images/video_capture.jpg) no-repeat;
+}
+
+#mos-contact {
+    background: $leaf-green; 
+}
+
+footer {
+    font-size: $font-size-x-small; 
+    padding-bottom: 20px; 
+    .navbar {
+        font-size: $font-size-small;
+    }
+}

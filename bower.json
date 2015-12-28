@@ -1,0 +1,29 @@
+{
+  "name": "careers-yo",
+  "private": true,
+  "dependencies": {
+    "bootstrap-sass": "~3.3.5",
+    "modernizr": "~2.8.3",
+    "packery": "~1.4.3",
+    "components-font-awesome": "~4.5.0"
+  },
+  "overrides": {
+    "bootstrap-sass": {
+      "main": [
+        "assets/stylesheets/_bootstrap.scss",
+        "assets/fonts/bootstrap/*",
+        "assets/javascripts/bootstrap.js"
+      ]
+    },
+    "packery": {
+      "main": [
+        "./dist/packery.pkgd.js"
+      ],
+      "dependencies": {}
+    }
+  },
+  "devDependencies": {
+    "chai": "~3.4.2",
+    "mocha": "~2.3.4"
+  }
+}

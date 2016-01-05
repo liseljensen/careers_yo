@@ -1,4 +1,5 @@
 @import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+@import url('http://fonts.googleapis.com/css?family=Arimo:400,700,400italic,700italic');
 
 //
 // Variables
@@ -29,6 +30,16 @@ $dark-sky:              #00747A;
 
 $mos-padding:           10% 0 0 10%; 
 
+//Extentions 
+.simplot-gray {
+    color: $simplot-gray !important;
+}
+.all-caps {
+    text-transform: uppercase; 
+}
+.right {
+    right: 0; 
+}
 //Mix Ins
 
 @mixin transition($transition...) {
@@ -44,4 +55,11 @@ $mos-padding:           10% 0 0 10%;
 	    -ms-transform: $transforms;
 	-webkit-transform: $transforms;
           transform: $transforms;
+}
+
+@mixin background-size($size) {
+    -webkit-background-size: $size;
+    -moz-background-size: $size;
+    background-size: $size;
+    -o-background-size: $size;
 }

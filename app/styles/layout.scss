@@ -7,10 +7,19 @@
 */
 
 @import "base.scss";
-
 .container-95 {
     width: 95%; 
     margin: 0 auto; 
+}
+.subpage {
+    margin-top: 100px;
+}
+section {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+.bg-gray {
+    background: #e8ebec;
 }
 .item {
     padding: 0; 
@@ -25,6 +34,52 @@
 .item-bottom {
     width: 32.5%; 
     height: 300px; 
+}
+.grid {
+    color: #fff; 
+    .col-md-6, .col-sm-6 {
+        margin-bottom: 30px;
+    }
+    &.culture {
+        figure {
+            min-height: 500px;
+        }
+    }
+    figure {
+        z-index: 1;
+        display: inline-block;
+        position: relative;
+        float: left;
+        overflow: hidden;
+        margin: 0 1%;
+        height: 200px;
+        min-height: 300px;
+        width: 100%;
+        background: #BD4F19;
+        text-align: center;
+        cursor: pointer;
+        img {
+            position: relative;
+            display: block;
+            min-height: 100%;
+            //max-width: 100%;
+            opacity: 0.7;
+        }
+        figcaption {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            padding: 2em;
+            color: #fff;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            &::before, &::after {
+                pointer-events: none;
+            }
+        }
+    }
 }
 
 footer {

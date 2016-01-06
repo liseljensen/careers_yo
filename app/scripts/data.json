@@ -1,0 +1,34 @@
+[
+	{
+		"name" : "Grand_Forks",
+		"long" : "47.9331123",
+		"lat" : "-97.084086",
+		"postings" : [
+			{
+				"position" : "Raw Product Storage Assistant",
+				"jobPost" : "1",
+				"jobID" : "2936"
+			},
+			{
+				"position" : "Raw Product Storage Assistant 2",
+				"jobPost" : "1",
+				"jobID" : "2936"
+			}
+		]
+
+	},
+	{
+		"name" : "Boise",
+		"long" : "43.6163606",
+		"lat" : "-116.2078246",
+		"postings" : [
+			{
+				"position" : "Accounting Technician",
+				"jobPost" : "3",
+				"jobID" : "2926"
+				
+			}
+		]
+
+	}  
+]

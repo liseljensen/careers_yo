@@ -23,14 +23,16 @@
     <!-- endbuild -->
     
   </head>
-  <body>
+  <body class="subpage">
     <!--[if lt IE 10]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-
-    <div class="container-95 container-fluid">
-      <div class="header">
-        <div id="global-nav">
+      <div class="apply-now-tab">
+          <h2>Apply<br>Now</h2><i class="fa fa-chevron-circle-right"></i>
+          <div class="overlay"><a class="overlay-link" href="why_simplot_new.html">Apply Now</a></div>
+      </div>
+      <div class="header fixed">
+        <div class="container" id="global-nav">
           <nav class="navbar navbar-default" role="navigation">
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right">
@@ -53,7 +55,7 @@
                 </div>
            </nav>
         </div>
-        <div id="main-nav">
+        <div class="container" id="main-nav">
             <nav class="navbar navbar-default">
               <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -66,7 +68,7 @@
               </div>
               <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
-                  <li id="home" class="active"><a href="index.html">Home</a></li>
+                  <li id="home"><a href="index.html">Home</a></li>
                   <li id="what_we_do"><a href="subpages.html?page=what_we_do">What We Do</a></li>
                   <li id="why_simplot"><a href="subpages.html?page=why_simplot">Why Simplot</a></li>
                   <li id="student_center"><a href="subpages.html?page=student_center">Student Center</a></li>
@@ -77,79 +79,40 @@
           </nav>
         </div>
       </div>
-        <div id="mosaic" class="row">
-            <!-- WHAT WE DO -->
-            <div id="mos-wwd" class="item col-md-5 col-sm-5 col-xs-12 animated fadeIn delay-1 duration-one">
-                <div class="overlay mos-wwd-overlay">
-                    <figure class="mos-figure mos-wwd-figure">
-                        <span class="mos-subheading animated fadeIn delay-3 duration-one">We are driven to</span>
-                        <h1 class="mos-heading animated fadeInLeft delay-4 duration-one">Explore.</h1>
-                        <h1 class="mos-heading animated fadeInLeft delay-half duration-one">Discover.</h1>
-                        <h1 class="mos-heading animated fadeInLeft delay-6 duration-one">Create.</h1>
-                    </figure>
-                    <span class="link mos-link"><a href="why_simplot.html">What We Do <i class="fa fa-chevron-circle-right"></i></a></span>
-                    <a class="overlay-link" href="what_we_do.html">What we do</a>
-                </div>
-            </div>
-            <!-- WHY SIMPLOT -->
-            <div id="mos-why-simplot" class="item col-md-7 col-sm-6 animated fadeIn delay-2 duration-one">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="col-md-7 col-sm-12 col-xs-12 visible">
-                            <figure class="mos-figure quote animated fadeIn delay-3 duration-one">
-                                <em>Put bets down on the right people and give them responsibility.</em><span class="sig">- Founder J.R. Simplot</span>
-                            </figure>
-                        </div> 
-                        <div class="col-md-5 col-sm-12 col-xs-12">
-                            <img src="images/smiling_woman.jpg" class="mos-img pull-right" alt="Picture of woman smiling" />
-                        </div>
-                        <span class="link mos-link"><a href="why_simplot.html">Why Simplot <i class="fa fa-chevron-circle-right"></i></a></span>
-                    </div>
-                </div>
-                <div class="overlay"><a class="overlay-link" href="why_simplot_new.html">Why Simplot</a></div>
-            </div>   
-            <!-- APPLY -->
-            <div id="mos-apply" class="item col-md-7 col-sm-6 col-xs-12">
-                <div class="row apply_now animated fadeIn delay-3 duration-one">
-                    <div class="col-md-12">
-                        <div class="col-md-5">
-                            <img src="images/potato_heart.jpg" class="mos-img pull-left" alt="Picture of a potato shaped heart" />
-                        </div>
-                        <div class="col-md-7 pull-left">
-                            <figure class="mos-figure animated fadeIn delay-4 duration-one">
-                                <h1 class="mos-heading">Join us</h1><span class="mos-subheading">in our mission to help feed the world's population.</span>
-                            </figure>
-                        </div> 
-                        <span class="link mos-link"><a href="why_simplot.html">Job Search &amp; Apply <i class="fa fa-chevron-circle-right"></i></a></span>
-                        <div class="overlay"><a class="overlay-link" href="apply_now.html">Search Jobs and Apply</a></div>
-                    </div>
-                </div>
-            </div>
-            <div id="mos-student-center" class="item item-bottom col-md-4 col-sm-4 col-xs-12 animated fadeIn delay-4 duration-one">
-                <figure class="mos-figure animated fadeIn delay-5 duration-one">
-                    <span class="mos-subheading">Open new</span>
-                    <h1 class="mos-heading">Doors.</h1>
-                </figure>
-                <span class="link mos-link"><a href="why_simplot.html">Student Center <i class="fa fa-chevron-circle-right"></i></a></span>
-                <div class="overlay"><a class="overlay-link" href="student_center_new.html">Search Jobs and Apply</a></div>
-            </div> 
-            <div id="mos-video" class="item item-bottom col-md-4 col-sm-4 col-xs-12 animated fadeIn delay-half duration-one">
-                <div class="media">
-                    <div class="overlay overlay-video" data-toggle="modal" data-target="#vid_1">
-                        <i class="fa fa-play-circle-o"></i>
-                    </div>
-                </div>
-            </div> 
-            <div id="mos-contact" class="item item-bottom col-md-4 col-sm-4 col-xs-12 animated fadeIn delay-6 duration-one">
-                <figure class="mos-figure animated fadeIn delay-4 duration-one">
-                    <span class="mos-subheading">Have something to say?</span>
-                    <h1 class="mos-heading">Get in Touch.</h1>
-                </figure>
-                <span class="link mos-link"><a href="why_simplot.html">Contact Us <i class="fa fa-chevron-circle-right"></i></a></span>
-                <div class="overlay"></div>
-            </div>
-        </div> 
-      <footer class="container text-center">
+      <div>
+        <section class="page-banner yellow">
+			<div class="container">
+				<h1>Job Search &amp; Apply</h1>
+			</div>
+		</section>
+		<section>
+			<div class="container">
+				<div class="row biz-group">
+					<div class="col-md-6">
+						<img src="images/mockup-macbook.jpg" class="img-responsive" alt="image of computer on patio" />
+					</div>
+					<div class="col-md-6">
+						<h2 class="subpage-heading">Career Portal</h2>
+						<h3>Login to our Career Portal to search and apply for open postions. </h3>
+						<p>The Career Portal also allows you to:</p>
+						<ul>
+							<li>Store your current resume</li>
+							<li>View job cart, saved searches and history of applications</li>
+							<li>Check the status of your application(s)</li>
+							<li>Manage your contact information</li>
+							<li>Change your password</li>
+						</ul>
+						<span class="link"><a class="simplot-gray" href="why_simplot.html">Login to Career Portal <i class="fa fa-chevron-circle-right"></i></a></span>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="map">
+
+		</section>
+      </div>    
+    <section class="bg-gray">      
+      <footer class="container text-center subpage-footer">
             <nav class="navbar navbar-default">
                 <ul class="nav navbar-nav">
                       <li><a href="http://www.simplot.com/contact_us">Contact Us</a></li>
@@ -168,8 +131,8 @@
              </nav>
              © 2015 J.R. Simplot Company
         </footer>
+    </section>
         
-      </div><!-- .container-95 --> 
     
 
     <!-- build:js(.) scripts/vendor.js -->
@@ -197,9 +160,90 @@
     
 
     <!-- build:js scripts/main.js -->
+<!--    <script src="scripts/jquery-animateNumber.js"></script>-->
+    <script src="scripts/jquery.viewport.mini.js"></script>
     <script src="scripts/main.js"></script>
     <!-- endbuild -->
+	 
+	<script src="scripts/map_styles.js"></script>
+	<script>
+	var image = 'images/marker-potatoes.png';
+	function initMap() {
+		var boise = {lat: 43.6167, lng: -116.2000};
+		var map = new google.maps.Map(document.getElementById('map'), { zoom: 4, center: boise });
 
+		var styledMap = new google.maps.StyledMapType(styles, {name: "Styled Map"});
+			map.mapTypes.set('map_style', styledMap);
+  			map.setMapTypeId('map_style');
+		
+		
+	$.ajax({
+		beforeSend: function(xhr) {
+		  if (xhr.overrideMimeType) {
+			xhr.overrideMimeType("application/json");
+		  }
+		}
+	});
+
+	$.getJSON('scripts/data.json')
+		.done(function(json){
+			 $.each(json, function(key, data) {
+					var marker = new google.maps.Marker({
+						position: new google.maps.LatLng(data.long,data.lat),
+						map: map,
+						title: data.name,
+						icon: image 
+
+					});	
+				 	marker.setMap(map);
+				 
+				 	var buildBodyContent = ""
+				 	$.each(data.postings, function(i, posting ){
+						var item = '<a href="#" class="list-group-item">'
+						+ posting.position
+						+ '</a>'
+						buildBodyContent += item;
+					});
+				 	
+				 	var buildModal = '<div class="modal fade" id="' + data.name + '" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">'
+								   	+ '<div class="modal-dialog" role="document">'
+								   	+ '<div class="modal-content">'
+								   	+ '<div class="modal-header">'
+								   	+ '<button type="button" class="close" data-dismiss="modal" aria-label="Close">'
+								   	+ '<span aria-hidden="true">&times;</span></button>'
+								   	+ '<h4 class="modal-title" id="myModalLabel">' + 'Available Postions for ' + data.name + '</h4></div>'
+								   	+ '<div class="modal-body">'
+									+ '<div class="list-group">'
+									+ buildBodyContent
+									+ '</div>'
+									+ '</div'
+									+ '</div></div></div>'
+
+					$('body').append(buildModal);
+				 
+				 	
+									
+					console.log(data.postings);
+				 
+					marker.addListener('click', function() {
+						//infowindow.open(map, marker);
+						//console.log(marker);
+						$("#" + marker.title).modal('show');
+					});
+			 });
+		 })
+		.fail(function(){
+		  console.log('failed')
+		})
+	}
+		
+		
+	
+	</script>
+	  
+	<script async defer
+	  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD6F8DDumSo3nUet2sUNjLQS5U-SWwm8VQ&callback=initMap">
+	</script>
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
       (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=

@@ -92,9 +92,9 @@
        * @returns {Function} numberStep-compatible function for use in animateNumber's parameters
        */
       append: function(suffix) {
-          console.log(suffix);
+        //console.log(suffix);
         return function(now, tween) {
-          var floored_number = Math.floor(now);
+          var floored_number = Math.floor(now),
               target = $(tween.elem);
                           
 

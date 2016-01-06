@@ -1,5 +1,6 @@
 $(function() {
     var $container = $('#mosaic');
+  	var mapExists = false; 
     
     $container.packery({
       itemSelector: '.item',
@@ -10,7 +11,7 @@ $(function() {
     //HOVER EFFECTS ON HOME PAGE
     function onHover() {
         for (var prop in this) {
-          console.log(this[prop]);
+          //console.log(this[prop]);
           $(this[prop]).addClass('hover');
         }
     }
@@ -63,7 +64,6 @@ $(function() {
         };
     
         function animateNumbers() {
-//                var percent_number_step = $.animateNumber.numberStepFactories.append(' %');
                 (function() {
                     $('#holidays').animateNumber(
                        {
@@ -86,28 +86,25 @@ $(function() {
 
                     $('#value').animateNumber(
                        {
-                        number: 97,
-                        numberStep: percent_number_step
+                        number: 97
                       },
                         2000
                     ).delay(1000);
                     $('#fulltime').animateNumber(
                        {
-                        number: 92,
-                        numberStep: percent_number_step
+                        number: 92
                       },
                       2000
                     ).delay(2000);
                     $('#employed').animateNumber(
                        {
-                        number: 40,
-                        numberStep: percent_number_step
+                        number: 40
                       },
                       2000
                     ).delay(3000);
                 }()); 
                 numbersDone = true;
-                console.log(numbersDone);
+                //console.log(numbersDone);
             }
     
         function checkNav() {
@@ -123,15 +120,16 @@ $(function() {
         
         function canSeeNumbers() {
             var numCheck = $(".numbers:in-viewport").length; 
-            console.log(numbersDone);
+            //console.log(numbersDone);
             if((numCheck !== 0)) {
                 animateNumbers();
             }
         }
    
-        function pullPage() {    
-           var page = "content/" + getUrlParameter('page') + ".html" || undefined; 
-           var content; 
+        function pullPage() {   
+           var pageName = getUrlParameter('page'),
+               page = "content/" + pageName + ".html" || undefined,
+               content; 
            if(page) {
                $("#content").load( page, function( response, status, xhr ) {
                   if ( status == "error" ) {
@@ -139,16 +137,17 @@ $(function() {
                     $( "#content" ).html( msg + xhr.status + " " + xhr.statusText );
                   } 
                   else {
-                      console.log('success');
+                      //console.log('success');
+                      $('#' + pageName).addClass('active');
                       if($('.numbers').length) {
-                          console.log('has numbers');
+                          //console.log('has numbers');
                           $('[src="scripts/main.js"]').before('<script src="scripts/jquery-animateNumber.js"></script>');
                           canSeeNumbers();
                       }
                   }
                 });
            }
-        };
+        }
     
 
         if($('#content').length) {
@@ -156,15 +155,13 @@ $(function() {
             pullPage();
             
             $(window).bind("scroll", function(event) {
-                console.log(numbersDone);
+                //console.log(numbersDone);
                 checkNav();
                 if ((numbersDone === false) && ($('#holidays').length != 0) || ($('#value').length != 0)) {
                     //canSeeNumbers();
                     
                 }
             });
-        }
-    
-        
+        }   
 });
 

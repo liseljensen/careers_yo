@@ -185,6 +185,7 @@
     width: 100%;
     cursor: pointer;
     transition: all .5s ease-in-out;
+    //z-index: 1000; 
     & > a.overlay-link {
         z-index: 1000;
         text-indent: 200%;
@@ -239,6 +240,12 @@
         display: block; 
         text-align: right; 
     }
+}
+/*
+    Map
+*/
+#map {
+    min-height: 500px; 
 }
 /*
     CAROUSEL
@@ -298,6 +305,7 @@
             p {
                 margin-left:0;
                 font-size: $font-size-xx-large;
+                color: $white; 
             }
         }
     }
@@ -470,8 +478,31 @@ figure.effect-sadie {
     }
 }
 /*
+    EVENT LOGO
+*/
+.event-logo {
+    max-width: 100px; 
+}
+.intern {
+    width: 50%;
+    background: url(../images/intern_video.jpg) no-repeat;
+    height: 350px;
+    i.fa {
+        position: absolute;
+        top: 28%;
+    }
+    h3 {
+        top: 70%;
+        color: #fff;
+        text-align: center;
+        position: absolute;
+        left: 30%;
+    }
+}
+/*
     MOSAIC STYLES
 */
+
 #mosaic {
     color: $white; 
     .mos-heading {

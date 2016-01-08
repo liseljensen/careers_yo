@@ -1,4 +1,16 @@
 var styles = [
+	 {
+		"featureType" : "all",
+		"elementType" : "labels",
+		"stylers" : [
+		  { 
+			"color" : "#675c53"
+		  },
+		  {
+			"weight" : ".2"
+		  }
+		]
+  	},
     {
         "featureType": "landscape.natural",
         "elementType": "geometry.fill",

@@ -150,7 +150,7 @@ $(function() {
         }
     
 
-        if($('#content').length) {
+        if($('#content').length || $('#map').length) {
             var numbersDone = false; 
             pullPage();
             

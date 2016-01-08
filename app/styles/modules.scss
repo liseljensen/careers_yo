@@ -245,7 +245,72 @@
     Map
 */
 #map {
+	margin-top: 20px; 
     min-height: 500px; 
+	border-bottom: 2px solid lighten($simplot-gray, 50%);
+}
+.map-bar {
+	border-top: 2px solid lighten($simplot-gray, 50%);
+	padding-bottom: 0; 
+}
+.gm-style-iw > div {
+	min-width: 100px;
+	min-height: 50px; 
+	& > div {
+		padding-top: 2px; 
+		overflow: visible !important; 
+	}
+	a {
+		color: $simplot-gray; 
+		display: inline-block;
+    	margin-top: 5px;
+		text-decoration: none;
+		line-height: 20px;
+		@include transition(all 0.35s ease-in-out 0s);
+		&:hover {
+			color: lighten($simplot-gray, 25%);
+		}
+	}
+}
+.badge {
+	background-color: $simplot-gold; 
+	margin-right: 5px;
+	display: inline-block;
+	margin-top: -3px; 
+}
+/*
+	SEARCH
+*/
+#custom-search-input{
+    padding: 3px;
+    border: solid 1px #E4E4E4;
+    border-radius: 6px;
+    background-color: #fff;
+}
+
+#custom-search-input input{
+    border: 0;
+    box-shadow: none;
+}
+
+#custom-search-input button{
+    margin: 2px 0 0 0;
+    background: none;
+    box-shadow: none;
+    border: 0;
+    color: $simplot-gray;
+    padding: 0 8px 0 10px;
+    border-left: solid 1px #ccc;
+}
+
+#custom-search-input button:hover{
+    border: 0;
+    box-shadow: none;
+    border-left: solid 1px #ccc;
+}
+
+#custom-search-input .glyphicon-search{
+    font-size: 23px;
 }
 /*
     CAROUSEL
@@ -483,7 +548,7 @@ figure.effect-sadie {
 .event-logo {
     max-width: 100px; 
 }
-.intern {
+.intern, .apply-video {
     width: 50%;
     background: url(../images/intern_video.jpg) no-repeat;
     height: 350px;
@@ -499,10 +564,126 @@ figure.effect-sadie {
         left: 30%;
     }
 }
+.apply-video {
+	background: url(../images/mockup-macbook.jpg) no-repeat;
+}
+/*
+    APPLY PAGE OPTIONS
+*/
+.job-option {
+	.effect-sadie {
+		min-height: 400px; 
+	}
+	figure {
+		background: $simplot-gray !important; 
+		img {
+			opacity: .4; 
+		}
+		&.hover {
+			figcaption {
+				transform: translate3d(0,15%,0) translate3d(0,-40px,0);
+			}
+		}
+	}
+	figcaption {
+		margin-top: 15%;
+		@include transition(all 0.35s ease-in-out 0s);
+	}
+	figcaption::before {
+		background: transparent !important;
+		opacity: 0; 
+	}
+	.outline {
+		background: lighten($light-slate, 20%);
+		margin: 20px; 
+		padding: 20px; 
+		border: solid 2px $gray-light; 
+		@include border-radius(5px); 
+		@include transition(all 0.35s ease-in-out 0s);
+		&.hover {
+			background: lighten($light-slate, 15%);
+		}
+	}
+	.small-text {
+		display: block;
+		font-size: $font-size-xxx-large; 
+		margin-top: 20px; 
+	}
+	.large-text {
+		display: block;
+		font-size: $font-size-super-large;
+		margin-bottom: 20px; 
+		font-weight: 600; 
+	}
+	.job-option-icon {
+		i {
+			font-size: $font-size-super-huge * 2;
+			color: $simplot-gold; 
+		}
+	}
+	.arrow {
+		font-size: $font-size-xxx-large; 
+	}
+}
+.app-list-title {
+	margin-top:0; 
+}
+.application-list {
+	padding: 0; 
+	li {
+		list-style: none; 
+		font-size: $font-size-large; 
+		font-weight: 600;
+		line-height:45px;
+		a {
+			text-decoration: underline;
+			color: $simplot-gray; 
+			@include transition(all 0.35s ease-in-out 0s);
+			&:hover {
+				color: lighten($simplot-gray, 25%);
+			}
+		}
+	}
+	.app-list-number {
+		text-align: center; 
+		display: inline-block;
+		@include border-radius(50%);
+		background: $simplot-gold; 
+		width: 50px;
+		height: 50px;
+		color: $white;
+		font-size: $font-size-large; 
+		font-weight: 900; 
+		margin: 5px 10px 5px 0; 
+		border: 2px solid $white; 
+		&:nth-of-type(1) {
+			//margin-top:0; 
+		}
+	}
+	.very-small-text {
+		font-size: $font-size-small; 
+		font-weight: 100; 
+	}
+}
+.questions {
+	margin-top: 20px; 
+	display: inline-block;
+	font-size: $font-size-large; 
+	font-weight: 100;
+	a {
+		text-decoration: underline;
+		color: $simplot-gray; 
+		&:hover {
+			color: lighten($simplot-gray, 25%);
+		}
+	}
+}
+.app-list-title, .application-list, .questions {
+	margin-left: 20px; 
+}
 /*
     MOSAIC STYLES
 */
-
 #mosaic {
     color: $white; 
     .mos-heading {

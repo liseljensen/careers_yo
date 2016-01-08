@@ -41,6 +41,11 @@ $mos-padding:           10% 0 0 10%;
     right: 0; 
 }
 //Mix Ins
+@mixin border-radius($border-radius...) {
+    -webkit-border-radius: $border-radius;
+	-moz-border-radius: $border-radius;
+	border-radius: $border-radius;
+}
 
 @mixin transition($transition...) {
     -moz-transition:    $transition;

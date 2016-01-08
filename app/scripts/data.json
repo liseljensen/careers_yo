@@ -1,8 +1,9 @@
 [
 	{
-		"name" : "Grand_Forks",
-		"long" : "47.9331123",
-		"lat" : "-97.084086",
+		"name" : "grandForks",
+		"displayName": "Grand Forks",
+		"displayState": "ND",
+		"address": "3630 Gateway Dr Grand Forks, ND 58203",
 		"postings" : [
 			{
 				"position" : "Raw Product Storage Assistant",
@@ -18,9 +19,10 @@
 
 	},
 	{
-		"name" : "Boise",
-		"long" : "43.6163606",
-		"lat" : "-116.2078246",
+		"name" : "boise",
+		"displayName" : "Boise",
+		"displayState" : "ID",
+		"address" : "999 W Main St #1400 Boise, ID 83702",
 		"postings" : [
 			{
 				"position" : "Accounting Technician",

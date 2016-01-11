@@ -252,6 +252,13 @@
 .map-bar {
 	border-top: 2px solid lighten($simplot-gray, 50%);
 	padding-bottom: 0; 
+	.btn-default {
+		border-color: $light-slate; 
+		i {
+			display: inline-block;
+			margin-right: 10px; 
+		}
+	}
 }
 .gm-style-iw > div {
 	min-width: 100px;
@@ -270,6 +277,9 @@
 		&:hover {
 			color: lighten($simplot-gray, 25%);
 		}
+		&:focus {
+			outline: none; 
+		}
 	}
 }
 .badge {
@@ -282,10 +292,12 @@
 	SEARCH
 */
 #custom-search-input{
-    padding: 3px;
-    border: solid 1px #E4E4E4;
-    border-radius: 6px;
+    padding: 1px;
+    border: solid 1px $light-slate;
+    border-radius: 4px;
     background-color: #fff;
+	margin-top: 15px; 
+	margin-bottom: 15px; 
 }
 
 #custom-search-input input{
@@ -306,11 +318,97 @@
 #custom-search-input button:hover{
     border: 0;
     box-shadow: none;
-    border-left: solid 1px #ccc;
+    border-left: solid 1px $light-slate;
 }
 
 #custom-search-input .glyphicon-search{
-    font-size: 23px;
+    font-size: $font-size-med;
+}
+/*
+	MODAL FULL SCREEN
+*/
+
+.modal-fullscreen {
+  background: transparent;
+  
+  .modal-header {
+	  border-bottom: none; 
+	  text-align: center;
+	  font-weight: 900; 
+	  h3 {
+		  margin-top: 20px; 
+	  }
+  }
+	.modal-body.table {
+		@include transform(translate(20%,0)); 
+		text-align: left; 
+	}
+	.close {
+		color: $white; 
+		opacity: .8;
+	}
+	.table-hover > tbody > tr:hover {
+		background: $simplot-gray; 
+	}
+	.th-inner.sortable.both {
+		cursor: pointer; 
+	}
+	td {
+		cursor: default; 
+	}
+	a {
+		color: $white; 
+		text-decoration: underline; 
+	}
+	.both {
+    	background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAATCAQAAADYWf5HAAAAkElEQVQoz7X QMQ5AQBCF4dWQSJxC5wwax1Cq1e7BAdxD5SL+Tq/QCM1oNiJidwox0355mXnG/DrEtIQ6azioNZQxI0ykPhTQIwhCR+BmBYtlK7kLJYwWCcJA9M4qdrZrd8pPjZWPtOqdRQy320YSV17OatFC4euts6z39GYMKRPCTKY9UnPQ6P+GtMRfGtPnBCiqhAeJPmkqAAAAAElFTkSuQmCC');
+	}
+	.sortable {
+		cursor: pointer;
+    	background-position: right;
+    	background-repeat: no-repeat;
+    	padding-right: 30px;
+	}
+}
+.modal-fullscreen .modal-content {
+  background: transparent;
+  border: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  color: $white; 
+}
+.modal-backdrop {
+  background: $simplot-gray;
+}
+.modal-backdrop.in {
+  opacity: .9;
+  filter: alpha(opacity=97);
+}
+.fixed-table-loading {
+	display:none; 
+}
+/* .modal-fullscreen size: we use Bootstrap media query breakpoints */
+
+.modal-fullscreen .modal-dialog {
+  margin: 0;
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .modal-fullscreen .modal-dialog {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .modal-fullscreen .modal-dialog {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .modal-fullscreen .modal-dialog {
+     width: 1170px;
+  }
 }
 /*
     CAROUSEL

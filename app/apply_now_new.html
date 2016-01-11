@@ -142,20 +142,21 @@
 			<div class="row">
 				<div class="col-md-7">
 					<h2 class="subpage-heading">Search for Open Postions</h2>
-					<p>Use the map below or login to the Career Portal to search for open positions.</p>
+					<p>To search for open positions, use the map below or login to the <a href="#">Career Portal</a>.</p>
 				</div>
 
 				<div class="col-md-3 pull-right">
 					<div id="custom-search-input">
 						<div class="input-group col-md-12">
-							<input type="text" name="geo-search" id="geo-search" class="form-control input-lg" placeholder="Buscar" />
+							<input type="text" name="geo-search" id="geo-search" class="form-control" placeholder="Search Locations" />
 							<span class="input-group-btn">
-								<button class="btn btn-info btn-lg" type="button">
+								<button class="btn btn-info" type="button">
 									<i class="glyphicon glyphicon-search"></i>
 								</button>
 							</span>
 						</div>
 					</div>
+					<button id="useLocation" type="button" class="btn btn-default btn-block"><i class="fa fa-location-arrow"></i>Use My Current Location</button>
 				</div>
 			</div>
 		</div>
@@ -372,6 +373,7 @@
 	<!-- bower:js -->
 	<script src="/bower_components/jquery/dist/jquery.js"></script>
 	<script src="/bower_components/packery/dist/packery.pkgd.js"></script>
+	<script src="/bower_components/bootstrap-table/src/bootstrap-table.js"></script>
 	<!-- endbower -->
 	<!-- endbuild -->
 
@@ -462,7 +464,7 @@
 											return "Position"
 										}
 									})();
-									var infowindowConent = '<b>' + data.displayName + ", " + data.displayState + '</b><br><a href="#"><span class="badge">' + data.postings.length + '</span>' + position + '</a>';
+									var infowindowConent = '<b>' + data.displayName + ", " + data.displayState + '</b><br><a href=#" data-toggle="modal" data-target="#' + data.name + '"><span class="badge">' + data.postings.length + '</span>' + position + '</a>';
 
 										marker.addListener('click', function () {
 											infowindow.setContent(infowindowConent);
@@ -475,16 +477,61 @@
 							});
 						})(geocoder, map);
 
-						//Build Modal body content with job listings
-						var buildBodyContent = "";
-
-						$.each(data.postings, function (i, posting) {
-							var item = '<a href="https://jrsextdev.simplot.com:1443/prodhcm/CandidateSelfService/controller.servlet?dataarea=prodhcm&context.session.key.HROrganization=JRS&context.session.key.JobBoard=EXTERNALNEW&context.session.key.noheader=true&JobPost=' + posting.jobPost + '&JobReq=' + posting.jobID + '" class="list-group-item" target="_blank">' + posting.position + '<i class="fa fa-chevron-circle-right pull-right"></i></a>'
-							buildBodyContent += item;
-						});
+//						$.each(data.postings, function (i, posting) {
+//							var item = '<a href="https://jrsextdev.simplot.com:1443/prodhcm/CandidateSelfService/controller.servlet?dataarea=prodhcm&context.session.key.HROrganization=JRS&context.session.key.JobBoard=EXTERNALNEW&context.session.key.noheader=true&JobPost=' + posting.jobPost + '&JobReq=' + posting.jobID + '" class="list-group-item" target="_blank">' + posting.position + '<i class="fa fa-chevron-circle-right pull-right"></i></a>'
+//							buildBodyContent += item;
+//						});
 
 						//Build Modal and insert job listings
-						var buildModal = '<div class="modal fade" id="' + data.name + '" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">' + '<div class="modal-dialog" role="document">' + '<div class="modal-content">' + '<div class="modal-header">' + '<button type="button" class="close" data-dismiss="modal" aria-label="Close">' + '<span aria-hidden="true">&times;</span></button>' + '<h4 class="modal-title" id="myModalLabel">' + 'Available Postions for ' + data.name + '</h4></div>' + '<div class="modal-body">' + '<div class="list-group">' + buildBodyContent + '</div>' + '</div' + '</div></div></div>'
+						var buildModal = '<div class="modal modal-fullscreen fade" id="' + data.name + '" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">' + '<div class="modal-dialog" role="document">' + '<div class="modal-content">' + '<div class="modal-header">' + '<button type="button" class="close" data-dismiss="modal" aria-label="Close">' + '<span aria-hidden="true">&times;</span></button>' + '<h3 class="modal-title" id="myModalLabel">' + 'Available Postions for ' + data.displayName + ', ' + data.displayState + '</h3></div>' + '<div class="modal-body" id="' + data.name + '-table"></div></div></div></div>'
+
+						$('body').append(buildModal);
+						
+						var $table = $('#' + data.name +'-table');
+						
+						$table.bootstrapTable({
+							table: [{
+								striped: true	
+							}],
+							columns: [{
+								field: 'postDate',
+								title: 'Date Posted',
+								sortable: true
+							},{
+								field: 'jobID',
+								title: 'Job ID',
+								sortable: true
+							}, {
+								field: 'jobTitle',
+								title: 'Job Title',
+								sortable: true
+							}, {
+								field: 'category',
+								title: 'Category',
+								sortable: true
+							}, {
+								field: 'link',
+								title: '',
+								sortable: true
+							}]
+						});
+						var row = []; 
+						function addRows(){
+							
+							$.each(data.postings, function (i, posting) {
+								row.push({
+									postDate: posting.postDate,
+									jobID: posting.jobID,
+									jobTitle: posting.position,
+									category: posting.category,
+									link: '<a href="https://jrsextdev.simplot.com:1443/prodhcm/CandidateSelfService/controller.servlet?dataarea=prodhcm&context.session.key.HROrganization=JRS&context.session.key.JobBoard=EXTERNALNEW&context.session.key.noheader=true&JobPost=' + posting.jobPost + '&JobReq=' + posting.jobID + '"target="_blank"> View Details </a>'
+								});
+
+							});
+							return row; 
+					   } 
+						
+						$table.bootstrapTable('append', addRows());
 
 					});
 				})
@@ -538,6 +585,19 @@
 					if(e.which == 13){//Enter key pressed
 						geoSearch(); 
 					}
+				});
+			
+				$('#useLocation').on('click', function(e){
+					function success(pos) {
+					  var crd = pos.coords;					  
+					  map.setCenter({lat: crd.latitude, lng: crd.longitude}); 
+					  map.setZoom(8);
+					};
+
+					function error(err) {
+					  console.warn('ERROR(' + err.code + '): ' + err.message);
+					};
+					navigator.geolocation.getCurrentPosition(success, error, {enableHighAccuracy: true, timeout: 5000, maximumAge: 0});
 				});
 		}
 	</script>

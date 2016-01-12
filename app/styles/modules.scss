@@ -78,6 +78,37 @@
             }
         }
     }
+	.navbar-toggle {
+		margin-right: -15px; 
+	}
+	@media (max-width: $screen-sm-min) {
+		#navbar {
+			margin-top: 25px; 
+		}
+		.navbar-toggle {
+			margin-top: 30px; 
+		}
+		li {
+			padding: 1px 0 10px; 
+			&.active {
+				background: lighten($light-slate, 10%);
+				& > a {
+					border-bottom: none; 
+				}
+			}
+			&:hover, &:active, &:focus {
+				background: lighten($light-slate, 5%);
+			}
+		} 
+	}
+	@media (max-width: 425px){
+		#navbar {
+			margin-top: 0; 
+		}
+		.navbar-brand {
+			max-width: 200px;
+		}
+	}
 }
 /*
     HEADERS
@@ -170,6 +201,25 @@
     a {
         font-size: $font-size-large;
     }
+	@media (max-width:550px) {
+		right: 10%; 
+	}
+}
+/*
+    RESPONSIVE VIDEO
+*/
+.videoWrapper {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+	iframe {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
 }
 /*
     OVERLAYS
@@ -820,6 +870,25 @@ figure.effect-sadie {
             }
         }
     }
+	@media (max-width: $screen-sm-min) {
+		.mos-heading {
+        font-size: $font-size-super-large;
+		}
+		.mos-subheading {
+			font-size: $font-size-x-large;
+		}
+		.mos-img {
+			display: none; 
+		}
+		.mos-figure {
+			padding: 10% 10% 10% 100px;
+		}
+	}
+	@media (max-width: 550px) {
+		.mos-figure {
+			padding: 10%;
+		}
+	}
 }
 .mos-figure {
     padding: 10%; 
@@ -867,6 +936,31 @@ figure.effect-sadie {
             }
         }
     }   
+	@media (max-width: $screen-sm-min) {
+		width: 100%; 
+		height: 300px;
+		.mos-wwd-overlay {
+			.mos-wwd-figure {
+				margin: 5% 0 1% 100px; 
+			}
+		}
+	}
+	@media (max-width: 550px) {
+		.mos-wwd-overlay {
+			.mos-wwd-figure {
+				margin: 5% 0 1% 10%; 
+			}
+		}
+	}
+	@media (max-width: 425px) {
+		.mos-wwd-overlay {
+			.mos-wwd-figure {
+				.mos-heading {
+					 margin: 5px 0; 
+				}	
+			}
+		}
+	}
 }
 
 #mos-why-simplot {
@@ -878,7 +972,37 @@ figure.effect-sadie {
             display: inline-block;
         }
     }
-    
+	@media (max-width: $screen-sm-min) {
+		height: 300px;
+		.mos-link {
+			right: 100px; 
+			bottom: -280px; 
+		}
+		.quote {
+			padding-left: 70px !important;
+			margin-left: 100px; 
+			background: url(../images/quotes.png) no-repeat 0 27%;
+		}
+	}
+	@media (max-width: 550px) {
+		.quote {
+			margin-left: 10%; 
+		}
+		.mos-link {
+			right: 10%; 
+		}
+	}
+	@media (max-width: 425px) {
+		.quote {
+			padding-left: 70px !important;
+			margin-left: 10%; 
+			background: url(../images/quotes.png) no-repeat 0 15%;
+			font-size: $font-size-med;
+			.sig {
+				font-size: $font-size-small; 
+			}
+		}
+	}
 }
 
 #mos-apply {
@@ -894,6 +1018,21 @@ figure.effect-sadie {
             @include transform(translate(15px,0));
         }
     }
+	@media (max-width: $screen-sm-min) {
+		height: 300px;
+		.mos-link {
+			bottom: -280px; 
+		}
+		.mos-figure {
+			padding: 10% 10% 10% 100px;
+		}
+	}
+	@media (max-width:550px){
+		.mos-figure {
+			padding: 10%;
+		}
+	}
+	
 }
 
 #mos-student-center {

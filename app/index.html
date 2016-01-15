@@ -22,6 +22,11 @@
     <!-- build:js scripts/vendor/modernizr.js -->
     <script src="/bower_components/modernizr/modernizr.js"></script>
     <!-- endbuild -->
+	  
+	 <!--[if lt IE 9]>
+      <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
     
   </head>
   <body>
@@ -31,7 +36,7 @@
 
     <div class="container-95 container-fluid">
       <div class="header">
-        <div id="global-nav">
+        <div id="global-nav" class="hidden-sm">
           <nav class="navbar navbar-default" role="navigation">
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right">
@@ -66,7 +71,7 @@
                 <a class="navbar-brand" href="index.html"><img src="images/logo.png" class="img-responsive" alt="Simplot Logo" /></a>
               </div>
               <div id="navbar" class="navbar-collapse collapse">
-                <ul class="nav navbar-nav navbar-right">
+                <ul class="nav navbar-nav">
                   <li id="home" class="active"><a href="index.html">Home</a></li>
                   <li id="what_we_do"><a href="subpages.html?page=what_we_do">What We Do</a></li>
                   <li id="why_simplot"><a href="subpages.html?page=why_simplot">Why Simplot</a></li>
@@ -80,7 +85,7 @@
       </div>
         <div id="mosaic" class="row">
             <!-- WHAT WE DO -->
-            <div id="mos-wwd" class="item col-md-5 col-sm-5 col-xs-12 animated fadeIn delay-1 duration-one">
+            <div id="mos-wwd" class="item col-lg-5 col-md-7 col-sm-5 col-xs-12 animated fadeIn delay-1 duration-one">
                 <div class="overlay mos-wwd-overlay">
                     <figure class="mos-figure mos-wwd-figure">
                         <span class="mos-subheading animated fadeIn delay-3 duration-one">We are driven to</span>
@@ -93,7 +98,7 @@
                 </div>
             </div>
             <!-- WHY SIMPLOT -->
-            <div id="mos-why-simplot" class="item col-md-7 col-sm-6 col-xs-12 animated fadeIn delay-2 duration-one">
+            <div id="mos-why-simplot" class="item col-lg-7 col-md-7 col-sm-6 col-xs-12 animated fadeIn delay-2 duration-one">
                 <div class="row">
                     <div class="col-md-12">
                         <div class="col-md-7 col-sm-12 col-xs-12 visible">
@@ -113,10 +118,10 @@
             <div id="mos-apply" class="item col-md-7 col-sm-6 col-xs-12">
                 <div class="row apply_now animated fadeIn delay-3 duration-one">
                     <div class="col-md-12">
-                        <div class="col-md-5">
+                        <div class="col-md-5 col-sm-5">
                             <img src="images/potato_heart.jpg" class="mos-img pull-left" alt="Picture of a potato shaped heart" />
                         </div>
-                        <div class="col-md-7 pull-left">
+                        <div class="col-md-7 col-sm-7 pull-left">
                             <figure class="mos-figure animated fadeIn delay-4 duration-one">
                                 <h1 class="mos-heading">Join us</h1><span class="mos-subheading">in our mission to help feed the world's population.</span>
                             </figure>

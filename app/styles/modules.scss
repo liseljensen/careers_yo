@@ -42,6 +42,9 @@
             padding-right:0; 
        }
     }
+	@media (max-width: $screen-sm-max) {
+		display:none; 
+	}
 }
 #main-nav {
     font-size: $font-size-base;
@@ -84,6 +87,24 @@
 	.nav.navbar-nav{
 		float: right;
 	}
+	@media (max-width: $screen-md-max) {
+		.navbar-brand {
+			max-width: 250px;
+		}
+		#navbar {
+			.navbar-nav {
+				margin-top:0;
+				margin-bottom:0; 
+			}
+		}
+	}
+	@media (max-width: 1100px) {
+		#navbar {
+			.navbar-nav {
+				margin: 15px 0; 
+			}
+		}
+	}
 	@media (max-width: $screen-sm-max) {
 		.navbar-header {
 			margin-top:0; 
@@ -96,15 +117,12 @@
 				font-size: $font-size-med;
 				float: none;
 				display: inline-block;
-				margin: 15px 0; 
 			}
 		}
 		li {
 			padding: 1px 0 5px; 
 		}
-		.navbar-brand {
-			max-width: 250px;
-		}
+		
 	}
 	@media (max-width: 936px){
 		#navbar{
@@ -114,14 +132,11 @@
 		}
 	}
 	@media (max-width: $screen-xs-max) {
-		.navbar-header {
-			margin-top: -50px; 
-		}
 		#navbar {
 			margin-left: 0;
-			margin-top: 25px; 
+			border: none; 
 			.navbar-nav {
-				margin: 15px 0 15px -15px;
+				width: 100%; 
 			}
 		}
 		.navbar-toggle {
@@ -138,11 +153,6 @@
 			&:hover, &:active, &:focus {
 				background: lighten($light-slate, 5%);
 			}
-		} 
-	}
-	@media (max-width: 425px){
-		#navbar {
-			margin-top: 0; 
 		}
 		.navbar-brand {
 			max-width: 200px;
@@ -910,12 +920,16 @@ figure.effect-sadie {
         }
     }
 	@media (max-width: $screen-md-max) {
-
-	}
-	@media (max-width: $screen-sm-max) {
 		.mos-img {
 			display: none; 
 		}
+		.mos-link {
+			right: 10% !important; 
+			bottom: 20px; 
+		}
+	}
+	@media (max-width: $screen-sm-max) {
+		
 		.mos-figure {
 			margin: 10% 0;
 			padding: 0 10%;
@@ -926,10 +940,7 @@ figure.effect-sadie {
 		.mos-subheading {
 			font-size: $font-size-x-large;
 		}
-		.mos-link {
-			right: 10% !important; 
-			bottom: 20px; 
-		}
+		
 	}
 	@media (max-width: $screen-xs-max) {
 		.mos-heading {
@@ -1032,12 +1043,16 @@ figure.effect-sadie {
     }
 	@media (max-width: $screen-md-max) { 
 		height: 325px; 
+		.quote {
+			margin-top: 10%; 
+			padding-top: 0; 
+			padding-left: 70px !important;
+			margin-left: 10%; 
+			background: url(../images/quotes.png) no-repeat;
+		}
 	}
 	@media (max-width: $screen-sm-max) {
 		@include size (50%, 450px);
-		.mos-link {
-			bottom: -425px; 
-		}
 		.quote {
 			margin-top: 20%; 
 			padding-left: 70px !important;
@@ -1047,9 +1062,6 @@ figure.effect-sadie {
 	}
 	@media (max-width: $screen-xs-max) {
 		@include size (100%, 300px);
-		.mos-link {
-			bottom: -280px; 
-		}
 		.quote {
 			margin-top: 10%; 
 		}
@@ -1071,25 +1083,21 @@ figure.effect-sadie {
     }
 	@media (max-width: $screen-md-max) { 
 		height: 325px;
-	}
-	@media (max-width: $screen-sm-max) {
-		width: 100%; 
 		.mos-figure {
 			margin: 10% 0;
 			padding: 0 10%;
 		}
-		.mos-link {
-			bottom: -300px; 
-			right: 5% !important;
-		}
+	}
+	@media (max-width: $screen-sm-max) {
+		width: 100%; 
 		.mos-img {
 			display: block; 
 		}
+		.mos-link {
+			right: 5% !important; 
+		}
 	}
 	@media (max-width: $screen-xs-max) {
-		.mos-link {
-			bottom: -280px; 
-		}
 		.mos-img {
 			display:none; 
 		}

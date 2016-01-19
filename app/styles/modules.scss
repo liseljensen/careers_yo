@@ -22,7 +22,6 @@
 .navbar.navbar-default {
     background: none;
     border: none; 
-    margin-bottom: 0; 
     .navbar-nav > li {
         & > a {
             color: $simplot-gray; 
@@ -37,10 +36,8 @@
 }
 #global-nav {
     font-size: $font-size-small;
-    li:last-child {
-       & > a {
-            padding-right:0; 
-       }
+    .navbar {
+        margin-bottom: 0; 
     }
 	@media (max-width: $screen-sm-max) {
 		display:none; 
@@ -50,7 +47,10 @@
     font-size: $font-size-base;
     font-weight: 600; 
     .navbar-header {
-        margin-top: -50px; 
+        margin-top: -40px; 
+    }
+    .navbar-collapse {
+        padding-right: 0; 
     }
     li:last-child {
        & > a {
@@ -108,6 +108,7 @@
 	@media (max-width: $screen-sm-max) {
 		.navbar-header {
 			margin-top:0; 
+            float: none;
 		}
 		#navbar {
 			margin-left: -30px;
@@ -119,6 +120,11 @@
 				display: inline-block;
 			}
 		}
+        .navbar-brand {
+            float: none;
+            margin: 14px auto 0; 
+            display: block; 
+        }
 		li {
 			padding: 1px 0 5px; 
 		}
@@ -156,6 +162,9 @@
 		}
 		.navbar-brand {
 			max-width: 200px;
+            float: left;
+            display: inline; 
+            margin-left: -15px; 
 		}
 	}
 }
@@ -955,13 +964,13 @@ figure.effect-sadie {
 	}
 	@media (max-width: 374px) {
 		.mos-heading {
-        	font-size: $font-size-xxx-large;
+        	font-size: $font-size-xxxx-large;
 		}
 		.mos-subheading, .quote {
-			font-size: $font-size-med;
+			font-size: $font-size-x-large;
 		}
 		.quote .sig {
-			font-size: $font-size-small;
+			font-size: $font-size-med;
 		}
 	}
 }
@@ -1119,12 +1128,23 @@ figure.effect-sadie {
 
 footer {
     font-size: $font-size-x-small; 
-    padding-bottom: 20px; 
+    padding: 40px 0; 
     .navbar {
         font-size: $font-size-small;
     }
+    .col-md-4:nth-of-type(1) {
+        padding-left:0; 
+    }
     &.subpage-footer {
         padding: 50px 0; 
+    }
+    #global-nav-mobile {
+        ul {
+            float:right;
+            li {
+                text-align: right; 
+            }
+        }
     }
 	@media (max-width: $screen-sm-max) {
 		.navbar {

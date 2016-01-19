@@ -162,6 +162,27 @@ $(function() {
                     
                 }
             });
-        }   
+        }
+
+    var $window = $(window),
+        navAdded = false;
+
+    function checkWidth() {
+        var visible = $('#global-nav').is(':visible');
+        
+        if (!(visible) && (navAdded === false)) {
+            var globalNav = $('#global-nav > .navbar').clone();
+            $('#global-nav-mobile').append(globalNav);
+            navAdded = true;
+        }
+        else if((visible) && (navAdded === true)) {
+            $('#global-nav-mobile').empty(); 
+            navAdded = false; 
+        }
+    }
+    // Execute on load
+    checkWidth();
+    // Bind event listener
+    $(window).resize(checkWidth);
 });
 

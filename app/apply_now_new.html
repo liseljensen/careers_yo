@@ -30,29 +30,6 @@
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 	<div class="header fixed">
-		<div class="container" id="global-nav">
-			<nav class="navbar navbar-default" role="navigation">
-				<div class="navbar-collapse collapse">
-					<ul class="nav navbar-nav navbar-right">
-						<li class="node_about level_1 has_children first_child">
-							<a href="http://www.simplot.com/about">About Simplot</a>
-						</li>
-						<li class="node_sustainability level_1 has_children">
-							<a href="http://www.simplot.com/sustainability">Sustainability</a>
-						</li>
-						<li class="node_international level_1">
-							<a href="http://www.simplot.com/international">International</a>
-						</li>
-						<li class="node_community_involvement level_1">
-							<a href="http://www.simplot.com/community_involvement">Community Involvement</a>
-						</li>
-						<li class="node_news level_1 has_children last_child">
-							<a href="http://www.simplot.com/news">News</a>
-						</li>
-					</ul>
-				</div>
-			</nav>
-		</div>
 		<div class="container" id="main-nav">
 			<nav class="navbar navbar-default">
 				<div class="navbar-header">
@@ -346,24 +323,8 @@
 	</section>
 
 	<section>
-		<footer class="container text-center subpage-footer">
-			<nav class="navbar navbar-default">
-				<ul class="nav navbar-nav">
-					<li><a href="http://www.simplot.com/contact_us">Contact Us</a></li>
-
-					<li><a href="http://www.simplot.com/copyright">Copyright</a></li>
-
-					<li><a href="http://www.simplot.com/privacy_policy">Privacy Policy</a></li>
-
-					<li><a href="http://www.simplot.com/terms_conditions">Terms &amp; Conditions</a></li>
-
-					<li><a href="http://employee.simplot.com/" target="_blank">Employee Space</a></li>
-					<li><a href="https://simplotscholarships.versaic.com/" target="_blank">Scholarships</a></li>
-					<li><a href="http://www.simplot.com" target="_blank">www.simplot.com</a></li>
-					<li><a href="http://www.facebook.com/jrsimplotcompany" target="_blank"><i class="fa fa-facebook"></i></a></li>
-				</ul>
-			</nav>
-			© 2015 J.R. Simplot Company
+		<footer class="container subpage-footer">
+			
 		</footer>
 	</section>
 
@@ -399,7 +360,8 @@
 	<script src="scripts/jquery.viewport.mini.js"></script>
 	<script src="scripts/main.js"></script>
 	<!-- endbuild -->
-
+    <script src="http://www.simplot.com/services/news_service"></script>
+    
 	<script src="scripts/map_styles.js"></script>
 	<script>
 		var image = 'images/marker-potatoes.png';
@@ -423,21 +385,12 @@
 			map.setMapTypeId('map_style');
 
 
-
-
-			$.ajax({
-				beforeSend: function (xhr) {
-					if (xhr.overrideMimeType) {
-						xhr.overrideMimeType("application/json");
-					}
-				}
-			});
-
-			$.getJSON('scripts/data.json')
+			$.getJSON('data/data.json')
 				.done(function (json) {
 					var infowindow = new google.maps.InfoWindow();
-
+                    
 					$.each(json, function (key, data) {
+                        
 						var geocoder = new google.maps.Geocoder();
 
 						(function (geocoder, resultsMap) {
@@ -457,7 +410,7 @@
 									
 									var position = (function() {
 										if(data.postings.length > 1) {
-											console.log(data.postings.length);
+											//console.log(data.postings.length);
 											return "Positions"
 										}
 										else {
@@ -477,10 +430,6 @@
 							});
 						})(geocoder, map);
 
-//						$.each(data.postings, function (i, posting) {
-//							var item = '<a href="https://jrsextdev.simplot.com:1443/prodhcm/CandidateSelfService/controller.servlet?dataarea=prodhcm&context.session.key.HROrganization=JRS&context.session.key.JobBoard=EXTERNALNEW&context.session.key.noheader=true&JobPost=' + posting.jobPost + '&JobReq=' + posting.jobID + '" class="list-group-item" target="_blank">' + posting.position + '<i class="fa fa-chevron-circle-right pull-right"></i></a>'
-//							buildBodyContent += item;
-//						});
 
 						//Build Modal and insert job listings
 						var buildModal = '<div class="modal modal-fullscreen fade" id="' + data.name + '" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">' + '<div class="modal-dialog" role="document">' + '<div class="modal-content">' + '<div class="modal-header">' + '<button type="button" class="close" data-dismiss="modal" aria-label="Close">' + '<span aria-hidden="true">&times;</span></button>' + '<h3 class="modal-title" id="myModalLabel">' + 'Available Postions for ' + data.displayName + ', ' + data.displayState + '</h3></div>' + '<div class="modal-body"><table id="' + data.name + '-table" class="table-bordered"></table></div></div></div></div>'

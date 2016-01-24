@@ -1,15 +1,10 @@
-$icon-font-path: "../bower_components/bootstrap-sass/assets/fonts/bootstrap/";
-
-// bower:scss
-@import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
-@import "bower_components/components-font-awesome/scss/font-awesome.scss";
-// endbower
-
 //@import "variables.scss";
 @import "modules.scss";
 
 body {
     font-family: Arial, sans-serif;
+    background: $white !important;
+    color: $simplot-gray; 
 }
 
 h1, h2, h3, h4, h5, h6 {

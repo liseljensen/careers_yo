@@ -1,0 +1,1222 @@
+[
+    {
+        "location" : "A128 - RETAIL",
+        "locationDesc" : "SGS - Bakersfield, CA",
+        "address" : "19421 Creek Rd, Bakersfield, CA, 93314-8451, US",
+        "municipality" : "Bakersfield",
+        "stateprovince" : "CA",
+        "postalcode" : "93314-8451",
+        "country" : "US",
+        "postings" :  [
+            {
+                "jobPostTitle" : "Technical Services Representative",
+                "jobReq" : "3041",
+                "jobPost" : "3",
+                "jobID" : "3041",
+                "category" : "MARKETING",
+                "postBeginDate" : "01/20/2016",
+                "postEndDate" : "",
+                "jobPostURL" : "https://jrsext.simplot.com:1443/prodhcm/xmlhttp/shorturl.do?key=16G"
+                }
+            ]
+    },
+    {
+        "location" : "A55 - RETAIL",
+        "locationDesc" : "SGS - Colusa, CA",
+        "address" : "2947 State Highway 20, Colusa, CA, 95932, US",
+        "municipality" : "Colusa",
+        "stateprovince" : "CA",
+        "postalcode" : "95932",
+        "country" : "US",
+        "postings" :  [
+            {
+                "jobPostTitle" : "Crop Advisor (AgriBusiness - Sacramento Valley, CA)",
+                "jobReq" : "1641",
+                "jobPost" : "3",
+                "jobID" : "1641",
+                "category" : "SALES",
+                "postBeginDate" : "11/04/2015",
+                "postEndDate" : "",
+                "jobPostURL" : "https://jrsext.simplot.com:1443/prodhcm/xmlhttp/shorturl.do?key=SY"
+                }
+            ]
+    },
+    {
+        "location" : "A114 - RETAIL",
+        "locationDesc" : "SGS - Fresno, CA",
+        "address" : "205 E River Park Cir Ste 210, Fresno, CA, 93720-1541, US",
+        "municipality" : "Fresno",
+        "stateprovince" : "CA",
+        "postalcode" : "93720-1541",
+        "country" : "US",
+        "postings" :  [
+            {
+                "jobPostTitle" : "Agronomist (SGS-Northern California)",
+                "jobReq" : "2244",
+                "jobPost" : "3",
+                "jobID" : "2244",
+                "category" : "RESEARCH&DEVELOPMENT",
+                "postBeginDate" : "11/04/2015",
+                "postEndDate" : "",
+                "jobPostURL" : "https://jrsext.simplot.com:1443/prodhcm/xmlhttp/shorturl.do?key=S3"
+                },
+            {
+                "jobPostTitle" : "Water Logics Services Manager",
+                "jobReq" : "3017",
+                "jobPost" : "2",
+                "jobID" : "3017",
+                "category" : "MARKETING",
+                "postBeginDate" : "01/07/2016",
+                "postEndDate" : "",
+                "jobPostURL" : "https://jrsext.simplot.com:1443/prodhcm/xmlhttp/shorturl.do?key=15E"
+                },
+            {
+                "jobPostTitle" : "Field Technician - Water Logic Services",
+                "jobReq" : "3039",
+                "jobPost" : "3",
+                "jobID" : "3039",
+                "category" : "SALES",
+                "postBeginDate" : "01/20/2016",
+                "postEndDate" : "",
+                "jobPostURL" : "https://jrsext.simplot.com:1443/prodhcm/xmlhttp/shorturl.do?key=16E"
+                }
+            ]
+    },
+    {
+        "location" : "A08 - PLANT",
+        "locationDesc" : "Lathrop Plant -  Lathrop, CA",
+        "address" : "16777 Howland Rd, Lathrop, CA, 95330-0198, US",
+        "municipality" : "Lathrop",
+        "stateprovince" : "CA",
+        "postalcode" : "95330-0198",
+        "country" : "US",
+        "postings" :  [
+            {
+                "jobPostTitle" : "Electrician (AgriBusiness-Lathrop, CA)",
+                "jobReq" : "2899",
+                "jobPost" : "4",
+                "jobID" : "2899",
+                "category" : "MAINTENANCE",
+                "postBeginDate" : "11/05/2015",
+                "postEndDate" : "",
+                "jobPostURL" : "https://jrsext.simplot.com:1443/prodhcm/xmlhttp/shorturl.do?key=16C"
+                },
+            {
+                "jobPostTitle" : "Continuous Improvement Leader (AgriBusiness ? Lathrop, CA)",
+                "jobReq" : "2969",
+                "jobPost" : "3",
+                "jobID" : "2969",
+                "category" : "OPS / PROD",
+                "postBeginDate" : "12/11/2015",
+                "postEndDate" : "",
+                "jobPostURL" : "https://jrsext.simplot.com:1443/prodhcm/xmlhttp/shorturl.do?key=111"
+                },
+            {
+                "jobPostTitle" : "Instrumentation Technician (AgriBusiness-Lathrop, CA)",
+                "jobReq" : "3018",
+                "jobPost" : "3",
+                "jobID" : "3018",
+                "category" : "MAINTENANCE",
+                "postBeginDate" : "01/09/2016",
+                "postEndDate" : "",
+                "jobPostURL" : "https://jrsext.simplot.com:1443/prodhcm/xmlhttp/shorturl.do?key=15J"
+                }
+            ]
+    },
+    {
+        "location" : "A116 - RETAIL",
+        "locationDesc" : "SGS - Salinas, CA",
+        "address" : "746 Vertin Avenue, Salinas, CA, 93901, US",
+        "municipality" : "Salinas",
+        "stateprovince" : "CA",
+        "postalcode" : "93901",
+        "country" : "US",
+        "postings" :  [
+            {
+                "jobPostTitle" : "Shipping Receiving Coordinator (AgriBusiness-Salinas, CA)",
+                "jobReq" : "2843",
+                "jobPost" : "4",
+                "jobID" : "2843",
+                "category" : "DISTRIBUTN/LOGISTICS",
+                "postBeginDate" : "11/05/2015",
+                "postEndDate" : "",
+                "jobPostURL" : "https://jrsext.simplot.com:1443/prodhcm/xmlhttp/shorturl.do?key=UN"
+                }
+            ]
+    },
+    {
+        "location" : "A140 - RETAIL",
+        "locationDesc" : "SGS - Burlington, CO",
+        "address" : "19230 County Road 55, Burlington, CO, 80807-9510, US",
+        "municipality" : "Burlington",
+        "stateprovince" : "CO",
+        "postalcode" : "80807-9510",
+        "country" : "US",
+        "postings" :  [
+            {
+                "jobPostTitle" : "Market Manager (AgriBusiness-Burlington, CO)",
+                "jobReq" : "2801",
+                "jobPost" : "3",
+                "jobID" : "2801",
+                "category" : "SALES",
+                "postBeginDate" : "11/04/2015",
+                "postEndDate" : "",
+                "jobPostURL" : "https://jrsext.simplot.com:1443/prodhcm/xmlhttp/shorturl.do?key=RT"
+                },
+            {
+                "jobPostTitle" : "Office Coordinator I/II/III",
+                "jobReq" : "2985",
+                "jobPost" : "3",
+                "jobID" : "2985",
+                "category" : "ADMINISTRATIVE",
+                "postBeginDate" : "12/18/2015",
+                "postEndDate" : "",
+                "jobPostURL" : "https://jrsext.simplot.com:1443/prodhcm/xmlhttp/shorturl.do?key=11M"
+                }
+            ]
+    },
+    {
+        "location" : "A141 - RETAIL",
+        "locationDesc" : "SGS - Cheyenne Wells, CO",
+        "address" : "44905 County Road Q, Cheyenne Wells, CO, 80810, US",
+        "municipality" : "Cheyenne Wells",
+        "stateprovince" : "CO",
+        "postalcode" : "80810",
+        "country" : "US",
+        "postings" :  [
+            {
+                "jobPostTitle" : "Operations Supervisor I/II/III (AgriBusiness-Cheyenne Wells, CO)",
+                "jobReq" : "2856",
+                "jobPost" : "3",
+                "jobID" : "2856",
+                "category" : "OPS / PROD",
+                "postBeginDate" : "11/04/2015",
+                "postEndDate" : "",
+                "jobPostURL" : "https://jrsext.simplot.com:1443/prodhcm/xmlhttp/shorturl.do?key=RL"
+                }
+            ]
+    },
+    {
+        "location" : "A103 - RETAIL",
+        "locationDesc" : "SGS - Timnath, CO",
+        "address" : "5701 E Harmony Rd, Fort Collins, CO, 80528-9569, US",
+        "municipality" : "Fort Collins",
+        "stateprovince" : "CO",
+        "postalcode" : "80528-9569",
+        "country" : "US",
+        "postings" :  [
+            {
+                "jobPostTitle" : "Operations Support I/II/III (AgriBusiness ?Timnath, CO)",
+                "jobReq" : "2389",
+                "jobPost" : "3",
+                "jobID" : "2389",
+                "category" : "OPS / PROD",
+                "postBeginDate" : "11/04/2015",
+                "postEndDate" : "",
+                "jobPostURL" : "https://jrsext.simplot.com:1443/prodhcm/xmlhttp/shorturl.do?key=S1"
+                }
+            ]
+    },
+    {
+        "location" : "A59 - RETAIL",
+        "locationDesc" : "SGS - Ft Morgan, CO",
+        "address" : "17199 County Road 21, Fort Morgan, CO, 80701-7211, US",
+        "municipality" : "Fort Morgan",
+        "stateprovince" : "CO",
+        "postalcode" : "80701-7211",
+        "country" : "US",
+        "postings" :  [
+            {
+                "jobPostTitle" : "Intern - Crop Advisor (AgriBusiness - Colorado)",
+                "jobReq" : "1612",
+                "jobPost" : "3",
+                "jobID" : "1612",
+                "category" : "SALES",
+                "postBeginDate" : "11/06/2015",
+                "postEndDate" : "",
+                "jobPostURL" : "https://jrsext.simplot.com:1443/prodhcm/xmlhttp/shorturl.do?key=W9"
+                }
+            ]
+    },
+    {
+        "location" : "A01 - HQ",
+        "locationDesc" : "AgriBusiness Headquarters - Boise, ID",
+        "address" : "999 W Main St, Boise, ID, 83702-9000, US",
+        "municipality" : "Boise",
+        "stateprovince" : "ID",
+        "postalcode" : "83702-9000",
+        "country" : "US",
+        "postings" :  [
+            {
+                "jobPostTitle" : "Intern - Research Agronomy (AgriBusiness - Boise, ID)",
+                "jobReq" : "2923",
+                "jobPost" : "3",
+                "jobID" : "2923",
+                "category" : "RESEARCH&DEVELOPMENT",
+                "postBeginDate" : "11/04/2015",
+                "postEndDate" : "",
+                "jobPostURL" : "https://jrsext.simplot.com:1443/prodhcm/xmlhttp/shorturl.do?key=SC"
+                }
+            ]
+    },
+    {
+        "location" : "C01 - HQ",
+        "locationDesc" : "Corporate Headquarters - Boise, ID",
+        "address" : "999 W Main St Ste 1400, Boise, ID, 83702-9008, US",
+        "municipality" : "Boise",
+        "stateprovince" : "ID",
+        "postalcode" : "83702-9008",
+        "country" : "US",
+        "postings" :  [
+            {
+                "jobPostTitle" : "Senior Biotech Agronomy Manager HQ CP Building A",
+                "jobReq" : "2373",
+                "jobPost" : "3",
+                "jobID" : "2373",
+                "category" : "RESEARCH&DEVELOPMENT",
+                "postBeginDate" : "12/23/2015",
+                "postEndDate" : "",
+                "jobPostURL" : "https://jrsext.simplot.com:1443/prodhcm/xmlhttp/shorturl.do?key=14Z"
+                }
+            ]
+    },
+    {
+        "location" : "C12 - BUILDING",
+        "locationDesc" : "IT Building A - Boise, ID",
+        "address" : "5369 W Irving St, Boise, ID, 83706-1211, US",
+        "municipality" : "Boise",
+        "stateprovince" : "ID",
+        "postalcode" : "83706-1211",
+        "country" : "US",
+        "postings" :  [
+            {
+                "jobPostTitle" : "BioTech Regulatory Affairs Specialist - Corp. (Boise, ID)",
+                "jobReq" : "2604",
+                "jobPost" : "3",
+                "jobID" : "2604",
+                "category" : "RESEARCH&DEVELOPMENT",
+                "postBeginDate" : "11/06/2015",
+                "postEndDate" : "",
+                "jobPostURL" : "https://jrsext.simplot.com:1443/prodhcm/xmlhttp/shorturl.do?key=WA"
+                },
+            {
+                "jobPostTitle" : "Biotech Regulatory Affairs Manager - Corp. (Boise, ID)",
+                "jobReq" : "2846",
+                "jobPost" : "3",
+                "jobID" : "2846",
+                "category" : "RESEARCH&DEVELOPMENT",
+                "postBeginDate" : "11/06/2015",
+                "postEndDate" : "",
+                "jobPostURL" : "https://jrsext.simplot.com:1443/prodhcm/xmlhttp/shorturl.do?key=VY"
+                },
+            {
+                "jobPostTitle" : "Associate BioChem Scientist I/II OR BioChem Scientist - Corp. (Boise, ID)",
+                "jobReq" : "2878",
+                "jobPost" : "3",
+                "jobID" : "2878",
+                "category" : "RESEARCH&DEVELOPMENT",
+                "postBeginDate" : "11/06/2015",
+                "postEndDate" : "",
+                "jobPostURL" : "https://jrsext.simplot.com:1443/prodhcm/xmlhttp/shorturl.do?key=WI"
+                },
+            {
+                "jobPostTitle" : "Intern - Research Agronomy (Corporate - Boise, ID)",
+                "jobReq" : "2880",
+                "jobPost" : "3",
+                "jobID" : "2880",
+                "category" : "RESEARCH&DEVELOPMENT",
+                "postBeginDate" : "11/05/2015",
+                "postEndDate" : "",
+                "jobPostURL" : "https://jrsext.simplot.com:1443/prodhcm/xmlhttp/shorturl.do?key=TJ"
+                },
+            {
+                "jobPostTitle" : "BioTech Research Agronomist - Corp (Boise, ID)",
+                "jobReq" : "2904",
+                "jobPost" : "4",
+                "jobID" : "2904",
+                "category" : "RESEARCH&DEVELOPMENT",
+                "postBeginDate" : "11/03/2015",
+                "postEndDate" : "",
+                "jobPostURL" : "https://jrsext.simplot.com:1443/prodhcm/xmlhttp/shorturl.do?key=QU"
+                },
+            {
+                "jobPostTitle" : "BioTech Regulatory Compliance Specialist OR Manager (Corp. Boise, ID)",
+                "jobReq" : "2913",
+                "jobPost" : "3",
+                "jobID" : "2913",
+                "category" : "RESEARCH&DEVELOPMENT",
+                "postBeginDate" : "11/06/2015",
+                "postEndDate" : "",
+                "jobPostURL" : "https://jrsext.simplot.com:1443/prodhcm/xmlhttp/shorturl.do?key=V7"
+                },
+            {
+                "jobPostTitle" : "Intern - Plant Pathology (Corporate - Boise, ID)",
+                "jobReq" : "2931",
+                "jobPost" : "4",
+                "jobID" : "2931",
+                "category" : "RESEARCH&DEVELOPMENT",
+                "postBeginDate" : "11/13/2015",
+                "postEndDate" : "",
+                "jobPostURL" : "https://jrsext.simplot.com:1443/prodhcm/xmlhttp/shorturl.do?key=XP"
+                },
+            {
+                "jobPostTitle" : "Intern - Regulatory Compliance (Corporate - Boise, ID)",
+                "jobReq" : "2983",
+                "jobPost" : "3",
+                "jobID" : "2983",
+                "category" : "RESEARCH&DEVELOPMENT",
+                "postBeginDate" : "12/18/2015",
+                "postEndDate" : "",
+                "jobPostURL" : "https://jrsext.simplot.com:1443/prodhcm/xmlhttp/shorturl.do?key=12X"
+                },
+            {
+                "jobPostTitle" : "Intern - Molecular Research Assistant (Corporate - Boise, ID)",
+                "jobReq" : "2984",
+                "jobPost" : "3",
+                "jobID" : "2984",
+                "category" : "RESEARCH&DEVELOPMENT",
+                "postBeginDate" : "12/18/2015",
+                "postEndDate" : "",
+                "jobPostURL" : "https://jrsext.simplot.com:1443/prodhcm/xmlhttp/shorturl.do?key=12V"
+                },
+            {
+                "jobPostTitle" : "Intern - Communications and Marketing (Corporate - Boise, ID)",
+                "jobReq" : "2998",
+                "jobPost" : "3",
+                "jobID" : "2998",
+                "category" : "MARKETING",
+                "postBeginDate" : "12/28/2015",
+                "postEndDate" : "",
+                "jobPostURL" : "https://jrsext.simplot.com:1443/prodhcm/xmlhttp/shorturl.do?key=14W"
+                },
+            {
+                "jobPostTitle" : "Senior Seed Product Manager - Corp. (Boise, ID)",
+                "jobReq" : "3010",
+                "jobPost" : "3",
+                "jobID" : "3010",
+                "category" : "RESEARCH&DEVELOPMENT",
+                "postBeginDate" : "01/05/2016",
+                "postEndDate" : "",
+                "jobPostURL" : "https://jrsext.simplot.com:1443/prodhcm/xmlhttp/shorturl.do?key=157"
+                },
+            {
+                "jobPostTitle" : "BioTech Assistant or Associate Agronomist - Corp. (Boise, ID)",
+                "jobReq" : "3013",
+                "jobPost" : "3",
+                "jobID" : "3013",
+                "category" : "RESEARCH&DEVELOPMENT",
+                "postBeginDate" : "01/06/2016",
+                "postEndDate" : "",
+                "jobPostURL" : "https://jrsext.simplot.com:1443/prodhcm/xmlhttp/shorturl.do?key=15A"
+                },
+            {
+                "jobPostTitle" : "Intern - BioTech Business Development (Corporate - Boise, ID)",
+                "jobReq" : "3022",
+                "jobPost" : "3",
+                "jobID" : "3022",
+                "category" : "RESEARCH&DEVELOPMENT",
+                "postBeginDate" : "01/08/2016",
+                "postEndDate" : "",
+                "jobPostURL" : "https://jrsext.simplot.com:1443/prodhcm/xmlhttp/shorturl.do?key=15H"
+                }
+            ]
+    },
+    {
+        "location" : "C19 - BUILDING",
+        "locationDesc" : "IT Building D - Boise, ID",
+        "address" : "1301 N Orchard St Ste 200, Boise, ID, 83706-2200, US",
+        "municipality" : "Boise",
+        "stateprovince" : "ID",
+        "postalcode" : "83706-2200",
+        "country" : "US",
+        "postings" :  [
+            {
+                "jobPostTitle" : "Chief Information Officer - Boise, ID",
+                "jobReq" : "3019",
+                "jobPost" : "2",
+                "jobID" : "3019",
+                "category" : "EXECUTIVE",
+                "postBeginDate" : "01/12/2016",
+                "postEndDate" : "",
+                "jobPostURL" : "https://jrsext.simplot.com:1443/prodhcm/xmlhttp/shorturl.do?key=15T"
+                }
+            ]
+    },
+    {
+        "location" : "F01  - HQ",
+        "locationDesc" : "Food Group Headquarters - Boise, ID",
+        "address" : "6360 S Federal Way, Boise, ID, 83716-9281, US",
+        "municipality" : "Boise",
+        "stateprovince" : "ID",
+        "postalcode" : "83716-9281",
+        "country" : "US",
+        "postings" :  [
+            {
+                "jobPostTitle" : "Key Account Manager",
+                "jobReq" : "3029",
+                "jobPost" : "3",
+                "jobID" : "3029",
+                "category" : "SALES",
+                "postBeginDate" : "01/19/2016",
+                "postEndDate" : "",
+                "jobPostURL" : "https://jrsext.simplot.com:1443/prodhcm/xmlhttp/shorturl.do?key=169"
+                },
+            {
+                "jobPostTitle" : "Executive Chef, Marketing (FGHQ - Boise, ID)",
+                "jobReq" : "3033",
+                "jobPost" : "3",
+                "jobID" : "3033",
+                "category" : "MARKETING",
+                "postBeginDate" : "01/15/2016",
+                "postEndDate" : "",
+                "jobPostURL" : "https://jrsext.simplot.com:1443/prodhcm/xmlhttp/shorturl.do?key=15Z"
+                }
+            ]
+    },
+    {
+        "location" : "L29 - RETAIL",
+        "locationDesc" : "L&L - SWS - Burley, ID",
+        "address" : "1001 W Main St, Burley, ID, 83318-1627, US",
+        "municipality" : "Burley",
+        "stateprovince" : "ID",
+        "postalcode" : "83318-1627",
+        "country" : "US",
+        "postings" :  [
+            {
+                "jobPostTitle" : "Sales Associate  (L&L - Burley, ID)",
+                "jobReq" : "2944",
+                "jobPost" : "3",
+                "jobID" : "2944",
+                "category" : "SALES",
+                "postBeginDate" : "11/23/2015",
+                "postEndDate" : "",
+                "jobPostURL" : "https://jrsext.simplot.com:1443/prodhcm/xmlhttp/shorturl.do?key=YQ"
+                }
+            ]
+    },
+    {
+        "location" : "F05 - BUILDING",
+        "locationDesc" : "Tech Center - Caldwell, ID",
+        "address" : "16733 Simplot Blvd, Building E, Caldwell, ID, 83607, US",
+        "municipality" : "Caldwell",
+        "stateprovince" : "ID",
+        "postalcode" : "83607",
+        "country" : "US",
+        "postings" :  [
+            {
+                "jobPostTitle" : "Sensory Panelist",
+                "jobReq" : "3024",
+                "jobPost" : "3",
+                "jobID" : "3024",
+                "category" : "QUALITY",
+                "postBeginDate" : "01/20/2016",
+                "postEndDate" : "",
+                "jobPostURL" : "https://jrsext.simplot.com:1443/prodhcm/xmlhttp/shorturl.do?key=16K"
+                }
+            ]
+    },
+    {
+        "location" : "F63 - PLANT",
+        "locationDesc" : "Idaho Plant - Caldwell, ID",
+        "address" : "16733 Simplot Blvd, Caldwell, ID, 83607, US",
+        "municipality" : "Caldwell",
+        "stateprovince" : "ID",
+        "postalcode" : "83607",
+        "country" : "US",
+        "postings" :  [
+            {
+                "jobPostTitle" : "Plant Shift Manager (Food Group-Caldwell, ID)",
+                "jobReq" : "2883",
+                "jobPost" : "3",
+                "jobID" : "2883",
+                "category" : "OPS / PROD",
+                "postBeginDate" : "01/19/2016",
+                "postEndDate" : "",
+                "jobPostURL" : "https://jrsext.simplot.com:1443/prodhcm/xmlhttp/shorturl.do?key=167"
+                }
+            ]
+    },
+    {
+        "location" : "L32 - RETAIL",
+        "locationDesc" : "L&L - SWS - Caldwell, ID",
+        "address" : "223 Rodeo Ave, Caldwell, ID, 83605-6714, US",
+        "municipality" : "Caldwell",
+        "stateprovince" : "ID",
+        "postalcode" : "83605-6714",
+        "country" : "US",
+        "postings" :  [
+            {
+                "jobPostTitle" : "Mill Operator I/II - (Land & Livestock - Caldwell, ID)",
+                "jobReq" : "2775",
+                "jobPost" : "3",
+                "jobID" : "2775",
+                "category" : "OPS / PROD",
+                "postBeginDate" : "11/06/2015",
+                "postEndDate" : "",
+                "jobPostURL" : "https://jrsext.simplot.com:1443/prodhcm/xmlhttp/shorturl.do?key=VS"
+                }
+            ]
+    },
+    {
+        "location" : "L12 - FEEDLOT",
+        "locationDesc" : "L&L - Simplot Livestock - Grand View, ID",
+        "address" : "1301 Highway 67, Grand View, ID, 83624-5062, US",
+        "municipality" : "Grand View",
+        "stateprovince" : "ID",
+        "postalcode" : "83624-5062",
+        "country" : "US",
+        "postings" :  [
+            {
+                "jobPostTitle" : "Mechanic (Land & Livestock - Grandview, ID)",
+                "jobReq" : "2918",
+                "jobPost" : "3",
+                "jobID" : "2918",
+                "category" : "MAINTENANCE",
+                "postBeginDate" : "11/04/2015",
+                "postEndDate" : "",
+                "jobPostURL" : "https://jrsext.simplot.com:1443/prodhcm/xmlhttp/shorturl.do?key=SH"
+                }
+            ]
+    },
+    {
+        "location" : "L35 - MILL",
+        "locationDesc" : "L&L - Double J Milling - Mountain Home, ID",
+        "address" : "2450 NW Granary Rd, Mountain Home, ID, 83647, US",
+        "municipality" : "Mountain Home",
+        "stateprovince" : "ID",
+        "postalcode" : "83647",
+        "country" : "US",
+        "postings" :  [
+            {
+                "jobPostTitle" : "Lead Production Operator (L&L - Mountain Home, ID)",
+                "jobReq" : "2951",
+                "jobPost" : "3",
+                "jobID" : "2951",
+                "category" : "OPS / PROD",
+                "postBeginDate" : "11/30/2015",
+                "postEndDate" : "",
+                "jobPostURL" : "https://jrsext.simplot.com:1443/prodhcm/xmlhttp/shorturl.do?key=104"
+                }
+            ]
+    },
+    {
+        "location" : "A05 - PLANT",
+        "locationDesc" : "Don Plant - Pocatello, ID",
+        "address" : "1150 Highway 30 W, Pocatello, ID, 83204-7510, US",
+        "municipality" : "Pocatello",
+        "stateprovince" : "ID",
+        "postalcode" : "83204-7510",
+        "country" : "US",
+        "postings" :  [
+            {
+                "jobPostTitle" : "Intern ? E&I Engineer (AgriBusiness - Pocatello, ID)",
+                "jobReq" : "2872",
+                "jobPost" : "3",
+                "jobID" : "2872",
+                "category" : "ENGINEERING",
+                "postBeginDate" : "11/06/2015",
+                "postEndDate" : "",
+                "jobPostURL" : "https://jrsext.simplot.com:1443/prodhcm/xmlhttp/shorturl.do?key=VB"
+                }
+            ]
+    },
+    {
+        "location" : "A22 - BUILDING",
+        "locationDesc" : "Frontier Building - Pocatello, ID",
+        "address" : "1130 Highway 30 W, Pocatello, ID, 83204-7510, US",
+        "municipality" : "Pocatello",
+        "stateprovince" : "ID",
+        "postalcode" : "83204-7510",
+        "country" : "US",
+        "postings" :  [
+            {
+                "jobPostTitle" : "Intern - Energy Engineer (AgriBusiness - Pocatello, ID)",
+                "jobReq" : "2881",
+                "jobPost" : "3",
+                "jobID" : "2881",
+                "category" : "ENGINEERING",
+                "postBeginDate" : "11/05/2015",
+                "postEndDate" : "",
+                "jobPostURL" : "https://jrsext.simplot.com:1443/prodhcm/xmlhttp/shorturl.do?key=TH"
+                }
+            ]
+    },
+    {
+        "location" : "A98 - RETAIL",
+        "locationDesc" : "SGS - Shelley, ID",
+        "address" : "864 E 1400 N, Shelley, ID, 83274-0492, US",
+        "municipality" : "Shelley",
+        "stateprovince" : "ID",
+        "postalcode" : "83274-0492",
+        "country" : "US",
+        "postings" :  [
+            {
+                "jobPostTitle" : "Shipping Receiving Coordinator (AgriBusiness ? Shelly, ID)  ",
+                "jobReq" : "2973",
+                "jobPost" : "2",
+                "jobID" : "2973",
+                "category" : "DISTRIBUTN/LOGISTICS",
+                "postBeginDate" : "12/15/2015",
+                "postEndDate" : "",
+                "jobPostURL" : "https://jrsext.simplot.com:1443/prodhcm/xmlhttp/shorturl.do?key=115"
+                }
+            ]
+    },
+    {
+        "location" : "A142 - RETAIL",
+        "locationDesc" : "SGS - Atwood, KS",
+        "address" : "21432 E Highway 36, Atwood, KS, 67730, US",
+        "municipality" : "Atwood",
+        "stateprovince" : "KS",
+        "postalcode" : "67730",
+        "country" : "US",
+        "postings" :  [
+            {
+                "jobPostTitle" : "Crop Advisor (AgriBusiness-Atwood, KS)",
+                "jobReq" : "2922",
+                "jobPost" : "3",
+                "jobID" : "2922",
+                "category" : "SALES",
+                "postBeginDate" : "11/11/2015",
+                "postEndDate" : "",
+                "jobPostURL" : "https://jrsext.simplot.com:1443/prodhcm/xmlhttp/shorturl.do?key=X8"
+                }
+            ]
+    },
+    {
+        "location" : "A143 - RETAIL",
+        "locationDesc" : "SGS - Goodland, KS",
+        "address" : "6415 Road 21, Goodland, KS, 67735-8956, US",
+        "municipality" : "Goodland",
+        "stateprovince" : "KS",
+        "postalcode" : "67735-8956",
+        "country" : "US",
+        "postings" :  [
+            {
+                "jobPostTitle" : "Crop Advisor (AgriBusiness-Goodland, KS)",
+                "jobReq" : "2938",
+                "jobPost" : "4",
+                "jobID" : "2938",
+                "category" : "SALES",
+                "postBeginDate" : "11/23/2015",
+                "postEndDate" : "",
+                "jobPostURL" : "https://jrsext.simplot.com:1443/prodhcm/xmlhttp/shorturl.do?key=YH"
+                }
+            ]
+    },
+    {
+        "location" : "F98 - PLANT",
+        "locationDesc" : "Portage la Prairie Plant - Portage la Prairie, Manitoba",
+        "address" : "Hwy 1 & Simplot Rd, Portage La Prairie, MB, R1N 3A4, CA",
+        "municipality" : "Portage La Prairie",
+        "stateprovince" : "MB",
+        "postalcode" : "R1N 3A4",
+        "country" : "CA",
+        "postings" :  [
+            {
+                "jobPostTitle" : "Shift Packaging Supervisor Portage FG",
+                "jobReq" : "2954",
+                "jobPost" : "4",
+                "jobID" : "2954",
+                "category" : "OPS / PROD",
+                "postBeginDate" : "12/07/2015",
+                "postEndDate" : "",
+                "jobPostURL" : "https://jrsext.simplot.com:1443/prodhcm/xmlhttp/shorturl.do?key=10O"
+                }
+            ]
+    },
+    {
+        "location" : "A54 - RETAIL",
+        "locationDesc" : "SGS - Crystal, ND",
+        "address" : "13845 Highway 66, Crystal, ND, 58222, US",
+        "municipality" : "Crystal",
+        "stateprovince" : "ND",
+        "postalcode" : "58222",
+        "country" : "US",
+        "postings" :  [
+            {
+                "jobPostTitle" : "Intern - Crop Advisor (AgriBusiness -  Crystal/Langdon, ND)",
+                "jobReq" : "2547",
+                "jobPost" : "3",
+                "jobID" : "2547",
+                "category" : "SALES",
+                "postBeginDate" : "11/06/2015",
+                "postEndDate" : "",
+                "jobPostURL" : "https://jrsext.simplot.com:1443/prodhcm/xmlhttp/shorturl.do?key=W5"
+                }
+            ]
+    },
+    {
+        "location" : "F56 - PLANT",
+        "locationDesc" : "Grand Forks Plant - Grand Forks, ND",
+        "address" : "3630 Gateway Dr, Grand Forks, ND, 58203-0826, US",
+        "municipality" : "Grand Forks",
+        "stateprovince" : "ND",
+        "postalcode" : "58203-0826",
+        "country" : "US",
+        "postings" :  [
+            {
+                "jobPostTitle" : "Electrical Maintenance Supervisor (FG - Grand Forks, ND)",
+                "jobReq" : "2939",
+                "jobPost" : "4",
+                "jobID" : "2939",
+                "category" : "MAINTENANCE",
+                "postBeginDate" : "11/19/2015",
+                "postEndDate" : "",
+                "jobPostURL" : "https://jrsext.simplot.com:1443/prodhcm/xmlhttp/shorturl.do?key=YA"
+                },
+            {
+                "jobPostTitle" : "Forklift Line Service Grand Forks FG",
+                "jobReq" : "2976",
+                "jobPost" : "2",
+                "jobID" : "2976",
+                "category" : "DISTRIBUTN/LOGISTICS",
+                "postBeginDate" : "12/23/2015",
+                "postEndDate" : "",
+                "jobPostURL" : "https://jrsext.simplot.com:1443/prodhcm/xmlhttp/shorturl.do?key=14Y"
+                },
+            {
+                "jobPostTitle" : "Intern - Operations (Food Group - Grand Forks, ND)",
+                "jobReq" : "2987",
+                "jobPost" : "2",
+                "jobID" : "2987",
+                "category" : "OPS / PROD",
+                "postBeginDate" : "12/18/2015",
+                "postEndDate" : "",
+                "jobPostURL" : "https://jrsext.simplot.com:1443/prodhcm/xmlhttp/shorturl.do?key=12S"
+                },
+            {
+                "jobPostTitle" : "Agronomy Raw Development Manager",
+                "jobReq" : "2991",
+                "jobPost" : "3",
+                "jobID" : "2991",
+                "category" : "DISTRIBUTN/LOGISTICS",
+                "postBeginDate" : "01/04/2016",
+                "postEndDate" : "",
+                "jobPostURL" : "https://jrsext.simplot.com:1443/prodhcm/xmlhttp/shorturl.do?key=153"
+                },
+            {
+                "jobPostTitle" : "General Laborer - Grand Forks, ND",
+                "jobReq" : "2997",
+                "jobPost" : "2",
+                "jobID" : "2997",
+                "category" : "OPS / PROD",
+                "postBeginDate" : "12/23/2015",
+                "postEndDate" : "",
+                "jobPostURL" : "https://jrsext.simplot.com:1443/prodhcm/xmlhttp/shorturl.do?key=12H"
+                },
+            {
+                "jobPostTitle" : "Forklift Talley Grand Forks FG",
+                "jobReq" : "2999",
+                "jobPost" : "2",
+                "jobID" : "2999",
+                "category" : "DISTRIBUTN/LOGISTICS",
+                "postBeginDate" : "12/25/2015",
+                "postEndDate" : "",
+                "jobPostURL" : "https://jrsext.simplot.com:1443/prodhcm/xmlhttp/shorturl.do?key=12Z"
+                },
+            {
+                "jobPostTitle" : "Boiler Operator Grand Forks FG",
+                "jobReq" : "3030",
+                "jobPost" : "1",
+                "jobID" : "3030",
+                "category" : "MAINTENANCE",
+                "postBeginDate" : "01/18/2016",
+                "postEndDate" : "",
+                "jobPostURL" : "https://jrsext.simplot.com:1443/prodhcm/xmlhttp/shorturl.do?key=161"
+                }
+            ]
+    },
+    {
+        "location" : "A73 - RETAIL",
+        "locationDesc" : "SGS - Langdon, ND",
+        "address" : "120 5th Ave, Langdon, ND, 58249-0109, US",
+        "municipality" : "Langdon",
+        "stateprovince" : "ND",
+        "postalcode" : "58249-0109",
+        "country" : "US",
+        "postings" :  [
+            {
+                "jobPostTitle" : "Operations Support (AgriBusiness - Langdon, ND)",
+                "jobReq" : "2114",
+                "jobPost" : "3",
+                "jobID" : "2114",
+                "category" : "OPS / PROD",
+                "postBeginDate" : "11/04/2015",
+                "postEndDate" : "",
+                "jobPostURL" : "https://jrsext.simplot.com:1443/prodhcm/xmlhttp/shorturl.do?key=S6"
+                }
+            ]
+    },
+    {
+        "location" : "A29 - TURF",
+        "locationDesc" : "Jacklin Seed - Albany, OR",
+        "address" : "3025 Kathryn Ave NE, Albany, OR, 97321-6591, US",
+        "municipality" : "Albany",
+        "stateprovince" : "OR",
+        "postalcode" : "97321-6591",
+        "country" : "US",
+        "postings" :  [
+            {
+                "jobPostTitle" : "Grower Services Representative (AgriBusiness-Albany, OR)",
+                "jobReq" : "1878",
+                "jobPost" : "4",
+                "jobID" : "1878",
+                "category" : "DISTRIBUTN/LOGISTICS",
+                "postBeginDate" : "11/06/2015",
+                "postEndDate" : "",
+                "jobPostURL" : "https://jrsext.simplot.com:1443/prodhcm/xmlhttp/shorturl.do?key=UZ"
+                }
+            ]
+    },
+    {
+        "location" : "A144 - RETAIL",
+        "locationDesc" : "SGS - Hallettsville, TX",
+        "address" : "2415 US Highway 90A W, Hallettsville, TX, 77964-4894, US",
+        "municipality" : "Hallettsville",
+        "stateprovince" : "TX",
+        "postalcode" : "77964-4894",
+        "country" : "US",
+        "postings" :  [
+            {
+                "jobPostTitle" : "Crop Advisor I/II/III (AgriBusiness-Hallettsville, TX)",
+                "jobReq" : "2925",
+                "jobPost" : "3",
+                "jobID" : "2925",
+                "category" : "SALES",
+                "postBeginDate" : "11/16/2015",
+                "postEndDate" : "",
+                "jobPostURL" : "https://jrsext.simplot.com:1443/prodhcm/xmlhttp/shorturl.do?key=YD"
+                }
+            ]
+    },
+    {
+        "location" : "A118 - RETAIL",
+        "locationDesc" : "SGS - Hempstead, TX",
+        "address" : "1275 Zach Road, Hempstead, TX, 77445, US",
+        "municipality" : "Hempstead",
+        "stateprovince" : "TX",
+        "postalcode" : "77445",
+        "country" : "US",
+        "postings" :  [
+            {
+                "jobPostTitle" : "Intern - Crop Advisor & Operational Support (AgriBusiness SGS - Texas)",
+                "jobReq" : "2845",
+                "jobPost" : "3",
+                "jobID" : "2845",
+                "category" : "SALES",
+                "postBeginDate" : "11/06/2015",
+                "postEndDate" : "",
+                "jobPostURL" : "https://jrsext.simplot.com:1443/prodhcm/xmlhttp/shorturl.do?key=VW"
+                }
+            ]
+    },
+    {
+        "location" : "A120 - RETAIL",
+        "locationDesc" : "SGS - Placedo, TX",
+        "address" : "13739 US Hwy 87 South, Victoria, TX, 77905, US",
+        "municipality" : "Victoria",
+        "stateprovince" : "TX",
+        "postalcode" : "77905",
+        "country" : "US",
+        "postings" :  [
+            {
+                "jobPostTitle" : "Crop Advisor (AgriBusiness-Placedo, TX)",
+                "jobReq" : "2947",
+                "jobPost" : "3",
+                "jobID" : "2947",
+                "category" : "SALES",
+                "postBeginDate" : "11/24/2015",
+                "postEndDate" : "",
+                "jobPostURL" : "https://jrsext.simplot.com:1443/prodhcm/xmlhttp/shorturl.do?key=Z0"
+                }
+            ]
+    },
+    {
+        "location" : "A20 - MINE",
+        "locationDesc" : "Vernal Mine -  Vernal, UT",
+        "address" : "9401 N Highway 191, Vernal, UT, 84078-7801, US",
+        "municipality" : "Vernal",
+        "stateprovince" : "UT",
+        "postalcode" : "84078-7801",
+        "country" : "US",
+        "postings" :  [
+            {
+                "jobPostTitle" : "Intern - Energy Engineer (AgriBusiness - Vernal, UT)",
+                "jobReq" : "2906",
+                "jobPost" : "3",
+                "jobID" : "2906",
+                "category" : "ENGINEERING",
+                "postBeginDate" : "11/05/2015",
+                "postEndDate" : "",
+                "jobPostURL" : "https://jrsext.simplot.com:1443/prodhcm/xmlhttp/shorturl.do?key=T9"
+                },
+            {
+                "jobPostTitle" : "Intern - Mine/Civil Engineer (AgriBusiness - Vernal, UT)",
+                "jobReq" : "2912",
+                "jobPost" : "3",
+                "jobID" : "2912",
+                "category" : "ENGINEERING",
+                "postBeginDate" : "11/05/2015",
+                "postEndDate" : "",
+                "jobPostURL" : "https://jrsext.simplot.com:1443/prodhcm/xmlhttp/shorturl.do?key=T5"
+                },
+            {
+                "jobPostTitle" : "Warehouse 1 Vernal AB",
+                "jobReq" : "3027",
+                "jobPost" : "3",
+                "jobID" : "3027",
+                "category" : "MAINTENANCE",
+                "postBeginDate" : "01/12/2016",
+                "postEndDate" : "01/29/2016",
+                "jobPostURL" : "https://jrsext.simplot.com:1443/prodhcm/xmlhttp/shorturl.do?key=15O"
+                }
+            ]
+    },
+    {
+        "location" : "L13 - FEEDLOT",
+        "locationDesc" : "L&L - Simplot Feeders - Pasco - Burbank, WA",
+        "address" : "13981 Dodd Rd, Burbank, WA, 99323, US",
+        "municipality" : "Burbank",
+        "stateprovince" : "WA",
+        "postalcode" : "99323",
+        "country" : "US",
+        "postings" :  [
+            {
+                "jobPostTitle" : "Management Trainee (Land & Livestock - Pasco, WA)",
+                "jobReq" : "2811",
+                "jobPost" : "3",
+                "jobID" : "2811",
+                "category" : "AGRICULTURE",
+                "postBeginDate" : "11/06/2015",
+                "postEndDate" : "",
+                "jobPostURL" : "https://jrsext.simplot.com:1443/prodhcm/xmlhttp/shorturl.do?key=VK"
+                }
+            ]
+    },
+    {
+        "location" : "F51 - PLANT",
+        "locationDesc" : "Moses Lake Plant - Moses Lake, WA",
+        "address" : "14124 Wheeler Rd NE, Moses Lake, WA, 98837-9505, US",
+        "municipality" : "Moses Lake",
+        "stateprovince" : "WA",
+        "postalcode" : "98837-9505",
+        "country" : "US",
+        "postings" :  [
+            {
+                "jobPostTitle" : "Intern - Field Operations (Food Group - Moses Lake, WA)",
+                "jobReq" : "2910",
+                "jobPost" : "3",
+                "jobID" : "2910",
+                "category" : "DISTRIBUTN/LOGISTICS",
+                "postBeginDate" : "11/05/2015",
+                "postEndDate" : "",
+                "jobPostURL" : "https://jrsext.simplot.com:1443/prodhcm/xmlhttp/shorturl.do?key=T7"
+                },
+            {
+                "jobPostTitle" : "Plant Shift Manager Moses Lake FG",
+                "jobReq" : "3009",
+                "jobPost" : "3",
+                "jobID" : "3009",
+                "category" : "OPS / PROD",
+                "postBeginDate" : "01/04/2016",
+                "postEndDate" : "",
+                "jobPostURL" : "https://jrsext.simplot.com:1443/prodhcm/xmlhttp/shorturl.do?key=155"
+                },
+            {
+                "jobPostTitle" : "Safety Specialist l/ll/lll (FG - Moses Lake, WA)",
+                "jobReq" : "3026",
+                "jobPost" : "3",
+                "jobID" : "3026",
+                "category" : "EHS&S",
+                "postBeginDate" : "01/12/2016",
+                "postEndDate" : "",
+                "jobPostURL" : "https://jrsext.simplot.com:1443/prodhcm/xmlhttp/shorturl.do?key=15R"
+                },
+            {
+                "jobPostTitle" : "Fry Sanitation 2 (FG - Moses Lake, WA)",
+                "jobReq" : "3042",
+                "jobPost" : "3",
+                "jobID" : "3042",
+                "category" : "OPS / PROD",
+                "postBeginDate" : "01/20/2016",
+                "postEndDate" : "",
+                "jobPostURL" : "https://jrsext.simplot.com:1443/prodhcm/xmlhttp/shorturl.do?key=16M"
+                }
+            ]
+    },
+    {
+        "location" : "F52 - PLANT",
+        "locationDesc" : "Othello Plant - Othello, WA",
+        "address" : "1201 N Broadway Ave, Othello, WA, 99344, US",
+        "municipality" : "Othello",
+        "stateprovince" : "WA",
+        "postalcode" : "99344",
+        "country" : "US",
+        "postings" :  [
+            {
+                "jobPostTitle" : "Boiler/Refrigeration Mechanic (FG - Othello, WA)",
+                "jobReq" : "2955",
+                "jobPost" : "3",
+                "jobID" : "2955",
+                "category" : "MAINTENANCE",
+                "postBeginDate" : "11/30/2015",
+                "postEndDate" : "",
+                "jobPostURL" : "https://jrsext.simplot.com:1443/prodhcm/xmlhttp/shorturl.do?key=ZU"
+                },
+            {
+                "jobPostTitle" : "Pallet Attendant",
+                "jobReq" : "2971",
+                "jobPost" : "3",
+                "jobID" : "2971",
+                "category" : "DISTRIBUTN/LOGISTICS",
+                "postBeginDate" : "12/29/2015",
+                "postEndDate" : "01/31/2016",
+                "jobPostURL" : "https://jrsext.simplot.com:1443/prodhcm/xmlhttp/shorturl.do?key=14N"
+                },
+            {
+                "jobPostTitle" : "Sanitation",
+                "jobReq" : "3000",
+                "jobPost" : "3",
+                "jobID" : "3000",
+                "category" : "OPS / PROD",
+                "postBeginDate" : "01/06/2016",
+                "postEndDate" : "01/31/2016",
+                "jobPostURL" : "https://jrsext.simplot.com:1443/prodhcm/xmlhttp/shorturl.do?key=15C"
+                },
+            {
+                "jobPostTitle" : "Frozen Inspector",
+                "jobReq" : "3004",
+                "jobPost" : "2",
+                "jobID" : "3004",
+                "category" : "QUALITY",
+                "postBeginDate" : "12/29/2015",
+                "postEndDate" : "01/31/2016",
+                "jobPostURL" : "https://jrsext.simplot.com:1443/prodhcm/xmlhttp/shorturl.do?key=14M"
+                },
+            {
+                "jobPostTitle" : "Trimmer",
+                "jobReq" : "3005",
+                "jobPost" : "1",
+                "jobID" : "3005",
+                "category" : "QUALITY",
+                "postBeginDate" : "12/29/2015",
+                "postEndDate" : "01/31/2016",
+                "jobPostURL" : "https://jrsext.simplot.com:1443/prodhcm/xmlhttp/shorturl.do?key=14L"
+                },
+            {
+                "jobPostTitle" : "Raw Receiver",
+                "jobReq" : "3006",
+                "jobPost" : "2",
+                "jobID" : "3006",
+                "category" : "OPS / PROD",
+                "postBeginDate" : "12/29/2015",
+                "postEndDate" : "01/31/2016",
+                "jobPostURL" : "https://jrsext.simplot.com:1443/prodhcm/xmlhttp/shorturl.do?key=14K"
+                },
+            {
+                "jobPostTitle" : "Raw Product Grader - Othello, WA",
+                "jobReq" : "3007",
+                "jobPost" : "2",
+                "jobID" : "3007",
+                "category" : "QUALITY",
+                "postBeginDate" : "12/29/2015",
+                "postEndDate" : "01/31/2016",
+                "jobPostURL" : "https://jrsext.simplot.com:1443/prodhcm/xmlhttp/shorturl.do?key=165"
+                },
+            {
+                "jobPostTitle" : "Packaging Sanitation - Othello, WA",
+                "jobReq" : "3008",
+                "jobPost" : "2",
+                "jobID" : "3008",
+                "category" : "OPS / PROD",
+                "postBeginDate" : "12/29/2015",
+                "postEndDate" : "01/31/2016",
+                "jobPostURL" : "https://jrsext.simplot.com:1443/prodhcm/xmlhttp/shorturl.do?key=163"
+                }
+            ]
+    },
+    {
+        "location" : "L43 - RETAIL",
+        "locationDesc" : "L&L - SWS - Sunnyside, WA",
+        "address" : "304 Yakima Valley Hwy, Sunnyside, WA, 98944-1323, US",
+        "municipality" : "Sunnyside",
+        "stateprovince" : "WA",
+        "postalcode" : "98944-1323",
+        "country" : "US",
+        "postings" :  [
+            {
+                "jobPostTitle" : "Sales Representative - (Land & Livestock SWS - WA)",
+                "jobReq" : "2740",
+                "jobPost" : "3",
+                "jobID" : "2740",
+                "category" : "SALES",
+                "postBeginDate" : "11/06/2015",
+                "postEndDate" : "",
+                "jobPostURL" : "https://jrsext.simplot.com:1443/prodhcm/xmlhttp/shorturl.do?key=WD"
+                }
+            ]
+    },
+    {
+        "location" : "A10 - MINE",
+        "locationDesc" : "Smoky Mine -  Afton, WY",
+        "address" : "1890 Smoky Canyon Rd, Afton, WY, 83110, US",
+        "municipality" : "Afton",
+        "stateprovince" : "WY",
+        "postalcode" : "83110",
+        "country" : "US",
+        "postings" :  [
+            {
+                "jobPostTitle" : "Intern - Energy Engineer (AgriBusiness - Afton, WY)",
+                "jobReq" : "2960",
+                "jobPost" : "4",
+                "jobID" : "2960",
+                "category" : "ENGINEERING",
+                "postBeginDate" : "12/04/2015",
+                "postEndDate" : "",
+                "jobPostURL" : "https://jrsext.simplot.com:1443/prodhcm/xmlhttp/shorturl.do?key=10R"
+                },
+            {
+                "jobPostTitle" : "HR Manager (AgriBusiness ? Smoky Canyon Mine-Afton, WY)",
+                "jobReq" : "2986",
+                "jobPost" : "3",
+                "jobID" : "2986",
+                "category" : "HUMAN RESOURCES",
+                "postBeginDate" : "12/22/2015",
+                "postEndDate" : "",
+                "jobPostURL" : "https://jrsext.simplot.com:1443/prodhcm/xmlhttp/shorturl.do?key=128"
+                }
+            ]
+    },
+    {
+        "location" : "A19 - PLANT",
+        "locationDesc" : "Rock Springs Plant -  Rock Springs, WY",
+        "address" : "515 State Highway 430, Rock Springs, WY, 82901-8810, US",
+        "municipality" : "Rock Springs",
+        "stateprovince" : "WY",
+        "postalcode" : "82901-8810",
+        "country" : "US",
+        "postings" :  [
+            {
+                "jobPostTitle" : "Phosphoric Acid Plant Area Supervisor (AgriBusiness ? Rock Springs, WY)",
+                "jobReq" : "2988",
+                "jobPost" : "3",
+                "jobID" : "2988",
+                "category" : "OPS / PROD",
+                "postBeginDate" : "12/22/2015",
+                "postEndDate" : "",
+                "jobPostURL" : "https://jrsext.simplot.com:1443/prodhcm/xmlhttp/shorturl.do?key=12C"
+                },
+            {
+                "jobPostTitle" : "Production Supervisor (Agribusiness ? Rock Springs, WY)",
+                "jobReq" : "3025",
+                "jobPost" : "2",
+                "jobID" : "3025",
+                "category" : "OPS / PROD",
+                "postBeginDate" : "01/13/2016",
+                "postEndDate" : "",
+                "jobPostURL" : "https://jrsext.simplot.com:1443/prodhcm/xmlhttp/shorturl.do?key=15S"
+                }
+            ]
+    }
+]

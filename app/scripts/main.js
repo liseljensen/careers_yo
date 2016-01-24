@@ -1,4 +1,21 @@
+/* global $, console, window, document */
+var newsItems = []; 
+function jsonpCallbackNews(data) {
+    $.each(data.news, function(key, story) {
+        var title = '<li><a href="' + story.url + '" target="_blank">' + story.title + '</a></li>';
+        newsItems.push(title);
+    });
+}
+
 $(function() {
+    $.ajax({
+        beforeSend: function (xhr) {
+            if (xhr.overrideMimeType) {
+                xhr.overrideMimeType("application/json");
+            }
+        }
+    });
+
     var $container = $('#mosaic');
   	var mapExists = false; 
     
@@ -63,23 +80,37 @@ $(function() {
             }
         };
     
+        $.get('content/footer.html')
+            .done(function (data) {
+                //console.log('news items' + newsItems + "done.");
+                $('footer').append(data); 
+                $.each(newsItems, function(i, data){
+                    //console.log(data);
+                   $('#news').append(data); 
+                });
+            })
+            .fail(function () {
+                console.log('failed');
+            });
+    
+
         function animateNumbers() {
                 (function() {
-                    $('#holidays').animateNumber(
+                    $('#nae').animateNumber(
                        {
-                        number: 10
+                        number: 6786
                       },
                         2000
                     ).delay(1000);
-                    $('#years').animateNumber(
+                    $('#nal').animateNumber(
                        {
-                        number: 14
+                        number: 193
                       },
                       2000
                     ).delay(2000);
-                    $('#weeks').animateNumber(
+                    $('#tenure').animateNumber(
                        {
-                        number: 4
+                        number: 10
                       },
                       2000
                     ).delay(3000);
@@ -109,11 +140,11 @@ $(function() {
     
         function checkNav() {
             if ($(document).scrollTop() > 100) {
-                $('#global-nav').fadeOut(100); 
+                $('header.fixed').addClass('small');
                 $('.navbar-brand img').addClass('small');
             } 
             else {
-                $('#global-nav').fadeIn(250); 
+                $('header.fixed').removeClass('small');
                 $('.navbar-brand img').removeClass('small');
             }
         }
@@ -157,32 +188,32 @@ $(function() {
             $(window).bind("scroll", function(event) {
                 //console.log(numbersDone);
                 checkNav();
-                if ((numbersDone === false) && ($('#holidays').length != 0) || ($('#value').length != 0)) {
-                    //canSeeNumbers();
+                if ((numbersDone === false) && ($('#nae').length !== 0) || ($('#value').length !== 0)) {
+                    canSeeNumbers();
                     
                 }
             });
         }
 
-    var $window = $(window),
-        navAdded = false;
-
-    function checkWidth() {
-        var visible = $('#global-nav').is(':visible');
-        
-        if (!(visible) && (navAdded === false)) {
-            var globalNav = $('#global-nav > .navbar').clone();
-            $('#global-nav-mobile').append(globalNav);
-            navAdded = true;
-        }
-        else if((visible) && (navAdded === true)) {
-            $('#global-nav-mobile').empty(); 
-            navAdded = false; 
-        }
-    }
-    // Execute on load
-    checkWidth();
-    // Bind event listener
-    $(window).resize(checkWidth);
+//    var $window = $(window),
+//        navAdded = false;
+//
+//    function checkWidth() {
+//        var visible = $('#global-nav').is(':visible');
+//        
+//        if (!(visible) && (navAdded === false)) {
+//            var globalNav = $('#global-nav > .navbar').clone();
+//            $('#global-nav-mobile').append(globalNav);
+//            navAdded = true;
+//        }
+//        else if((visible) && (navAdded === true)) {
+//            $('#global-nav-mobile').empty(); 
+//            navAdded = false; 
+//        }
+//    }
+//    // Execute on load
+//    checkWidth();
+//    // Bind event listener
+//    $(window).resize(checkWidth);
 });
 

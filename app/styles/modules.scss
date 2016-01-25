@@ -626,7 +626,7 @@
         margin-top: 0; 
         //padding-top: 0; 
     }
-    h4 {
+    h3, h2 {
         margin-top:0; 
     }
     .link {
@@ -640,6 +640,9 @@
             }
         }
     }
+}
+#legWrap {
+	display: none !important;
 }
 /*
     SADIE HOVER EFFECT
@@ -953,7 +956,6 @@ figure.effect-sadie {
 		}
 	}
 	@media (max-width: $screen-sm-max) {
-		
 		.mos-figure {
 			margin: 10% 0;
 			padding: 0 10%;
@@ -1034,7 +1036,7 @@ figure.effect-sadie {
             }
         }
     }
-	@media (min-width: $screen-md-max){
+	@media (min-width: $screen-lg-min){
 		@include size (40%, 665px);
 	}
 	@media (max-width: $screen-md-max) { 
@@ -1066,14 +1068,30 @@ figure.effect-sadie {
             display: inline-block;
         }
     }
+	.quote {
+		background: url(../images/quotes.png) no-repeat;
+		margin-top: 20%; 
+		padding-left: 70px !important;
+		margin-left: 20px; 
+		padding-top:0;
+	}
+	@media (max-width: 1300px) { 
+		.quote {
+			font-size: $font-size-large;
+			.sig {
+				font-size: $font-size-small;
+				margin-right:20px;
+			}
+		}
+	}
+	.mos-link {
+		right: calc(30.893536121673% + 140px);
+	}
 	@media (max-width: $screen-md-max) { 
 		height: 325px; 
 		.quote {
-			margin-top: 10%; 
-			padding-top: 0; 
 			padding-left: 70px !important;
 			margin-left: 10%; 
-			background: url(../images/quotes.png) no-repeat;
 		}
 	}
 	@media (max-width: $screen-sm-max) {
@@ -1082,7 +1100,7 @@ figure.effect-sadie {
 			margin-top: 20%; 
 			padding-left: 70px !important;
 			margin-left: 10%; 
-			background: url(../images/quotes.png) no-repeat;
+			padding-top:0;
 		}
 	}
 	@media (max-width: $screen-xs-max) {

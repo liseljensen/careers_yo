@@ -34,7 +34,7 @@ section {
     }
 }
 .item-bottom {
-    width: 32.5%; 
+    width: 32.4%; 
     height: 300px;
 	@media (max-width: $screen-md-max) {
 		@include size (40%, 400px);

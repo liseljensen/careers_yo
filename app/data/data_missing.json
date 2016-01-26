@@ -1,5 +1,40 @@
 [
     {
+        "long" : "0",
+        "lat" : "0",
+        "address" : "19421 Creek Rd",
+        "municipality" : "Bakersfield",
+        "stateprovince" : "CA",
+        "postalcode" : "93314-8451",
+        "country" : "US",
+        "postings" :  [
+            {
+                "location" : "A128 - RETAIL",
+                "locationDesc" : "SGS - Bakersfield, CA",
+                "jobPostTitle" : "Technical Services Representative",
+                "jobReq" : "3041",
+                "jobPost" : "3",
+                "jobID" : "3041",
+                "category" : "MARKETING",
+                "postBeginDate" : "01/20/2016",
+                "postEndDate" : "",
+                "jobPostURL" : "https://jrsext.simplot.com:1443/prodhcm/xmlhttp/shorturl.do?key=16G"
+                },
+            {
+                "location" : "C01 - HQ",
+                "locationDesc" : "Corporate Headquarters - Boise, ID",
+                "jobPostTitle" : "Senior Biotech Agronomy Manager HQ CP Building A",
+                "jobReq" : "2373",
+                "jobPost" : "3",
+                "jobID" : "2373",
+                "category" : "RESEARCH&DEVELOPMENT",
+                "postBeginDate" : "12/23/2015",
+                "postEndDate" : "",
+                "jobPostURL" : "https://jrsext.simplot.com:1443/prodhcm/xmlhttp/shorturl.do?key=14Z"
+                }
+            ]
+    },
+    {
         "long" : "-96.8437873",
         "lat" : "28.6992093",
         "address" : "13739 US Hwy 87 South",
@@ -65,29 +100,6 @@
                 "postBeginDate" : "11/06/2015",
                 "postEndDate" : "",
                 "jobPostURL" : "https://jrsext.simplot.com:1443/prodhcm/xmlhttp/shorturl.do?key=VW"
-                }
-            ]
-    },
-    {
-        "long" : "-119.2551327",
-        "lat" : "35.4457952",
-        "address" : "19421 Creek Rd",
-        "municipality" : "Bakersfield",
-        "stateprovince" : "CA",
-        "postalcode" : "93314-8451",
-        "country" : "US",
-        "postings" :  [
-            {
-                "location" : "A128 - RETAIL",
-                "locationDesc" : "SGS - Bakersfield, CA",
-                "jobPostTitle" : "Technical Services Representative",
-                "jobReq" : "3041",
-                "jobPost" : "3",
-                "jobID" : "3041",
-                "category" : "MARKETING",
-                "postBeginDate" : "01/20/2016",
-                "postEndDate" : "",
-                "jobPostURL" : "https://jrsext.simplot.com:1443/prodhcm/xmlhttp/shorturl.do?key=16G"
                 }
             ]
     },
@@ -811,18 +823,6 @@
                 "postBeginDate" : "11/04/2015",
                 "postEndDate" : "",
                 "jobPostURL" : "https://jrsext.simplot.com:1443/prodhcm/xmlhttp/shorturl.do?key=SC"
-                },
-            {
-                "location" : "C01 - HQ",
-                "locationDesc" : "Corporate Headquarters - Boise, ID",
-                "jobPostTitle" : "Senior Biotech Agronomy Manager HQ CP Building A",
-                "jobReq" : "2373",
-                "jobPost" : "3",
-                "jobID" : "2373",
-                "category" : "RESEARCH&DEVELOPMENT",
-                "postBeginDate" : "12/23/2015",
-                "postEndDate" : "",
-                "jobPostURL" : "https://jrsext.simplot.com:1443/prodhcm/xmlhttp/shorturl.do?key=14Z"
                 }
             ]
     },

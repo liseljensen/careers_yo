@@ -94,7 +94,7 @@ $(function() {
             });
     
 
-        function animateNumbers() {
+        function animateNumbersWhy() {
                 (function() {
                     $('#nae').animateNumber(
                        {
@@ -114,7 +114,11 @@ $(function() {
                       },
                       2000
                     ).delay(3000);
-
+                }()); 
+                numbersDoneWhy = true;
+            }
+            function animateNumbersStudent() {
+                (function() {
                     $('#value').animateNumber(
                        {
                         number: 97
@@ -134,8 +138,7 @@ $(function() {
                       2000
                     ).delay(3000);
                 }()); 
-                numbersDone = true;
-                //console.log(numbersDone);
+                numbersDoneStudent = true;
             }
     
         function checkNav() {
@@ -150,10 +153,11 @@ $(function() {
         }
         
         function canSeeNumbers() {
-            var numCheck = $(".numbers:in-viewport").length; 
-            //console.log(numbersDone);
-            if((numCheck !== 0)) {
-                animateNumbers();
+            if(($('#nae').length !== 0) && (numbersDoneWhy === false)) {
+                animateNumbersWhy();
+            }
+            else if(($('#value').length !== 0) && (numbersDoneStudent === false)) {
+                animateNumbersStudent();
             }
         }
    
@@ -173,7 +177,6 @@ $(function() {
                       if($('.numbers').length) {
                           //console.log('has numbers');
                           $('[src="scripts/main.js"]').before('<script src="scripts/jquery-animateNumber.js"></script>');
-                          canSeeNumbers();
                       }
                   }
                 });
@@ -182,15 +185,20 @@ $(function() {
     
 
         if($('#content').length || $('#map').length) {
-            var numbersDone = false; 
+            var numbersDoneWhy = false,
+                numbersDoneStudent = false;
             pullPage();
             
             $(window).bind("scroll", function(event) {
-                //console.log(numbersDone);
                 checkNav();
-                if ((numbersDone === false) && ($('#nae').length !== 0) || ($('#value').length !== 0)) {
-                    canSeeNumbers();
-                    
+                var numCheck = $(".numbers:in-viewport").length; 
+                if(numCheck) {
+                    console.log('page has numbers in view');
+                    canSeeNumbers(); 
+//                    if (($('#nae').length !== 0) || ($('#value').length !== 0)) {
+//                          
+//                          
+//                    }
                 }
             });
         }

@@ -6,7 +6,8 @@
     "modernizr": "~2.8.3",
     "packery": "~1.4.3",
     "components-font-awesome": "~4.5.0",
-    "bootstrap-table": "~1.9.1"
+    "bootstrap-table": "~1.9.1",
+    "js-marker-clusterer": "*"
   },
   "overrides": {
     "bootstrap-sass": {

@@ -335,6 +335,7 @@
 	<script src="/bower_components/jquery/dist/jquery.js"></script>
 	<script src="/bower_components/packery/dist/packery.pkgd.js"></script>
 	<script src="/bower_components/bootstrap-table/src/bootstrap-table.js"></script>
+    <script src="/bower_components/js-marker-clusterer/src/markerclusterer.js"></script>
 	<!-- endbower -->
 	<!-- endbuild -->
 
@@ -363,9 +364,9 @@
     <script src="http://www.simplot.com/services/news_service"></script>
     
 	<script src="scripts/map_styles.js"></script>
-	<script>
+    <script>
 		var image = 'images/marker-potatoes.png';
-
+            
 		function initMap() {
 			var boise = {
 				lat: 43.6167,
@@ -384,59 +385,96 @@
 			map.mapTypes.set('map_style', styledMap);
 			map.setMapTypeId('map_style');
 
+			$.ajax({
+				beforeSend: function (xhr) {
+					if (xhr.overrideMimeType) {
+						xhr.overrideMimeType("application/json");
+					}
+				}
+			});
+            
+            var infowindow = new google.maps.InfoWindow(),
+				locationID = 0; 
+            
+            ///////////////////////////////////////////////
+            // CLUSTER MARKERS
+            ///////////////////////////////////////////////
+            
+            function clusterMarkers(markersGroups) {
+                
+            
+                var clusterStyles = [
+                    {
+                        textColor: 'white',
+                        url: 'images/clusterMarker.png',
+                        height: 50,
+                        width: 50
+                      },
+                     {
+                        textColor: 'white',
+                        url: 'images/clusterMarker.png',
+                        height: 50,
+                        width: 50
+                      },
+                     {
+                        textColor: 'white',
+                        url: 'images/clusterMarker.png',
+                        height: 50,
+                        width: 50
+                      }
+                ];
+                var mcOptions = {
+                    styles: clusterStyles
+                }
+                var markerCluster = new MarkerClusterer(map, markersGroups, mcOptions);
+            }
+			
+            ///////////////////////////////////////////////
+            // CREATE MARKERS
+            ///////////////////////////////////////////////
+            
+            var markersGroups = [];
+            
+			function createMarker(key, data, theLatLong, lastOne) {
+				//resultsMap.setCenter(results[0].geometry.location);
 
-			$.getJSON('data/data.json')
-				.done(function (json) {
-					var infowindow = new google.maps.InfoWindow();
-                    
-					$.each(json, function (key, data) {
-                        
-						var geocoder = new google.maps.Geocoder();
+				var marker = new google.maps.Marker({
+					map: map,
+					position: theLatLong,
+					title: data.address + ", " + data.manicipality + ", " + data.stateprovince + " " + data.postalcode,
+					icon: image
+				});
+                markersGroups.push(marker);
+				marker.setMap(map);
+                //console.log(markersGroups);
+                
+				var position = (function() {
+					if(data.postings.length > 1) {
+						//console.log(data.postings.length);
+						return "Positions"
+					}
+					else {
+						return "Position"
+					}
+				})();
+				var infowindowConent = '<b>' + data.address + '</b><br><a href=#" data-toggle="modal" data-target="#' + locationID + '"><span class="badge">' + data.postings.length + '</span>' + position + '</a>';
 
-						(function (geocoder, resultsMap) {
-							var address = data.address;
-							geocoder.geocode({
-								'address': address
-							}, function (results, status) {
-								if (status === google.maps.GeocoderStatus.OK) {
-									resultsMap.setCenter(results[0].geometry.location);
-									var marker = new google.maps.Marker({
-										map: map,
-										position: results[0].geometry.location,
-										title: data.displayName + ", " + data.displayState,
-										icon: image
-									});
-									marker.setMap(map);
-									
-									var position = (function() {
-										if(data.postings.length > 1) {
-											//console.log(data.postings.length);
-											return "Positions"
-										}
-										else {
-											return "Position"
-										}
-									})();
-									var infowindowConent = '<b>' + data.displayName + ", " + data.displayState + '</b><br><a href=#" data-toggle="modal" data-target="#' + data.name + '"><span class="badge">' + data.postings.length + '</span>' + position + '</a>';
-
-										marker.addListener('click', function () {
-											infowindow.setContent(infowindowConent);
-											infowindow.open(map, marker);
-										});
-									
-								} else {
-									alert('Geocode was not successful for the following reason: ' + status);
-								}
-							});
-						})(geocoder, map);
-
+					marker.addListener('click', function () {
+						infowindow.setContent(infowindowConent);
+						infowindow.open(map, marker);
+					});
+				
+						$.each(data.postings, function (i, posting) {
+							var item = '<a href="https://jrsextdev.simplot.com:1443/prodhcm/CandidateSelfService/controller.servlet?dataarea=prodhcm&context.session.key.HROrganization=JRS&context.session.key.JobBoard=EXTERNALNEW&context.session.key.noheader=true&JobPost=' + posting.jobPost + '&JobReq=' + posting.jobID + '" class="list-group-item" target="_blank">' + posting.position + '<i class="fa fa-chevron-circle-right pull-right"></i></a>'
+							//buildBodyContent += item;
+						});
 
 						//Build Modal and insert job listings
-						var buildModal = '<div class="modal modal-fullscreen fade" id="' + data.name + '" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">' + '<div class="modal-dialog" role="document">' + '<div class="modal-content">' + '<div class="modal-header">' + '<button type="button" class="close" data-dismiss="modal" aria-label="Close">' + '<span aria-hidden="true">&times;</span></button>' + '<h3 class="modal-title" id="myModalLabel">' + 'Available Postions for ' + data.displayName + ', ' + data.displayState + '</h3></div>' + '<div class="modal-body"><table id="' + data.name + '-table" class="table-bordered"></table></div></div></div></div>'
+						var buildModal = '<div class="modal modal-fullscreen fade" id="' + locationID + '" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">' + '<div class="modal-dialog" role="document">' + '<div class="modal-content">' + '<div class="modal-header">' + '<button type="button" class="close" data-dismiss="modal" aria-label="Close">' + '<span aria-hidden="true">&times;</span></button>' + '<h3 class="modal-title" id="myModalLabel">' + 'Available Postions for ' + data.address + '</h3></div>' + '<div class="modal-body"></div><table id="' + locationID + '-table" class="table-bordered"></table></div></div></div>'
 
 						$('body').append(buildModal);
 						
-						var $table = $('#' + data.name +'-table');
+						var $table = $('#' + locationID +'-table');
 						
 						$table.bootstrapTable({
 							table: [{
@@ -469,11 +507,11 @@
 							
 							$.each(data.postings, function (i, posting) {
 								row.push({
-									postDate: posting.postDate,
+									postDate: posting.postBeginDate,
 									jobID: posting.jobID,
-									jobTitle: posting.position,
+									jobTitle: posting.jobPostTitle,
 									category: posting.category,
-									link: '<a href="https://jrsextdev.simplot.com:1443/prodhcm/CandidateSelfService/controller.servlet?dataarea=prodhcm&context.session.key.HROrganization=JRS&context.session.key.JobBoard=EXTERNALNEW&context.session.key.noheader=true&JobPost=' + posting.jobPost + '&JobReq=' + posting.jobID + '"target="_blank"> View Details </a>'
+									link: '<a href="' + posting.jobPostURL + '" target="_blank"> View Details </a>'
 								});
 
 							});
@@ -481,7 +519,66 @@
 					   } 
 						
 						$table.bootstrapTable('append', addRows());
+				
+					locationID++
+                    
+                    if(lastOne){
+                        console.log('cluster called');
+                        clusterMarkers(markersGroups);
+                    }
+				}
+            
+            
+            
+            ///////////////////////////////////////////////
+            // RUN GEOCODER
+            ///////////////////////////////////////////////
+			
+			function runGeocoder(key, data, lastOne) {
+				var geocoder = new google.maps.Geocoder();
 
+				(function (geocoder, resultsMap) {
+					var address = data.address + ", " + data.manicipality + ", " + data.stateprovince + " " + data.postalcode;
+					geocoder.geocode({
+						'address': address
+					}, function (results, status) {
+						if (status === google.maps.GeocoderStatus.OK) {
+							var theGeoResults = results[0].geometry.location;
+							createMarker(key, data, theGeoResults, lastOne);
+                            console.log('geo results back');
+						} else {
+							alert('Geocode was not successful for the following reason: ' + status);
+						}
+					});
+				})(geocoder, map);
+			}
+            
+            ///////////////////////////////////////////////
+            // GET JOB POSTINGS AND LOOP THROUGH
+            ///////////////////////////////////////////////
+
+			$.getJSON('data/data_missing.json')
+				.done(function (json) {
+                
+                    var lastOne = false; 
+					$.each(json, function (key, data) {
+                        if (key == (json.length - 1)) {
+                            lastOne = true;
+                        }
+						//console.log("key:" + key + ", json.length:" + json.length);
+						//Check if Long and Lat exist
+						if((data.long !== "0") || (data.lat !== "0")) {
+							console.log('coordinates exist');
+							var longitude = data.long * 1, //convert to number from string
+								latitude = data.lat * 1, //convert to number from string
+								latLong = {lat: latitude, lng: longitude}
+							createMarker(key, data, latLong, lastOne);
+						}
+						else {
+							console.log('no coordinates');
+							runGeocoder(key, data, lastOne);
+						}
+                       
 					});
 				})
 				.fail(function () {
@@ -548,11 +645,16 @@
 					};
 					navigator.geolocation.getCurrentPosition(success, error, {enableHighAccuracy: true, timeout: 5000, maximumAge: 0});
 				});
+            
 		}
+        
+        
 	</script>
+
 
 	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD6F8DDumSo3nUet2sUNjLQS5U-SWwm8VQ&callback=initMap">
 	</script>
+
 	<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
 	<script>
 		(function (b, o, i, l, e, r) {

@@ -59,6 +59,11 @@ $(function() {
             var sq = new Square(el);
                 sq.hoverEffect(); 
         })
+        .on('tap', function(e){
+            var el = this;
+            var sq = new Square(el);
+                sq.hoverEffect(); 
+        })
         .mouseout(function() {
             var el = this;
             var sq = new Square(el);

@@ -25,6 +25,9 @@
         .navbar-brand {
             margin-left:0; 
         }
+        li > a {
+            margin-top: 15px;
+        }
     }
     &.small {
         height: 50px; 
@@ -34,17 +37,30 @@
         .navbar-header {
             height: 50px; 
         }
+        #main-nav {
+            .navbar-brand {
+            margin-top:5px;
+            img {
+                &.small {
+                    width: 175px; 
+                    padding-bottom: 5px; 
+                    bottom:0; 
+                }
+            }
+        }
     }
+}
     @media (max-width: $screen-sm-max) {
         position: relative;
         &.small {
-           height: 100px; 
-        
+            height: auto; 
             #main-nav {
                 .navbar-brand {
                     img {
                         &.small {
                             width: 200px; 
+                            padding-bottom: 5px; 
+                            bottom:0; 
                         }
                     }
                 }
@@ -100,14 +116,6 @@
         padding: 0; 
         margin-left: -15px; 
         margin-top: -15px;
-        img {
-            &.small {
-                width: 175px; 
-                //position: absolute;
-                padding-bottom: 5px; 
-                bottom:0; 
-            }
-        }
     }
 	
 	.nav.navbar-nav{
@@ -144,6 +152,7 @@
 		#navbar {
 			margin-left: -30px;
 			text-align: center; 
+            width: 100%; 
 			.navbar-nav {
 				padding-left:0;
 				font-size: $font-size-med;
@@ -167,6 +176,11 @@
                 margin-top: 15px; 
             }
 		}
+        li:last-child {
+           & > a {
+                margin: 15px; 
+            }
+        }
         
 		
 	}
@@ -607,7 +621,6 @@
     .item {
         height: 100%; 
         width: 100%; 
-        
         .person-highlight {
             margin-top: 100px; 
             p {
@@ -637,7 +650,8 @@
             }
         }
         figcaption {
-            margin-top: 29%;
+            position: absolute;
+            top: 193px; 
             h2 {
                font-size: $font-size-xxxx-large;
                 font-weight: 200;
@@ -706,7 +720,9 @@
         }
     }
     @media (max-width: $screen-xs-max) {
-        border-bottom: 2px solid lightgray;
+        .mobile-border {
+            border-bottom: 2px solid lightgray;
+        }
         &:last-child {
             border:none;
         }
@@ -755,6 +771,16 @@ figure.effect-sadie {
         -webkit-transform: translate3d(0,-50%,0);
         transform: translate3d(0,-50%,0);
     }
+    i.fa {
+        position: absolute;
+        top: 65%;
+        -webkit-transition: -webkit-transform 0.35s, color 0.35s;
+        transition: transform 0.35s, color 0.35s;
+        -webkit-transform: translate3d(0,-55%,0);
+        transform: translate3d(0,-5%,0);
+        font-size: $font-size-large; 
+        margin-left: -10px;
+    }
     figcaption::before, p {
         -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
         transition: opacity 0.35s, transform 0.35s;
@@ -773,7 +799,7 @@ figure.effect-sadie {
             transform: translate3d(0,10px,0);
         }
     }
-    &:hover h2 {
+    &:hover h2, &:hover i.fa {
         color: #fff;
         -webkit-transform: translate3d(0,-50%,0) translate3d(0,-40px,0);
         transform: translate3d(0,-50%,0) translate3d(0,-40px,0);
@@ -784,6 +810,38 @@ figure.effect-sadie {
         -webkit-transform: translate3d(0,0,0);
         transform: translate3d(0,0,0);
     }
+    @media (max-width: $screen-sm-max) {
+        margin-bottom: 20px;
+        
+    }
+    @media (max-width: $screen-sm-max) {
+        h2 {
+            top: 40%
+        }
+        i.fa {
+            top: 55%; 
+        }
+        figcaption p {
+            padding: 2em;
+        }
+    }
+}
+.grid {
+    .mos-subheading, .link {
+        position: absolute;
+        left: 10%;
+    }
+    .mos-subheading {
+        top: 40%; 
+        font-size: $font-size-xxx-large;
+    }
+    .link {
+        top: 50%;
+        a {
+            font-size: $font-size-super-large; 
+        }
+    }
+    
 }
 /*
     ALL ABOUT
@@ -860,7 +918,6 @@ figure.effect-sadie {
     background: $white; 
 }
 .intern, .apply-video {
-    width: 50%;
     background: url(../images/intern_video.jpg) no-repeat;
     height: 350px;
     i.fa {
@@ -874,10 +931,48 @@ figure.effect-sadie {
         position: absolute;
         left: 30%;
     }
+//    @media (max-width: $screen-xs-max) {
+//        width: 95%;
+//        margin: 0 auto;
+//    }
 }
 .apply-video {
 	background: url(../images/mockup-macbook.jpg) no-repeat;
 }
+.internship-types {
+    ul {
+        padding-left: 20px;
+    }
+    @media (max-width: $screen-sm-max) and (min-width: $screen-xs-max) {
+        img {
+            margin-left: 20px; 
+        }
+    }
+}
+/*
+    RESOURCES
+*/
+.resources {
+    .fa {
+            margin-right: 5px;
+    }
+    li {
+        
+        .fa-check-square-o {
+            color: $light-field-green;
+        }
+        .fa-star {
+            color: $simplot-gold; 
+        }
+    }
+    .btn {
+        color: $simplot-gray;
+        &:hover, &:focus, &.focus {
+            color: lighten($simplot-gray, 15%);
+        }
+    }
+}
+
 /*
     APPLY PAGE OPTIONS
 */
@@ -993,10 +1088,20 @@ figure.effect-sadie {
 	margin-left: 20px; 
 }
 /*
+    FAQs
+*/
+.panel {
+    a {
+        color: $simplot-gray; 
+    }
+}
+/*
     MOSAIC STYLES
 */
 #mosaic {
     color: $white; 
+}
+    
     .mos-heading {
         font-size: $font-size-super-huge;
     }
@@ -1024,7 +1129,7 @@ figure.effect-sadie {
     .mos-img.hover {
         opacity: .75; 
     }
-    &.why-simplot-apply {
+    .why-simplot-apply {
         .mos-figure {
             text-align: left; 
             padding-top: 30%; 
@@ -1086,7 +1191,7 @@ figure.effect-sadie {
 			font-size: $font-size-med;
 		}
 	}
-}
+
 .mos-figure {
     padding: 10%; 
     &.hover {
@@ -1269,7 +1374,7 @@ figure.effect-sadie {
 }
 
 footer {
-    overflow: hidden; 
+    
     font-size: $font-size-small; 
     padding: 40px 0; 
     color: $simplot-gray;
@@ -1308,12 +1413,11 @@ footer {
                 display: inline-block; 
                 padding: 15px 0 0 0;
                 color: $simplot-gray;
-                border-bottom: 1px solid $simplot-gray;
+                text-decoration: underline;
                 -webkit-transition: all 0.5s ease-in-out;
                 transition: all .5s ease-in-out;
                 &:hover {
                    color: lighten($simplot-gray, 25%);
-                   border-color: lighten($simplot-gray, 25%);
                    background-color: transparent; 
                 }
             }
@@ -1337,6 +1441,7 @@ footer {
         padding-top: 30px; 
     }
 	@media (max-width: $screen-sm-max) {
+        overflow: hidden; 
         text-align: center; 
         .col-md-4{
             h4 {

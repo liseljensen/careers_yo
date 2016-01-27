@@ -13,6 +13,7 @@
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
     <link rel="stylesheet" href="/bower_components/components-font-awesome/css/font-awesome.css" />
+    <link rel="stylesheet" href="/bower_components/bootstrap-table/src/bootstrap-table.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
@@ -46,8 +47,8 @@
                   <li id="what_we_do"><a href="subpages.html?page=what_we_do">What We Do</a></li>
                   <li id="why_simplot"><a href="subpages.html?page=why_simplot">Why Simplot</a></li>
                   <li id="student_center"><a href="subpages.html?page=student_center">Student Center</a></li>
-                  <li id="apply_now"><a href="apply_now_new.html">Job Search &amp; Apply</a></li>
-                  <li id="contact_us"><a href="contact.html?page=contact_us">Contact Us</a></li>
+                  <li id="apply_now"><a href="apply_now.html">Job Search &amp; Apply</a></li>
+                  <li id="contact_us"><a href="subpages.html?page=contact_us">Contact Us</a></li>
                 </ul>
               </div><!--/.nav-collapse -->
           </nav>
@@ -63,7 +64,7 @@
     </section>
     <div class="apply-now-tab">
         <h2>Apply<br>Now</h2><i class="fa fa-chevron-circle-right"></i>
-        <div class="overlay"><a class="overlay-link" href="apply_now_new.html">Apply Now</a></div>
+        <div class="overlay"><a class="overlay-link" href="apply_now.html">Apply Now</a></div>
     </div>
     
 
@@ -71,6 +72,12 @@
     <!-- bower:js -->
     <script src="/bower_components/jquery/dist/jquery.js"></script>
     <script src="/bower_components/packery/dist/packery.pkgd.js"></script>
+    <script src="/bower_components/bootstrap-table/src/bootstrap-table.js"></script>
+    <script src="/bower_components/js-marker-clusterer/src/markerclusterer.js"></script>
+    <script src="/bower_components/jquery.finger/dist/jquery.finger.js"></script>
+    <script src="/bower_components/jquery-animateNumber/jquery.animateNumber.js"></script>
+    <script src="/bower_components/isInViewport/lib/isInViewport.min.js"></script>
+    <script src="/bower_components/bootstrap-validator/dist/validator.min.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -93,7 +100,7 @@
 
     <!-- build:js scripts/main.js -->
 <!--    <script src="scripts/jquery-animateNumber.js"></script>-->
-    <script src="scripts/jquery.viewport.mini.js"></script>
+<!--    <script src="scripts/jquery.viewport.mini.js"></script>-->
     <script src="scripts/main.js"></script>
     <!-- endbuild -->
       

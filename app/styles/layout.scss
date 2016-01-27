@@ -11,6 +11,10 @@
     width: 95%; 
     margin: 0 auto; 
     max-width: 1800px; 
+    overflow: hidden;
+}
+.container {
+    overflow: hidden; 
 }
 .subpage {
     margin-top: 91px;
@@ -76,7 +80,7 @@ section {
         background: #BD4F19;
         text-align: center;
         cursor: pointer;
-        img {
+        img, .orange-bk {
             position: relative;
             display: block;
             min-height: 100%;

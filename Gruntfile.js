@@ -210,7 +210,7 @@ module.exports = function (grunt) {
     // Automatically inject Bower components into the HTML file
     wiredep: {
       app: {
-        src: ['<%= config.app %>/index.html'],
+        src: ['<%= config.app %>/*.html'],
         exclude: ['bootstrap.js'],
         ignorePath: /^(\.\.\/)*\.\./
       },
@@ -340,7 +340,11 @@ module.exports = function (grunt) {
             '*.{ico,png,txt}',
             'images/{,*/}*.webp',
             '{,*/}*.html',
-            'styles/fonts/{,*/}*.*'
+            'styles/fonts/{,*/}*.*',
+            'styles/img/{,*/}*.*',
+            'fonts/{,*/}*.*',
+            'scripts/{,*/}*.*',
+            'data/{,*/}*.*'
           ]
         }, {
           expand: true,
@@ -381,7 +385,7 @@ module.exports = function (grunt) {
       dist: [
         'babel',
         'sass',
-        //'imagemin',
+        'imagemin',
         'svgmin'
       ]
     }

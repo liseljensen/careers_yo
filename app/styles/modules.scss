@@ -819,6 +819,7 @@ figure.effect-sadie {
         transform: translate3d(0,-5%,0);
         font-size: $font-size-large; 
         margin-left: -10px;
+        display: none;
     }
     figcaption::before, p {
         -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
@@ -851,9 +852,6 @@ figure.effect-sadie {
     }
     @media (max-width: $screen-sm-max) {
         margin-bottom: 20px;
-        
-    }
-    @media (max-width: $screen-sm-max) {
         h2 {
             top: 40%
         }
@@ -862,6 +860,9 @@ figure.effect-sadie {
         }
         figcaption p {
             padding: 2em;
+        }
+        i.fa {
+            display: inline-block;
         }
     }
 }
@@ -878,6 +879,20 @@ figure.effect-sadie {
         top: 50%;
         a {
             font-size: $font-size-super-large; 
+        }
+    }
+    @media (max-width: $screen-sm-max) {
+        
+        .mos-subheading, .link {
+            left: 5%;
+        }
+        .mos-subheading {
+            font-size: $font-size-xx-large;
+        }
+        .link {
+            a {
+                font-size: $font-size-xxxx-large; 
+            }
         }
     }
     
@@ -921,6 +936,23 @@ figure.effect-sadie {
         }
         
     }
+    @media (max-width: $screen-md-max) {
+        min-height: 200px; 
+        span.number {
+            font-size: ceil(($font-size-super-huge * 1.75 )); 
+        }
+    }
+    @media (max-width: $screen-sm-max) {
+        min-height: 200px; 
+        span.number, &.student span.number {
+            font-size: ceil(($font-size-super-huge * 1.25 )); 
+        }
+    }
+    @media (max-width: $screen-xs-max) {
+        span.number {
+            font-size: ceil(($font-size-super-huge * 1.5 )); 
+        }
+    }
 }
 /*
     REWARDS
@@ -951,13 +983,15 @@ figure.effect-sadie {
         margin-top: 20px; 
         font-weight: 600; 
     }
+    &.intern {
+        background: url(../images/intern_video.jpg) no-repeat;
+    }
 }
 .event-logo {
     max-width: 100px; 
     background: $white; 
 }
 .intern, .apply-video {
-    background: url(../images/intern_video.jpg) no-repeat;
     height: 350px;
     i.fa {
         position: absolute;
@@ -1437,7 +1471,7 @@ footer {
     }
     i.fa {
         font-size: $font-size-xxx-large; 
-        padding: 10px; 
+        padding: 0 10px; 
         margin-top: 20px;
         color: $simplot-gray;
         &:hover {
@@ -1481,6 +1515,11 @@ footer {
     #trademark {
         text-align: center;
         padding-top: 30px; 
+    }
+    @media (max-width: $screen-md-max) {
+         i.fa {
+            margin-left:-15px;
+        }
     }
 	@media (max-width: $screen-sm-max) {
         overflow: hidden; 

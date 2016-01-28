@@ -126,19 +126,19 @@ $(function() {
                 (function() {
                     $('#value').animateNumber(
                        {
-                        number: 97
+                        number: 100
                       },
                         2000
                     ).delay(1000);
                     $('#fulltime').animateNumber(
                        {
-                        number: 92
+                        number: 75
                       },
                       2000
                     ).delay(2000);
                     $('#employed').animateNumber(
                        {
-                        number: 40
+                        number: 100
                       },
                       2000
                     ).delay(3000);
@@ -179,10 +179,6 @@ $(function() {
                   else {
                       //console.log('success');
                       $('#' + pageName).addClass('active');
-                      if($('.numbers').length) {
-                          //console.log('has numbers');
-                          $('[src="scripts/main.js"]').before('<script src="scripts/jquery-animateNumber.js"></script>');
-                      }
                   }
                 });
            }
@@ -198,7 +194,7 @@ $(function() {
                 checkNav();
                 var numCheck = $(".numbers:in-viewport").length; 
                 if(numCheck) {
-                    console.log('page has numbers in view');
+                    //console.log('page has numbers in view');
                     canSeeNumbers(); 
 //                    if (($('#nae').length !== 0) || ($('#value').length !== 0)) {
 //                          

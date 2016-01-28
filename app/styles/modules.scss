@@ -710,6 +710,16 @@
     @media (max-width: $screen-xs-max) {
         display: none; 
     }
+	&.carousel-modal {
+		position: relative; 
+		max-width: 700px;
+		max-height: 467px;
+		margin: 15% auto 0; 
+		height: auto; 
+		@media (max-width: $screen-xs-max) {
+			display: block; 
+		}
+	}
 }
 /*
     PAGE BANNER
@@ -765,15 +775,11 @@
         &:last-child {
             border:none;
         }
-        &:nth-of-type(1), &:nth-of-type(3), &:nth-of-type(5)  {
-            img {
-                margin-bottom: 20px; 
-            }
+        .mobile-marg-bottom {
+			margin-bottom: 20px; 
         }
-        &:nth-of-type(2), &:nth-of-type(4), &:nth-of-type(6)  {
-            img {
-                margin-top: 50px; 
-            }
+        .mobile-marg-top {
+            margin-top: 50px; 
         }
     }
 }
@@ -810,7 +816,7 @@ figure.effect-sadie {
         -webkit-transform: translate3d(0,-50%,0);
         transform: translate3d(0,-50%,0);
     }
-    i.fa {
+    i.fa.fa-chevron-up  {
         position: absolute;
         top: 65%;
         -webkit-transition: -webkit-transform 0.35s, color 0.35s;
@@ -855,13 +861,13 @@ figure.effect-sadie {
         h2 {
             top: 40%
         }
-        i.fa {
+        i.fa.fa-chevron-up {
             top: 55%; 
         }
         figcaption p {
             padding: 2em;
         }
-        i.fa {
+        i.fa.fa-chevron-up {
             display: inline-block;
         }
     }
@@ -915,7 +921,7 @@ figure.effect-sadie {
         display: block;
         margin: 0 auto 20px; 
         font-weight: 900; 
-        font-size: ceil(($font-size-super-huge * 2 )); 
+        font-size: ceil(($font-size-super-huge * 1.75 )); 
         color: $simplot-gold; 
     }
     label {
@@ -928,7 +934,7 @@ figure.effect-sadie {
     }
     &.student {
         span.number {
-            font-size: 175px; 
+            font-size: ceil(($font-size-super-huge * 1.75 )); 
             &:after {
                 font-size: 50px;
                 content: "%"
@@ -938,18 +944,18 @@ figure.effect-sadie {
     }
     @media (max-width: $screen-md-max) {
         min-height: 200px; 
-        span.number {
-            font-size: ceil(($font-size-super-huge * 1.75 )); 
+        span.number, &.student span.number  {
+            font-size: ceil(($font-size-super-huge * 1.25 )); 
         }
     }
     @media (max-width: $screen-sm-max) {
         min-height: 200px; 
         span.number, &.student span.number {
-            font-size: ceil(($font-size-super-huge * 1.25 )); 
+            font-size: ceil(($font-size-super-huge * .8 )); 
         }
     }
     @media (max-width: $screen-xs-max) {
-        span.number {
+        span.number, &.student span.number  {
             font-size: ceil(($font-size-super-huge * 1.5 )); 
         }
     }

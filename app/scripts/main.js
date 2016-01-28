@@ -87,15 +87,15 @@ $(function() {
     
         $.get('content/footer.html')
             .done(function (data) {
-                //console.log('news items' + newsItems + "done.");
+                var year = new Date().getFullYear();
                 $('footer').append(data); 
                 $.each(newsItems, function(i, data){
-                    //console.log(data);
                    $('#news').append(data); 
                 });
+                $('#trademark').append('© ' + year + ' J.R. Simplot Company')
             })
             .fail(function () {
-                console.log('failed');
+                $('footer').append('Unable to load footer content.')
             });
     
 

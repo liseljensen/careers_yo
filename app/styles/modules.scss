@@ -51,11 +51,20 @@
     }
 }
     @media (max-width: $screen-sm-max) {
+        #main-nav {
+            .navbar.navbar-default {
+                margin: 0;
+            }
+            .navbar-brand {
+               margin: 14px auto 0; 
+            }
+        }
         position: relative;
         &.small {
             height: auto; 
             #main-nav {
                 .navbar-brand {
+                    
                     img {
                         &.small {
                             width: 200px; 
@@ -121,28 +130,21 @@
 	.nav.navbar-nav{
 		float: right;
 	}
+    #navbar {
+		.navbar-nav {
+	       margin: 15px 0 0; 
+		}
+	}
 	@media (max-width: $screen-md-max) {
 		.navbar-brand {
+            margin-top: 0; 
 			max-width: 250px;
-		}
-		#navbar {
-			.navbar-nav {
-				margin-top:0;
-				margin-bottom:0; 
-			}
-		}
+		}		
 	}
 	@media (max-width: 1100px) {
         .navbar-brand {
-            margin-top:0; 
-            
+            margin-top:10px;  
         }
-        #navbar {
-			.navbar-nav {
-				margin: 15px 0; 
-			}
-		}
-        
 	}
 	@media (max-width: $screen-sm-max) {
 		.navbar-header {
@@ -229,6 +231,38 @@
 		margin-right: -15px; 
 	}
 }
+.subpage {
+    header.fixed.small {
+        #main-nav {
+            li {
+                & > a {
+                    margin-top: 0; 
+                }
+            }                  
+        }
+    }
+    @media (max-width: $screen-md-max) {
+        #main-nav {
+            .navbar-brand {
+                margin-top: -2px; 
+            }
+        }
+        
+    }
+    @media (max-width: $screen-sm-max) {
+        #main-nav {
+            #navbar {
+                margin: 0; 
+                padding: 0;  
+                .navbar-nav {
+                    margin: 0 auto;
+                    float: none !important; 
+                }
+            }
+            
+        }
+    }
+}
 /*
     HEADERS
 */
@@ -271,7 +305,18 @@
            border-right: none; 
         }
     }
-    @media (max-width: $screen-sm-max) {
+    @media (max-width: 1500px) {
+        padding: 5px 5px 5px 10px;
+        h2 {
+            font-size: $font-size-large; 
+            margin-right: 10px; 
+        }
+        .fa-chevron-circle-right {
+            font-size: $font-size-xxx-large;    
+            margin-right: 10px; 
+        }
+    }
+    @media (max-width: $screen-md-max) {
         padding: 5px 5px 5px 10px;
         bottom: 0; 
         top:auto;
@@ -389,21 +434,15 @@
     opacity: .75;
     background: $simplot-gray;
     background-color: rgba( 103, 92, 83, .70);
+    text-align: center; 
     i.fa {
         height: 125px;
         width: 125px;
-        text-align: center;
         position: relative;
-        top: 25%;
-        -webkit-transform: translateY(-50%);
-        -ms-transform: translateY(-50%);
-        transform: translateY(-50%);
-        left: 50%;
-        -webkit-transform: translateX(-50%);
-        -ms-transform: translateX(-50%);
-        transform: translateX(-50%);
+        top: 30%;
         color: #fff;
         font-size: 125px;
+        vertical-align: bottom; 
     }
     &:hover {
       opacity: .95; 
@@ -683,16 +722,16 @@
         font-weight: 900; 
     }
     &.orange {
-        background: #b14b03 url(../images/doublefade_leaf-pattern-orange.png) no-repeat 100%;
+        background: #b14b03 url(../images/doublefade_leaf-pattern-orange.png) repeat-x 100%;
     }
     &.blue {
-        background: #04a5bd url(../images/doublefade_leaf-pattern-blue.png) no-repeat 100%;
+        background: #04a5bd url(../images/doublefade_leaf-pattern-blue.png) repeat-x 100%;
     }
     &.yellow {
-        background: #E2AF30 url(../images/doublefade_leaf-pattern-yellow.png) no-repeat 100%;
+        background: #E2AF30 url(../images/doublefade_leaf-pattern-yellow.png) repeat-x 100%;
     }
     &.green {
-        background: #62b226 url(../images/doublefade_leaf-pattern-green.png) no-repeat 100%;
+        background: #62b226 url(../images/doublefade_leaf-pattern-green.png) repeat-x 100%;
     }
 }
 /*
@@ -1271,9 +1310,9 @@ figure.effect-sadie {
     }
 	.quote {
 		background: url(../images/quotes.png) no-repeat;
-		margin-top: 15%; 
+		margin-top: 10%; 
 		padding-left: 70px !important;
-		margin-left: 40px; 
+		margin-left: 10%; 
 		padding-top:0;
 	}
 	@media (max-width: 1500px) { 
@@ -1290,7 +1329,9 @@ figure.effect-sadie {
     }
     @media (max-width: 1300px) {
         .quote {
+            margin-top: 15%; 
 			font-size: $font-size-large;
+           // margin-left: 10%; 
 			.sig {
 				font-size: $font-size-med;
 				margin-right:20px;
@@ -1301,7 +1342,7 @@ figure.effect-sadie {
 		height: 325px; 
 		.quote {
 			padding-left: 70px !important;
-			margin-left: 10%; 
+			
 		}
 	}
 	@media (max-width: $screen-sm-max) {
@@ -1309,7 +1350,7 @@ figure.effect-sadie {
 		.quote {
 			margin-top: 20%; 
 			padding-left: 70px !important;
-			margin-left: 10%; 
+			//margin-left: 10%; 
 			padding-top:0;
 		}
 	}
@@ -1417,8 +1458,9 @@ footer {
                 -webkit-transition: all 0.5s ease-in-out;
                 transition: all .5s ease-in-out;
                 &:hover {
-                   color: lighten($simplot-gray, 25%);
-                   background-color: transparent; 
+                    color: lighten($simplot-gray, 25%);
+                    text-decoration: underline; 
+                    background-color: transparent; 
                 }
             }
         }

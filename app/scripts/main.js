@@ -224,5 +224,7 @@ $(function() {
 //    checkWidth();
 //    // Bind event listener
 //    $(window).resize(checkWidth);
+    
+    $("[data-toggle='popover']").popover(); 
 });
 

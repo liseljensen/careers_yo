@@ -25,36 +25,33 @@ $(function() {
       percentPosition: true
     });    
     
-    //HOVER EFFECTS ON HOME PAGE
-    function onHover() {
-        for (var prop in this) {
-          //console.log(this[prop]);
-          $(this[prop]).addClass('hover');
-        }
-    }
-    function onMouseout() {
-        for (var prop in this) {
-          //console.log(this[prop]);
-          $(this[prop]).removeClass('hover');
-        }
-    }
-    
     function Square(el) {
         this.parent = $(el).parent(), 
         this.figure = this.parent.find('figure'),
         this.link = this.parent.find('.link a'),
         this.image = this.parent.find('img'),
-        this.hoverEffect = onHover,
-        this.mouseOut = onMouseout
+        this.hoverEffect = function() {
+			console.log(this);
+								Object.keys(this).forEach(function(key,index) {
+								  //console.log(key);
+									$(key).addClass('hover');
+								});
+							},
+        this.mouseOut = function() {
+								Object.keys(this).forEach(function(key,index) {
+									$(key).removeClass('hover');
+								});
+							}
     }
     
     $('.overlay')
         .hover(function(e) {
+		//console.log('hover');
             var el = this;
             var sq = new Square(el);
                 sq.hoverEffect(); 
         })
-        .click(function(){
+        .click(function(e){
             var el = this;
             var sq = new Square(el);
                 sq.hoverEffect(); 
@@ -64,7 +61,7 @@ $(function() {
             var sq = new Square(el);
                 sq.hoverEffect(); 
         })
-        .mouseout(function() {
+        .mouseout(function(e) {
             var el = this;
             var sq = new Square(el);
                 sq.mouseOut(); 
@@ -92,10 +89,10 @@ $(function() {
                 $.each(newsItems, function(i, data){
                    $('#news').append(data); 
                 });
-                $('#trademark').append('© ' + year + ' J.R. Simplot Company')
+                $('#trademark').append('© ' + year + ' J.R. Simplot Company');
             })
             .fail(function () {
-                $('footer').append('Unable to load footer content.')
+                $('footer').append('Unable to load footer content.');
             });
     
 

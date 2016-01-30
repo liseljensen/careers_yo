@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>careers_yo</title>
+	<title>Simplot Careers</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -48,7 +48,7 @@
 						<li id="what_we_do"><a href="subpages.html?page=what_we_do">What We Do</a></li>
 						<li id="why_simplot"><a href="subpages.html?page=why_simplot">Why Simplot</a></li>
 						<li id="student_center"><a href="subpages.html?page=student_center">Student Center</a></li>
-						<li id="apply_now" class="active"><a href="apply_now_new.html">Job Search &amp; Apply</a></li>
+						<li id="apply_now" class="active"><a href="apply_now.html">Job Search &amp; Apply</a></li>
 						<li id="contact_us"><a href="subpages.html?page=contact_us">Contact Us</a></li>
 					</ul>
 				</div>
@@ -95,23 +95,25 @@
 			<div class="row">
 				<div class="col-md-6">
                     <div class="vid-media intern mobile-marg-top">
-                        <img src="images/mockup-macbook.jpg" class="img-responsive" alt="screen shot of career portal" />
+                        <img src="images/mockup-macbook.jpg" class="img-responsive mobile-marg-bottom" alt="screen shot of career portal" />
+<!--
                         <div class="overlay overlay-video" data-toggle="modal" data-target="#intern-video">
                             <i class="fa fa-play-circle-o"></i>
                             <h3>Application Tutorial</h3>
                         </div>
+-->
                     </div>
 				</div>
 				<div class="col-md-6">
 					<h3 class="app-list-title">Application Steps</h3>
 					<ul class="application-list">
-						<li><span class="app-list-number">1</span>View the <a href="https://careercenter.tamu.edu/docs/ResumeWritingChecklist_Sept12.pdf" target="_blank">resume checklist</a></li>
-						<li><span class="app-list-number">2</span>Go to the <a href="https://jrsext.simplot.com/prodhcm/CandidateSelfService/controller.servlet" target="_blank">Careers Portal</a><a tabindex="0" class="mobile-warn" data-toggle="popover" data-trigger="focus" data-placement="top" title="" data-content="The Careers Portal does not support applications using a mobile device. Applications can only be filled out and submitted on a desktop or laptop computer. See the FAQs section below for more details.">&#40;On a mobile device?&#41;</a></li>
-						<li><span class="app-list-number">3</span>Fill out application &amp; submit</li>
-						<li><span class="app-list-number">4</span>Look for an email confirmation in you inbox </li>
-						<li><span class="app-list-number">5</span>Check your phone and email regularly</li>
+						<li><span class="app-list-number">1</span><span class="app-list-desc">View the <a href="docs/Resume_Checklist_Professional.pdf" target="_blank">resume checklist</a></span></li>
+						<li><span class="app-list-number">2</span><span class="app-list-desc">Go to the <a href="https://jrsext.simplot.com/prodhcm/CandidateSelfService/controller.servlet" target="_blank">Careers Portal</a><a tabindex="0" class="mobile-warn" data-toggle="popover" data-trigger="focus" data-placement="top" title="" data-content="The Careers Portal does not support applications using a mobile device. Applications can only be filled out and submitted on a desktop or laptop computer. See the FAQs section below for more details.">&#40;On a mobile device?&#41;</a></span></li>
+						<li><span class="app-list-number">3</span><span class="app-list-desc">Fill out application &amp; submit</span></li>
+						<li><span class="app-list-number">4</span><span class="app-list-desc">Look for an email confirmation in your inbox</span></li>
+						<li><span class="app-list-number">5</span><span class="app-list-desc">Check your phone and email regularly</span></li>
 					</ul>
-					<p class="questions">Have questions? <a href="#">View FAQs</a></p>
+					<p class="questions">Have questions? <a href="#faq">View FAQs</a></p>
 				</div>
 			</div>
 		</div>
@@ -121,7 +123,7 @@
 			<div class="row">
 				<div class="col-md-7">
 					<h2 class="subpage-heading">Search for Open Postions</h2>
-					<p>To search for open positions, use the map below or login to the <a href="#">Career Portal</a>.</p>
+					<p>To search for open positions use the map below or go to the <a href="https://jrsext.simplot.com/prodhcm/CandidateSelfService/controller.servlet#" target="_blank">Career Portal</a>.</p>
 				</div>
 
 				<div class="col-md-3 pull-right">
@@ -147,7 +149,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
-					<h2 class="subpage-header">FAQs</h2>
+					<h2 class="subpage-heading">FAQs</h2>
 
 					<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
 						<div class="panel panel-default">
@@ -304,6 +306,7 @@
 								</div>
 							</div>
 						</div>
+<!--
 						<div class="panel panel-default">
 							<div class="panel-heading" role="tab" id="headingTwelve">
 								<h4 class="panel-title">
@@ -318,6 +321,7 @@
 								</div>
 							</div>
 						</div>
+-->
                         <div class="panel panel-default">
 							<div class="panel-heading" role="tab" id="headingThirteen">
 								<h4 class="panel-title">
@@ -326,7 +330,7 @@
 								</a>
 							  </h4>
 							</div>
-							<div id="collapseTwelve" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+							<div id="collapseThirteen" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
 								<div class="panel-body">
 									The Careers Portal does not support applications using a mobile device. However, you have the option of “Expressing Interest” which will allow you to create a profile that you can later use to apply to a position from a desktop or laptop computer. 
 								</div>
@@ -414,32 +418,40 @@
             
             var infowindow = new google.maps.InfoWindow(),
 				locationID = 0; 
-            
+            ///////////////////////////////////////////////
+            // DISPLAY ERROR MESSAGE
+            ///////////////////////////////////////////////
+			function displayError(message, color) {
+				var createError = '<div class="alert alert-' + color + '" role="alert">' + message + '</div>'
+				$('.alert').remove();
+				$('#map').prepend(createError);
+			}
             ///////////////////////////////////////////////
             // CLUSTER MARKERS
             ///////////////////////////////////////////////
             
             function clusterMarkers(markersGroups) {
-                
-            
                 var clusterStyles = [
                     {
                         textColor: 'white',
                         url: 'styles/img/clusterMarker.png',
                         height: 50,
-                        width: 50
+                        width: 50,
+						textSize: 15
                       },
                      {
                         textColor: 'white',
                         url: 'styles/img/clusterMarker.png',
                         height: 50,
-                        width: 50
+                        width: 50,
+						textSize: 15
                       },
                      {
                         textColor: 'white',
                         url: 'styles/img/clusterMarker.png',
                         height: 50,
-                        width: 50
+                        width: 50,
+						textSize: 15
                       }
                 ];
                 var mcOptions = {
@@ -564,9 +576,9 @@
 						if (status === google.maps.GeocoderStatus.OK) {
 							var theGeoResults = results[0].geometry.location;
 							createMarker(key, data, theGeoResults, lastOne);
-                            console.log('geo results back');
+                            //console.log('geo results back');
 						} else {
-							alert('Geocode was not successful for the following reason: ' + status);
+							console.log('Geocode was not successful for the following reason: ' + status);
 						}
 					});
 				})(geocoder, map);
@@ -576,9 +588,8 @@
             // GET JOB POSTINGS AND LOOP THROUGH
             ///////////////////////////////////////////////
 
-			$.getJSON('data/data_missing.json')
+			$.getJSON('data/data.json')
 				.done(function (json) {
-                
                     var lastOne = false; 
 					$.each(json, function (key, data) {
                         if (key == (json.length - 1)) {
@@ -597,20 +608,17 @@
 							console.log('no coordinates');
 							runGeocoder(key, data, lastOne);
 						}
-                       
 					});
 				})
 				.fail(function () {
-					console.log('failed')
+					displayError('Unable to get map data.', "danger");
 				});
-			
 				function disableScrollWheel() {
-					console.log('disable');
+					//console.log('disable');
 					map.setOptions({scrollwheel:false, draggable: false});
 				}
-
 				map.addListener('click', function(e) {
-					console.log('map ' + this);
+					//console.log('map ' + this);
 					this.setOptions({scrollwheel:true, draggable: true});
 				});
                 map.addListener('tap', function(e) {
@@ -628,10 +636,10 @@
 				});
 			
 				function geoSearch() {
-					var search = $('#geo-search').val();
-				   console.log(search);
+				   $('.alert').remove(); 
+				   var search = $('#geo-search').val();
+				   //console.log(search);
 				   var geocoder = new google.maps.Geocoder();
-
 						(function (geocoder, resultsMap) {
 							var address = search;
 							geocoder.geocode({
@@ -642,7 +650,7 @@
 									resultsMap.setCenter(results[0].geometry.location);
 									resultsMap.setZoom(6);
 								} else {
-									alert('Geocode was not successful for the following reason: ' + status);
+								  displayError('Sorry, something went wrong. Unable to process your location.', "danger");
 								}
 							});
 						})(geocoder, map);
@@ -650,7 +658,6 @@
 			
 			   $('#custom-search-input .btn-info').click(function(){
 					geoSearch(); 
-				   	
 				});
 				$('#geo-search').keypress(function(e){
 					//console.log(e);
@@ -665,9 +672,8 @@
 					  map.setCenter({lat: crd.latitude, lng: crd.longitude}); 
 					  map.setZoom(8);
 					};
-
 					function error(err) {
-					  console.warn('ERROR(' + err.code + '): ' + err.message);
+					  displayError('Sorry, something went wrong. Unable to process your location.', "danger");
 					};
 					navigator.geolocation.getCurrentPosition(success, error, {enableHighAccuracy: true, timeout: 5000, maximumAge: 0});
 				});

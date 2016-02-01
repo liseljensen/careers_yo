@@ -31,17 +31,19 @@ $(function() {
         this.link = this.parent.find('.link a'),
         this.image = this.parent.find('img'),
         this.hoverEffect = function() {
-			console.log(this);
-								Object.keys(this).forEach(function(key,index) {
-								  //console.log(key);
-									$(key).addClass('hover');
-								});
-							},
+            for (var prop in this) {
+                if (this.hasOwnProperty(prop)) {
+                    $(this[prop]).addClass('hover');
+                }
+            }
+        },
         this.mouseOut = function() {
-								Object.keys(this).forEach(function(key,index) {
-									$(key).removeClass('hover');
-								});
-							}
+            for (var prop in this) {
+                if (this.hasOwnProperty(prop)) {
+                    $(this[prop]).removeClass('hover');
+                }
+            }
+        }
     }
     
     $('.overlay')

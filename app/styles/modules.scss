@@ -230,6 +230,17 @@
         margin-top: 20px; 
 		margin-right: -15px; 
 	}
+    .navbar-brand {
+        margin-top: 0;  
+    }
+    .navbar-default {
+        margin-top: 20px; 
+    }
+    @media (max-width: $screen-md-max) {
+        .navbar-brand {
+            margin-top: 10px; 
+        }
+    }
 }
 .subpage {
     header.fixed.small {
@@ -724,10 +735,13 @@ textarea:focus, .btn-default:focus, .btn-default.focus, .form-control:focus {
                 font-weight: 600;
                 text-transform: uppercase; 
                 color: $white; 
+                margin-top:0;
             }
             h3 {
                 font-size: $font-size-x-large;
                 color: $white; 
+                margin-bottom:5px; 
+                font-style: italic; 
             }
             p {
                 margin-left:0;

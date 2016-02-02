@@ -242,6 +242,9 @@
         }
     }
 }
+.btn.btn-default {
+	color: $simplot-gray; 
+}
 .subpage {
     header.fixed.small {
         #main-nav {
@@ -291,7 +294,7 @@
 .apply-now-tab {
     position: fixed;
     right: 0;
-    top: 50%;
+    top: 55%;
     text-align: center;
     background: #EBB700;
     padding: 10px;
@@ -461,7 +464,6 @@
         display: block; 
         position: relative;
         top: 50%;
-        top: 30%\0;
         -webkit-transform: translateY(-50%);
         -ms-transform: translateY(-50%);
         transform: translateY(-50%);
@@ -474,6 +476,7 @@
 //            top: 30%; 
 //        }
 //    }
+
 }
 /*
     QUOTES
@@ -704,17 +707,13 @@ textarea:focus, .btn-default:focus, .btn-default.focus, .form-control:focus {
                 margin-left: 15%;
                 color: $white; 
                 font-size: $font-size-large;
-                .intro {
-                    font-size: $font-size-x-large;
-                    font-weight: 900; 
-                }
             }
             .quote {
                 background-position: 18% top;
             }
             em {
                 color: $white;
-                font-size: $font-size-xxx-large;
+                font-size: $font-size-xx-large;
             }
             .sig {
                 color: $white;
@@ -1087,6 +1086,27 @@ figure.effect-sadie {
         position: relative;
         margin-top: 127px; 
     }
+	@media (max-width: $screen-md-max) {
+		h3 {
+			margin-top: 25%; 
+		} 
+	}
+	@media (max-width: $screen-sm-max) {
+		h3 {
+			margin-top: 15%; 
+		} 
+	}
+	@media (max-width: $screen-xs-max) {
+		h3 {
+			margin-top: 25%; 
+		} 
+	}
+	@media (max-width: 450px) {
+		h3 {
+			font-size: $font-size-med;
+			margin-top: 17%; 
+		} 
+	}
 }
 .apply-video {
 	background: url(../images/mockup-macbook.jpg) no-repeat;
@@ -1251,6 +1271,11 @@ figure.effect-sadie {
 .app-list-title, .application-list, .questions {
 	margin-left: 20px; 
 }
+th:last-child {
+	.sortable {
+		display: none;
+	}
+}
 /*
     FAQs
 */
@@ -1258,6 +1283,10 @@ figure.effect-sadie {
     a {
         color: $simplot-gray; 
     }
+}
+.submitMessage {
+	font-size: $font-size-large;
+	font-weight: 600;
 }
 /*
     MOSAIC STYLES

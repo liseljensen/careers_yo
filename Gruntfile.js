@@ -340,6 +340,7 @@ module.exports = function (grunt) {
             '*.{ico,png,txt}',
             'images/{,*/}*.webp',
             '{,*/}*.html',
+            '{,*/}*.cfc',
             'styles/fonts/{,*/}*.*',
             'styles/img/{,*/}*.*',
             'fonts/{,*/}*.*',
@@ -442,7 +443,7 @@ module.exports = function (grunt) {
     'modernizr',
     'filerev',
     'usemin',
-    //'htmlmin'
+    'htmlmin'
   ]);
 
   grunt.registerTask('default', [

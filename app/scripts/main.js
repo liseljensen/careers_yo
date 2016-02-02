@@ -164,7 +164,79 @@ $(function() {
                 animateNumbersStudent();
             }
         }
-   
+	
+		///////////////////////////////////////////////
+		// CONTACT FORM VALIDATE
+		///////////////////////////////////////////////
+	
+	 	function sendEmail() {
+			$.ajax({
+				type: "POST",
+				url: 'processForm.cfc',
+				data: {
+						method: "sendEmail",
+						firstName: $('#first_name').val(),
+						lastName: $('#last_name').val(),
+						phone: $('#phone').val(),
+						email: $('#email').val(),
+						message: $('#message').val()
+					},
+				success: function (data) {
+					if (data == "true") {
+						$('form').hide();
+						$('.submitMessage').append('The form has been successfully submitted. Thank you for contacting us.');
+					} 
+					else {
+						$('form').hide();
+						$('.submitMessage').append('Oops, an error seems to have occurred.');
+					}
+				}
+			}).fail(function (jqXHR, exception) {
+				$('form').hide();
+				$('.submitMessage').append('Oops, an error seems to have occurred.');
+			});
+		 }
+
+		function contactFormInit() {
+			$('#contact_form').validator().on('submit', function (e) {
+			  if (e.isDefaultPrevented()) {
+				 // alert('default prevented')
+			  } 
+			  else {
+				  e.preventDefault(); 
+				  $.ajax({
+					type: "POST",
+					url: 'processForm.cfc',
+					data: {
+							method: "sendEmail",
+							firstName: $('#first_name').val(),
+							lastName: $('#last_name').val(),
+							phone: $('#phone').val(),
+							email: $('#email').val(),
+							message: $('#message').val()
+						},
+					success: function (data) {
+						if (data == "true") {
+							$('form').hide();
+							$('.submitMessage').append('The form has been successfully submitted. Thank you for contacting us.');
+						} 
+						else {
+							$('form').hide();
+							$('.submitMessage').append('Oops, an error seems to have occurred.');
+						}
+					}
+				}).fail(function (jqXHR, exception) {
+					$('form').hide();
+					$('.submitMessage').append('Oops, an error seems to have occurred.');
+				});
+
+			  }
+			});
+		}
+		
+		///////////////////////////////////////////////
+		// PULL PAGE CONTENT
+		///////////////////////////////////////////////   
         function pullPage() {   
            var pageName = getUrlParameter('page'),
                page = "content/" + pageName + ".html" || undefined,
@@ -178,13 +250,19 @@ $(function() {
                   else {
                       //console.log('success');
                       $('#' + pageName).addClass('active');
+					  if (pageName === 'contact_us') {
+						 // console.log('contact init');
+						  contactFormInit();
+					  }
+					 
                   }
                 });
            }
         }
     
 
-        if($('#content').length || $('#map').length) {
+        if($('#content').length || $('.apply_page').length) {
+			//console.log('subpage');
             var numbersDoneWhy = false,
                 numbersDoneStudent = false;
             pullPage();
@@ -195,10 +273,6 @@ $(function() {
                 if(numCheck) {
                     //console.log('page has numbers in view');
                     canSeeNumbers(); 
-//                    if (($('#nae').length !== 0) || ($('#value').length !== 0)) {
-//                          
-//                          
-//                    }
                 }
             });
         }
@@ -223,7 +297,11 @@ $(function() {
 //    checkWidth();
 //    // Bind event listener
 //    $(window).resize(checkWidth);
-    
-    $("[data-toggle='popover']").popover(); 
+	
+	 $("[data-toggle='popover']").popover(); 
+	
+
+
+	
 });
 

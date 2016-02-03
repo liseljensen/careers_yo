@@ -160,6 +160,7 @@
 				font-size: $font-size-med;
 				float: none;
 				display: inline-block;
+				
 			}
 		}
         .navbar-brand {
@@ -174,8 +175,8 @@
         }
 		li {
 			padding: 1px 0 5px; 
-            a {
-                margin-top: 15px; 
+           	& > a {
+                margin: 15px 10px; 
             }
 		}
         li:last-child {
@@ -235,11 +236,28 @@
     }
     .navbar-default {
         margin-top: 20px; 
-    }
+    }	
     @media (max-width: $screen-md-max) {
         .navbar-brand {
             margin-top: 10px; 
+			max-width: 200px;
         }
+		#navbar {
+			.navbar-nav {
+				font-size: $font-size-small;
+				li {
+					& > a {
+						margin: 15px 10px; 
+					}
+				}
+			}
+		}
+    }
+	@media (max-width: $screen-sm-max) {
+		#navbar .navbar-nav {
+			margin-top: 0; 
+		}
+        
     }
 }
 .btn.btn-default {
@@ -263,9 +281,19 @@
 			#navbar {
 				.navbar-nav {
 					font-size: $font-size-small;
+					li {
+						& > a {
+							margin: 15px 10px; 
+						}
+					}
 				}
 			}
         }
+		.fixed.small {
+			#main-nav #navbar .navbar-nav {
+				margin-top:0; 
+			}
+		}
         
     }
     @media (max-width: $screen-sm-max) {
@@ -921,7 +949,7 @@ figure.effect-sadie {
         -webkit-transform: translate3d(0,0,0);
         transform: translate3d(0,0,0);
     }
-    @media (max-width: $screen-sm-max) {
+    @media (max-width: $screen-md-max) {
         margin-bottom: 20px;
         h2 {
             top: 40%

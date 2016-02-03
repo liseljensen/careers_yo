@@ -37,6 +37,18 @@
 	<!-- build:js scripts/vendor/modernizr.js -->
 	<script src="/bower_components/modernizr/modernizr.js"></script>
 	<!-- endbuild -->
+	
+	<!-- Hotjar Tracking Code for http://www.simplot.com -->
+	<script>
+		(function(h,o,t,j,a,r){
+			h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+			h._hjSettings={hjid:118141,hjsv:5};
+			a=o.getElementsByTagName('head')[0];
+			r=o.createElement('script');r.async=1;
+			r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+			a.appendChild(r);
+		})(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
+	</script>
 
 </head>
 
@@ -433,7 +445,7 @@
             // DISPLAY ERROR MESSAGE
             ///////////////////////////////////////////////
 			function displayError(message, color) {
-				var createError = '<div class="alert alert-' + color + '" role="alert">' + message + '</div>'
+				var createError = '<div class="alert alert-' + color + '" role="alert"><div class="container">' + message + '</div></div>'
 				$('.alert').remove();
 				$('#map').prepend(createError);
 			}
@@ -677,17 +689,25 @@
 					}
 				});
 			
+				if (!("geolocation" in navigator)) {
+					$('#useLocation').hide(); 
+				}
+			
 				$('#useLocation').on('click', function(e){
+					$('.alert').remove(); 
 					function success(pos) {
 					  var crd = pos.coords;					  
 					  map.setCenter({lat: crd.latitude, lng: crd.longitude}); 
 					  map.setZoom(8);
 					};
-					function error(err) {
+					function error(err, pos) {
+					  console.log(pos + " " + err);
 					  displayError('Sorry, something went wrong. Unable to process your location.', "danger");
 					};
 					navigator.geolocation.getCurrentPosition(success, error, {enableHighAccuracy: true, timeout: 5000, maximumAge: 0});
 				});
+			
+			
 		}
         
         

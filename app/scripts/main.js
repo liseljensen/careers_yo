@@ -299,9 +299,32 @@ $(function() {
 //    $(window).resize(checkWidth);
 	
 	 $("[data-toggle='popover']").popover(); 
-	
-
-
-	
+ 
 });
+
+	
+///////////////////////////////////////////////
+// Google Captcha
+///////////////////////////////////////////////  
+//	  var onloadCallback = function() {
+//		grecaptcha.render('captcha', {
+//		  'sitekey' : '6LdADhcTAAAAAPyxjpvRFIcGHsiaQPJgJseey0RV',
+//		  'callback' : function(response) {
+//			  $.ajax({
+//					type: "POST",
+//					url: 'processCaptcha.cfc',
+//					data: {
+//							method: "processCaptcha",
+//							captcha: $('.g-recaptcha-response').val()
+//						},
+//					success: function (data) {
+//						console.log('success');
+//					}
+//				}).fail(function (jqXHR, exception) {
+//					console.log('error');
+//				});
+//			}
+//		});
+//
+//	};
 

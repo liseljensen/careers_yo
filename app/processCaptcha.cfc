@@ -6,7 +6,7 @@
 <cftry>
 	
 	<cfhttp method="Post" 
-		url="https://www.google.com/recaptcha/api/siteverify"> 
+		url="//www.google.com/recaptcha/api/siteverify"> 
 		<cfhttpparam type="Formfield" value="6LdADhcTAAAAADq3ef28t2YeeuBUqDjtwm4z8QPl" name="secret">
 		<cfhttpparam type="Formfield" value="#captcha#" name="response">
 	</cfhttp> 

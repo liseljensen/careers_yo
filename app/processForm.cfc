@@ -9,12 +9,18 @@
 
 	
 <cftry>
-  <cfmail to="careers@simplot.com" bcc="lisel.jensen@simplot.com" from="#email#" subject="Careers Contact Form Submission From: #firstName# #lastName#">
+  <cfmail to="lisel.jensen@simplot.com" from="#email#" subject="Careers Contact Form Submission From: #firstName# #lastName#">
+<!---  <cfmail to="careers@simplot.com" bcc="lisel.jensen@simplot.com" from="#email#" subject="Careers Contact Form Submission From: #firstName# #lastName#">--->
     First Name: #firstName#
     Last Name: #lastName#
     Phone: #phone#
     Email: #email#
     Message: #message#
+  </cfmail> 
+  <cfmail to="#email#" from="noreply@simplot.com" subject="J.R. Simplot Form Submission">
+	  Thank you for your message.
+
+	  J.R. Simplot Company
   </cfmail>
   
   <cfset valid ="true">

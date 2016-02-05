@@ -1,4 +1,7 @@
 /* global $, console, window, google, styles, MarkerClusterer, navigator, document */
+///////////////////////////////////////////////
+// NEWS FOR FOOTER
+///////////////////////////////////////////////
 var newsItems = []; 
 function jsonpCallbackNews(data) {
     $.each(data.news, function(key, story) {
@@ -7,6 +10,58 @@ function jsonpCallbackNews(data) {
     });
 }
 
+///////////////////////////////////////////////
+// CONTACT FORM VALIDATE & SEND
+///////////////////////////////////////////////
+	function contactFormInit() {
+		// Init validator
+		$('#contact_form').validator().on('submit', function (e) {
+		  //If the validator didn't find any errors, proceed. 
+		  if (!(e.isDefaultPrevented())) { 
+			  
+			  e.preventDefault(); // Prevent the form from submitting
+			  
+			  // If captcha has been validated (see line 267), proceed. 
+			  if(captchaValid) { 
+				  $.ajax({
+						type: "POST",
+						url: 'processForm.cfc',
+						data: {
+								method: "sendEmail",
+								firstName: $('#first_name').val(),
+								lastName: $('#last_name').val(),
+								phone: $('#phone').val(),
+								email: $('#email').val(),
+								message: $('#message').val()
+							},
+						success: function (data) {
+							//Display message depending on if submission was successful 
+							if (data == "true") {
+								$('form').fadeOut(); 
+								$('.submitMessage').append('The form has been successfully submitted. Thank you for contacting us.');
+							} 
+							else {
+								$('form').fadeOut();
+								$('.submitMessage').append('Oops, an error seems to have occurred.');
+							}
+						}
+					}).fail(function (jqXHR, exception) { //If .cfc is not available or did not process
+						$('form').hide();
+						$('.submitMessage').append('Oops, an error seems to have occurred.');
+					});
+			  }
+			  
+			  // If captcha has not been validated (see line 267), add error class to captcha. 
+			  else {
+				  $('#captcha').addClass('has-error');
+				  $('#theCaptchaGroup .verify').fadeIn(); 
+			  }
+		  }
+		});
+	}
+///////////////////////////////////////////////
+// CALL ONLOAD
+///////////////////////////////////////////////
 $(function() {
     $.ajax({
         beforeSend: function (xhr) {
@@ -165,74 +220,7 @@ $(function() {
             }
         }
 	
-		///////////////////////////////////////////////
-		// CONTACT FORM VALIDATE
-		///////////////////////////////////////////////
 	
-	 	function sendEmail() {
-			$.ajax({
-				type: "POST",
-				url: 'processForm.cfc',
-				data: {
-						method: "sendEmail",
-						firstName: $('#first_name').val(),
-						lastName: $('#last_name').val(),
-						phone: $('#phone').val(),
-						email: $('#email').val(),
-						message: $('#message').val()
-					},
-				success: function (data) {
-					if (data == "true") {
-						$('form').hide();
-						$('.submitMessage').append('The form has been successfully submitted. Thank you for contacting us.');
-					} 
-					else {
-						$('form').hide();
-						$('.submitMessage').append('Oops, an error seems to have occurred.');
-					}
-				}
-			}).fail(function (jqXHR, exception) {
-				$('form').hide();
-				$('.submitMessage').append('Oops, an error seems to have occurred.');
-			});
-		 }
-
-		function contactFormInit() {
-			$('#contact_form').validator().on('submit', function (e) {
-			  if (e.isDefaultPrevented()) {
-				 // alert('default prevented')
-			  } 
-			  else {
-				  e.preventDefault(); 
-				  $.ajax({
-					type: "POST",
-					url: 'processForm.cfc',
-					data: {
-							method: "sendEmail",
-							firstName: $('#first_name').val(),
-							lastName: $('#last_name').val(),
-							phone: $('#phone').val(),
-							email: $('#email').val(),
-							message: $('#message').val()
-						},
-					success: function (data) {
-						if (data == "true") {
-							$('form').hide();
-							$('.submitMessage').append('The form has been successfully submitted. Thank you for contacting us.');
-						} 
-						else {
-							$('form').hide();
-							$('.submitMessage').append('Oops, an error seems to have occurred.');
-						}
-					}
-				}).fail(function (jqXHR, exception) {
-					$('form').hide();
-					$('.submitMessage').append('Oops, an error seems to have occurred.');
-				});
-
-			  }
-			});
-		}
 		
 		///////////////////////////////////////////////
 		// PULL PAGE CONTENT
@@ -254,16 +242,14 @@ $(function() {
 						 // console.log('contact init');
 						  contactFormInit();
 					  }
-                      if (pageName === 'apply_now') {
-//                          document.write('<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD6F8DDumSo3nUet2sUNjLQS5U-SWwm8VQ&callback=initMap"><script src="scripts/map_styles.js"></script>')
-                      }
-					 
+					  if (pageName === 'apply_now') {
+						  initMap(); 
+					  }
                   }
                 });
            }
         }
     
-
         if($('#content').length || $('.apply_page').length) {
 			//console.log('subpage');
             var numbersDoneWhy = false,
@@ -278,59 +264,50 @@ $(function() {
                     canSeeNumbers(); 
                 }
             });
-        }
-
-//    var $window = $(window),
-//        navAdded = false;
-//
-//    function checkWidth() {
-//        var visible = $('#global-nav').is(':visible');
-//        
-//        if (!(visible) && (navAdded === false)) {
-//            var globalNav = $('#global-nav > .navbar').clone();
-//            $('#global-nav-mobile').append(globalNav);
-//            navAdded = true;
-//        }
-//        else if((visible) && (navAdded === true)) {
-//            $('#global-nav-mobile').empty(); 
-//            navAdded = false; 
-//        }
-//    }
-//    // Execute on load
-//    checkWidth();
-//    // Bind event listener
-//    $(window).resize(checkWidth);
+		}
 	
 	 $("[data-toggle='popover']").popover(); 
  
 });
 
-	
+
 ///////////////////////////////////////////////
 // Google Captcha
 ///////////////////////////////////////////////  
-//	  var onloadCallback = function() {
-//		grecaptcha.render('captcha', {
-//		  'sitekey' : '6LdADhcTAAAAAPyxjpvRFIcGHsiaQPJgJseey0RV',
-//		  'callback' : function(response) {
-//			  $.ajax({
-//					type: "POST",
-//					url: 'processCaptcha.cfc',
-//					data: {
-//							method: "processCaptcha",
-//							captcha: $('.g-recaptcha-response').val()
-//						},
-//					success: function (data) {
-//						console.log('success');
-//					}
-//				}).fail(function (jqXHR, exception) {
-//					console.log('error');
-//				});
-//			}
-//		});
-//
-//	};
+var captchaValid = false;
 
+var onloadCallback = function() {
+	grecaptcha.render('captcha', {
+	  'sitekey' : '6LdADhcTAAAAAPyxjpvRFIcGHsiaQPJgJseey0RV',
+	  'callback' : function(response) {
+		  $.ajax({
+				type: "POST",
+				url: 'processCaptcha.cfc',
+				data: {
+						method: "processCaptcha",
+						captcha: $('.g-recaptcha-response').val()
+					},
+				success: function (data) {
+					$('#captcha').removeClass('has-error');
+					$('#theCaptchaGroup .verify').fadeOut(); 
+			    	$('#theCaptchaGroup .verify-error').fadeOut(); 
+					captchaValid = true;
+					//console.log('success');
+				}
+			}).fail(function (jqXHR, exception) {
+			  	$('#captcha').addClass('has-error');
+			    $('#theCaptchaGroup .verify').fadeOut(); 
+			    $('#theCaptchaGroup .verify-error').fadeIn(); 
+
+			    captchaValid = false;
+			});
+		}
+	});
+};
+
+///////////////////////////////////////////////
+// Build Map
+///////////////////////////////////////////////  
 
 var image = 'styles/img/marker.png';
             

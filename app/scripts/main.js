@@ -37,17 +37,17 @@ function jsonpCallbackNews(data) {
 						success: function (data) {
 							//Display message depending on if submission was successful 
 							if (data == "true") {
-								$('form').fadeOut(); 
-								$('.submitMessage').append('The form has been successfully submitted. Thank you for contacting us.');
+								$('form').hide(); 
+								$('.submitMessage').append('<h2>The form has been successfully submitted.</h2> <h3>Thank you for contacting us.</h3>');
 							} 
 							else {
-								$('form').fadeOut();
-								$('.submitMessage').append('Oops, an error seems to have occurred.');
+								$('form').hide();
+								$('.submitMessage').append('<h2>Oops, an error seems to have occurred.</h2>');
 							}
 						}
 					}).fail(function (jqXHR, exception) { //If .cfc is not available or did not process
 						$('form').hide();
-						$('.submitMessage').append('Oops, an error seems to have occurred.');
+						$('.submitMessage').append('<h2>Oops, an error seems to have occurred.</h2>');
 					});
 			  }
 			  

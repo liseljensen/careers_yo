@@ -260,6 +260,9 @@
         
     }
 }
+a:focus {
+	outline: none; 
+}
 .btn.btn-default {
 	color: $simplot-gray; 
 }
@@ -525,7 +528,6 @@
     Map
 */
 #map {
-	margin-top: 20px; 
     min-height: 500px; 
 	border-bottom: 2px solid lighten($simplot-gray, 50%);
 	@media (max-width: $screen-xs-max) {
@@ -533,8 +535,8 @@
 	}
 }
 .map-bar {
-	border-top: 2px solid lighten($simplot-gray, 50%);
-	padding-bottom: 0; 
+	border-bottom: 2px solid lighten($simplot-gray, 50%);
+	padding-bottom: 40px; 
 	.btn-default {
 		border-color: $light-slate; 
 		i {
@@ -633,6 +635,7 @@
 	.close {
 		color: $white; 
 		opacity: .8;
+		font-size: $font-size-super-large;
 	}
 	.table-hover > tbody > tr:hover {
 		background: $simplot-gray; 
@@ -816,7 +819,7 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
 		position: relative; 
 		max-width: 700px;
 		max-height: 467px;
-		margin: 15% auto 0; 
+		margin: 20px auto 0; 
 		height: auto; 
 		@media (max-width: $screen-xs-max) {
 			display: block; 
@@ -1019,7 +1022,7 @@ figure.effect-sadie {
     padding: 0 50px; 
     border-left: 2px solid #C3C8C8;
     text-align: center; 
-    min-height: 250px; 
+    min-height: 300px; 
     span.number {
         display: block;
         margin: 0 auto 20px; 
@@ -1031,6 +1034,7 @@ figure.effect-sadie {
         margin-top: -30px; 
         display: block;
         font-size: $font-size-med; 
+		margin-bottom: 15px; 
     }
     &:nth-of-type(1) {
         border:none; 

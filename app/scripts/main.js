@@ -1,5 +1,22 @@
 /* global $, console, window, google, styles, MarkerClusterer, navigator, document */
 ///////////////////////////////////////////////
+// GET URL PARAM
+///////////////////////////////////////////////
+var getUrlParameter = function getUrlParameter(sParam) {
+	var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+		sURLVariables = sPageURL.split('&'),
+		sParameterName,
+		i;
+
+	for (i = 0; i < sURLVariables.length; i++) {
+		sParameterName = sURLVariables[i].split('=');
+
+		if (sParameterName[0] === sParam) {
+			return sParameterName[1] === undefined ? true : sParameterName[1];
+		}
+	}
+};
+///////////////////////////////////////////////
 // NEWS FOR FOOTER
 ///////////////////////////////////////////////
 var newsItems = []; 
@@ -124,20 +141,7 @@ $(function() {
                 sq.mouseOut(); 
         });
     
-        var getUrlParameter = function getUrlParameter(sParam) {
-            var sPageURL = decodeURIComponent(window.location.search.substring(1)),
-                sURLVariables = sPageURL.split('&'),
-                sParameterName,
-                i;
-
-            for (i = 0; i < sURLVariables.length; i++) {
-                sParameterName = sURLVariables[i].split('=');
-
-                if (sParameterName[0] === sParam) {
-                    return sParameterName[1] === undefined ? true : sParameterName[1];
-                }
-            }
-        };
+        
     
         $.get('content/footer.html')
             .done(function (data) {
@@ -220,8 +224,18 @@ $(function() {
             }
         }
 	
-	
-		
+		///////////////////////////////////////////////
+		// SCROLL ANIMATION FOR ANCHOR LINKS
+		///////////////////////////////////////////////  
+		function scrollAnchor(hash) {
+			
+		}
+		$('a').on('click', function() {
+			console.log(this.attr('src'));
+		});
+		$('a').on('tap', function() {
+			
+		});
 		///////////////////////////////////////////////
 		// PULL PAGE CONTENT
 		///////////////////////////////////////////////   
@@ -229,6 +243,7 @@ $(function() {
            var pageName = getUrlParameter('page'),
                page = "content/" + pageName + ".html" || undefined,
                content; 
+		   var urlHash = window.location.hash.substring(1);
            if(page) {
                $("#content").load( page, function( response, status, xhr ) {
                   if ( status == "error" ) {
@@ -243,7 +258,14 @@ $(function() {
 						  contactFormInit();
 					  }
 					  if (pageName === 'apply_now') {
-						  initMap(); 
+						  $('.apply-now-tab').hide(); 
+						 $('body').append('<script src="scripts/map_styles.js"></script>');
+						 $('body').append('<script async defer src="//maps.googleapis.com/maps/api/js?key=AIzaSyD6F8DDumSo3nUet2sUNjLQS5U-SWwm8VQ&callback=initMap"></script>');
+						 if(urlHash === 'faq') {
+							 $('html, body').animate({
+								scrollTop: $("#faq").offset().top
+							}, 2000);
+						 }
 					  }
                   }
                 });
@@ -415,13 +437,13 @@ function initMap() {
                 infowindow.open(map, marker);
             });
 
-                $.each(data.postings, function (i, posting) {
-                    var item = '<a href="https://jrsextdev.simplot.com:1443/prodhcm/CandidateSelfService/controller.servlet?dataarea=prodhcm&context.session.key.HROrganization=JRS&context.session.key.JobBoard=EXTERNALNEW&context.session.key.noheader=true&JobPost=' + posting.jobPost + '&JobReq=' + posting.jobID + '" class="list-group-item" target="_blank">' + posting.position + '<i class="fa fa-chevron-circle-right pull-right"></i></a>';
-                    //buildBodyContent += item;
-                });
+//                $.each(data.postings, function (i, posting) {
+//                    var item = '<a href="https://jrsextdev.simplot.com:1443/prodhcm/CandidateSelfService/controller.servlet?dataarea=prodhcm&context.session.key.HROrganization=JRS&context.session.key.JobBoard=EXTERNALNEW&context.session.key.noheader=true&JobPost=' + posting.jobPost + '&JobReq=' + posting.jobID + '" class="list-group-item" target="_blank">' + posting.position + '<i class="fa fa-chevron-circle-right pull-right"></i></a>';
+//                    //buildBodyContent += item;
+//                });
 
                 //Build Modal and insert job listings
-                var buildModal = '<div class="modal modal-fullscreen fade" id="' + locationID + '" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">' + '<div class="modal-dialog" role="document">' + '<div class="modal-content">' + '<div class="modal-header">' + '<button type="button" class="close" data-dismiss="modal" aria-label="Close">' + '<span aria-hidden="true">&times;</span></button>' + '<h3 class="modal-title" id="myModalLabel">' + data.address + ", " + data.municipality + ", " + data.stateprovince + '</h3></div>' + '<div class="modal-body"></div><table id="' + locationID + '-table" class="table-bordered"></table></div></div></div>';
+                var buildModal = '<div class="modal modal-fullscreen fade" id="' + locationID + '" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button><div class="modal-dialog" role="document"><div class="modal-content"><div class="modal-header"><h3 class="modal-title" id="myModalLabel">' + data.address + ", " + data.municipality + ", " + data.stateprovince + '</h3></div>' + '<div class="modal-body"></div><table id="' + locationID + '-table" class="table-bordered"></table></div></div></div>';
 
                 $('body').append(buildModal);
 
@@ -502,7 +524,7 @@ function initMap() {
 
     // GET JOB POSTINGS AND LOOP THROUGH
 
-    $.getJSON('data/data.json')
+    $.getJSON('data/CareersMapData.json')
         .done(function (json) {
             var lastOne = false; 
             $.each(json, function (key, data) {
@@ -597,6 +619,5 @@ function initMap() {
             }
             navigator.geolocation.getCurrentPosition(success, error, {enableHighAccuracy: true, timeout: 5000, maximumAge: 0});
         });
-
 }
 

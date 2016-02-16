@@ -224,18 +224,7 @@ $(function() {
             }
         }
 	
-		///////////////////////////////////////////////
-		// SCROLL ANIMATION FOR ANCHOR LINKS
-		///////////////////////////////////////////////  
-		function scrollAnchor(hash) {
-			
-		}
-		$('a').on('click', function() {
-			console.log(this.attr('src'));
-		});
-		$('a').on('tap', function() {
-			
-		});
+		
 		///////////////////////////////////////////////
 		// PULL PAGE CONTENT
 		///////////////////////////////////////////////   
@@ -262,10 +251,26 @@ $(function() {
 						 $('body').append('<script src="scripts/map_styles.js"></script>');
 						 $('body').append('<script async defer src="//maps.googleapis.com/maps/api/js?key=AIzaSyD6F8DDumSo3nUet2sUNjLQS5U-SWwm8VQ&callback=initMap"></script>');
 						 if(urlHash === 'faq') {
-							 $('html, body').animate({
+				            $('html, body').animate({
 								scrollTop: $("#faq").offset().top
 							}, 2000);
+                            
 						 }
+                        $('#to_faq').click(function(e) {
+                           // e.preventDefault; 
+                            $('html, body').animate({
+								scrollTop: $("#faq").offset().top
+							}, 2000);
+                        });
+                        $('#to_apply').click(function(e) {
+
+                        });
+                        $('#to_search').click(function(e) {
+                           //s e.preventDefault; 
+                            $('html, body').animate({
+								scrollTop: $("#map-bar").offset().top
+							}, 2000);
+                        });
 					  }
                   }
                 });
@@ -289,8 +294,23 @@ $(function() {
 		}
 	
 	 $("[data-toggle='popover']").popover(); 
+    
+    $(document).on("click", '#to_search', function() {
+      console.log('click');
+    });
  
 });
+
+///////////////////////////////////////////////
+// SCROLL ANIMATION FOR ANCHOR LINKS
+///////////////////////////////////////////////  
+    function scrollAnchor(hash, e) {
+        e.preventDefault; 
+        $('html, body').animate({
+            scrollTop: $(hash).offset().top
+        }, 2000);
+    }
+
 
 
 ///////////////////////////////////////////////

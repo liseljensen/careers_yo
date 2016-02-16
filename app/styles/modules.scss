@@ -313,6 +313,16 @@ a:focus {
         }
     }
 }
+p {
+    a {
+		text-decoration: underline;
+		color: $simplot-gray; 
+        transition: all .5s ease-in-out;
+		&:hover {
+			color: lighten($simplot-gray, 25%);
+		}
+	}
+}
 /*
     HEADERS
 */
@@ -479,6 +489,9 @@ a:focus {
             background: #fff; 
         }
     }
+}
+#to_apply, #to_search {
+    text-indent: -2000%;
 }
 .overlay-video {
     opacity: .75;
@@ -1321,6 +1334,13 @@ th:last-child {
 /*
     FAQs
 */
+#to_faq {
+    text-decoration: underline;
+    cursor: pointer; 
+    &:hover {
+        color: lighten($simplot-gray, 25%);
+    }
+}
 .panel {
     a {
         color: $simplot-gray; 

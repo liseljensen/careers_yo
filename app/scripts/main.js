@@ -97,48 +97,63 @@ $(function() {
       percentPosition: true
     });    
     
-    function Square(el) {
-        this.parent = $(el).parent(), 
-        this.figure = this.parent.find('figure'),
-        this.link = this.parent.find('.link a'),
-        this.image = this.parent.find('img'),
-        this.hoverEffect = function() {
-            for (var prop in this) {
-                if (this.hasOwnProperty(prop)) {
-                    $(this[prop]).addClass('hover');
-                }
-            }
-        },
-        this.mouseOut = function() {
-            for (var prop in this) {
-                if (this.hasOwnProperty(prop)) {
-                    $(this[prop]).removeClass('hover');
-                }
-            }
-        };
+//    function Square(el) {
+//        this.parent = $(el).parent(), 
+//        this.figure = this.parent.find('figure'),
+//        this.link = this.parent.find('.link a'),
+//        this.image = this.parent.find('img'),
+//        this.hoverEffect = function() {
+//            for (var prop in this) {
+//                if (this.hasOwnProperty(prop)) {
+//                    $(this[prop]).addClass('hover');
+//                }
+//            }
+//        },
+//        this.mouseOut = function() {
+//            for (var prop in this) {
+//                if (this.hasOwnProperty(prop)) {
+//                    $(this[prop]).removeClass('hover');
+//                }
+//            }
+//        };
+//    }
+    function addClass(el) {
+         var $parent = $(el).parent();
+            $parent.find('figure').addClass('hover');
+            $parent.find('.link a').addClass('hover');
+            $parent.find('img').addClass('hover');
     }
-    
+    function removeClass(el) {
+         var $parent = $(el).parent();
+            $parent.find('figure').removeClass('hover');
+            $parent.find('.link a').removeClass('hover');
+            $parent.find('img').removeClass('hover');
+    }
     $('.overlay')
         .hover(function(e) {
 		//console.log('hover');
-            var el = this;
-            var sq = new Square(el);
-                sq.hoverEffect(); 
+            var theEl = this;
+            addClass(theEl);
+//            var sq = new Square(el);
+//                sq.hoverEffect(); 
         })
         .click(function(e){
-            var el = this;
-            var sq = new Square(el);
-                sq.hoverEffect(); 
+            var theEl = this;
+            addClass(theEl);
+//            var sq = new Square(el);
+//                sq.hoverEffect(); 
         })
         .on('tap', function(e){
-            var el = this;
-            var sq = new Square(el);
-                sq.hoverEffect(); 
+            var theEl = this;
+            addClass(theEl);
+//            var sq = new Square(el);
+//                sq.hoverEffect(); 
         })
         .mouseout(function(e) {
-            var el = this;
-            var sq = new Square(el);
-                sq.mouseOut(); 
+            var theEl = this;
+            removeClass(theEl);
+//            var sq = new Square(el);
+//                sq.mouseOut(); 
         });
     
         

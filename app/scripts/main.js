@@ -251,26 +251,10 @@ $(function() {
 						 $('body').append('<script src="scripts/map_styles.js"></script>');
 						 $('body').append('<script async defer src="//maps.googleapis.com/maps/api/js?key=AIzaSyD6F8DDumSo3nUet2sUNjLQS5U-SWwm8VQ&callback=initMap"></script>');
 						 if(urlHash === 'faq') {
-				            $('html, body').animate({
-								scrollTop: $("#faq").offset().top
-							}, 2000);
-                            
+							$('html, body').animate({
+								scrollTop: $('#faq').offset().top
+							}, 1250, 'easeInOutExpo');
 						 }
-                        $('#to_faq').click(function(e) {
-                           // e.preventDefault; 
-                            $('html, body').animate({
-								scrollTop: $("#faq").offset().top
-							}, 2000);
-                        });
-                        $('#to_apply').click(function(e) {
-
-                        });
-                        $('#to_search').click(function(e) {
-                           //s e.preventDefault; 
-                            $('html, body').animate({
-								scrollTop: $("#map-bar").offset().top
-							}, 2000);
-                        });
 					  }
                   }
                 });
@@ -294,24 +278,20 @@ $(function() {
 		}
 	
 	 $("[data-toggle='popover']").popover(); 
-    
-    $(document).on("click", '#to_search', function() {
-      console.log('click');
-    });
  
 });
 
-///////////////////////////////////////////////
-// SCROLL ANIMATION FOR ANCHOR LINKS
-///////////////////////////////////////////////  
-    function scrollAnchor(hash, e) {
-        e.preventDefault; 
-        $('html, body').animate({
-            scrollTop: $(hash).offset().top
-        }, 2000);
-    }
+/////////////////////////////////////////////////
+//// SCROLL ANIMATION FOR ANCHOR LINKS
+/////////////////////////////////////////////////  
 
-
+$(document).on("click", '.page-scroll', function(event) { 
+	var $anchor = $(this);
+    $('html, body').animate({
+		scrollTop: $($anchor.attr('href')).offset().top
+	}, 1250, 'easeInOutExpo');
+	event.preventDefault();
+});
 
 ///////////////////////////////////////////////
 // Google Captcha
@@ -640,4 +620,3 @@ function initMap() {
             navigator.geolocation.getCurrentPosition(success, error, {enableHighAccuracy: true, timeout: 5000, maximumAge: 0});
         });
 }
-

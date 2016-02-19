@@ -473,13 +473,13 @@ p {
     width: 100%;
     cursor: pointer;
     transition: all .5s ease-in-out;
-    //z-index: 1000; 
     & > a.overlay-link {
         z-index: 1000;
         text-indent: 200%;
         white-space: nowrap;
         font-size: 0;
         opacity: 0;
+		background-color: rgba(0,0,0,0);
         position: absolute;
         top: 0;
         left: 0;
@@ -492,6 +492,8 @@ p {
 }
 #to_apply, #to_search {
     text-indent: -2000%;
+	opacity: 0;
+	background: white;
 }
 .overlay-video {
     opacity: .75;
